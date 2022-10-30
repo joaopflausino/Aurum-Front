@@ -1,32 +1,11 @@
-import React from "react";
-import '../SCSS/Style.css'
+import React from 'react';
 
-function Home(){
-    return(
-        <section className="containerloginscreen">
-            <div className="containerloginscreen__containerform">
-                <label className="containerloginscreen__containerform_header" htmlFor="">
-                A melhor plataforma 
-                para acompanhar seus investimentos...
-                </label>
-                <div className="containerloginscreen__containerform">
-                <label>Email address</label>
-                <input
-                  type="email"
-                  className="containerloginscreen__containerform_input"
-                  placeholder="Enter email"
-                />
-                <div className="containerloginscreen__containerform_label">
-                  <label>Password</label>
-                <input
-                  type="password"
-                  className="containerloginscreen__containerform_input"
-                  placeholder="Enter password"
-                />
-                </div>
-            </div>
-        </div>
-        </section>
-    )
+function Home() {
+  return (
+    <div className='home'>
+        <h3>Home</h3>
+    </div>
+  );
 }
-export default Home
+
+export default Home;
