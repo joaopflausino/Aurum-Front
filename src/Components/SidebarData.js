@@ -36,10 +36,15 @@ export const SidebarData = [
         cName: 'nav-text'
     },
     {
-        title : 'Suporte',
-        path: '/suporte',
-        icon: <IoIcons.IoMdHelpCircle/>,
+        title : 'Adicionar Investimentos',
+        path: '/ai',
+        icon: <FaIcons.FaRegChartBar/>,
         cName: 'nav-text'
     },
-
+    {
+        title : 'Meus dados',
+        path: '/md',
+        icon: <FaIcons.FaRegChartBar/>,
+        cName: 'nav-text'
+    },
 ]
