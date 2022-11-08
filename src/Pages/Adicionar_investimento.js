@@ -1,11 +1,11 @@
 import React from 'react';
 
-function Adicionar_investimento() {
+function AI() {
   return (
-    <div className='adicionar_investimento'>
+    <div className='ai'>
         <h3>Adicionar investimento</h3>
     </div>
   );
 }
 
-export default Adicionar_investimento;
+export default AI;

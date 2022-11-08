@@ -1,11 +1,11 @@
 import React from 'react';
 
-function Meus_dados() {
+function MD() {
   return (
-    <div className='meus_dados'>
-        <h3>Heus Dados</h3>
+    <div className='md'>
+        <h3>Meus Dados</h3>
     </div>
   );
 }
 
-export default Meus_dados;
+export default MD;
