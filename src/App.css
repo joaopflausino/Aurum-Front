@@ -16,7 +16,7 @@
 .cadastro,
 .ai,
 .md {
-  background-image: url('src/Components/imagens/fundo-branco.jpg');
+  background-image: url('./Components/imagens/fundo-branco.jpg');
   display: flex;
   height: 90vh;
   align-items: center;
