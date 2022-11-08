@@ -3,6 +3,8 @@ import * as FaIcons from 'react-icons/fa';
 import * as AiIcons from 'react-icons/ai';
 import * as MdIcons from 'react-icons/md';
 import * as IoIcons from 'react-icons/io';
+import * as Io5Icons from 'react-icons/io5';
+import * as BsIcons from "react-icons/bs";
 
 export const SidebarData = [
     {
@@ -32,19 +34,19 @@ export const SidebarData = [
     {
         title : 'Simular Investimentos',
         path: '/si',
-        icon: <FaIcons.FaRegChartBar/>,
+        icon: <BsIcons.BsGraphUp/>,
         cName: 'nav-text'
     },
     {
         title : 'Adicionar Investimentos',
         path: '/ai',
-        icon: <FaIcons.FaRegChartBar/>,
+        icon: <Io5Icons.IoBagAddSharp/>,
         cName: 'nav-text'
     },
     {
         title : 'Meus dados',
         path: '/md',
-        icon: <FaIcons.FaRegChartBar/>,
+        icon: <BsIcons.BsFillGearFill/>,
         cName: 'nav-text'
     },
 ]
