@@ -12,7 +12,11 @@
 .pa,
 .si,
 .mi,
-.suporte {
+.login,
+.cadastro,
+.ai,
+.md {
+  background-image: url('src/Components/imagens/fundo-branco.jpg');
   display: flex;
   height: 90vh;
   align-items: center;
