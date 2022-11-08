@@ -8,13 +8,13 @@ import * as BsIcons from "react-icons/bs";
 
 export const SidebarData = [
     {
-        title : 'Home',
+        title : 'Página Inicial',
         path: '/',
         icon: <AiIcons.AiFillHome/>,
         cName: 'nav-text'
     },
     {
-        title : 'News',
+        title : 'Notícias',
         path: '/news',
         icon: <FaIcons.FaRegNewspaper/>,
         cName: 'nav-text'
