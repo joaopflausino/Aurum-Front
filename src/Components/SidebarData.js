@@ -32,21 +32,26 @@ export const SidebarData = [
         cName: 'nav-text'
     },
     {
-        title : 'Simular Investimentos',
-        path: '/si',
-        icon: <BsIcons.BsGraphUp/>,
-        cName: 'nav-text'
-    },
-    {
         title : 'Adicionar Investimentos',
         path: '/ai',
         icon: <Io5Icons.IoBagAddSharp/>,
         cName: 'nav-text'
     },
     {
+        title : 'Simular Investimentos',
+        path: '/si',
+        icon: <BsIcons.BsGraphUp/>,
+        cName: 'nav-text'
+    },
+    {
         title : 'Meus dados',
         path: '/md',
         icon: <BsIcons.BsFillGearFill/>,
+        cName: 'nav-text'
+    },
+    {
+        title : 'Sair',
+        icon: <MdIcons.MdLogout/>,
         cName: 'nav-text'
     },
 ]
