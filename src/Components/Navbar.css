@@ -14,7 +14,7 @@
 
 .nav-menu {
     background-color: #000000;
-    width: 250px;
+    width: 270px;
     height: 100vh;
     display: flex;
     justify-content: center;
@@ -33,9 +33,9 @@
     display: flex;
     justify-content: start;
     align-items: center;
-    padding: 7px 0px;
+    padding: 5px;
     list-style: none;
-    height: 65px;
+    height: 70px;
 }
 
 .nav-text a {
@@ -57,7 +57,6 @@
 
 .nav-menu-items{
     width: 100%;
-
 }
 
 .navbar-toggle{
