@@ -1,4 +1,5 @@
 import "./App.css";
+import "./login.css";
 import { React } from "react";
 import Home from "./Pages/Home";
 import Login from "./Pages/Login";
