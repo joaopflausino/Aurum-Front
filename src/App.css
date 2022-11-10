@@ -14,7 +14,7 @@
 .mi,
 .ai,
 .md {
-  background-image: url('./Components/imagens/fundo-branco.jpg');
+  background-image: url('./Imagens/fundo-branco.jpg');
   display: flex;
   height: 90vh;
   align-items: center;
