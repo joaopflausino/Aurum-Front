@@ -22,11 +22,8 @@ function Login() {
           <div className='img-carteira'>
             <img src={imagem} className='carteira' alt="carteira" />
           </div>
-        </div>
-        
-          
+        </div> 
       </div>
-
 
       <div className='direita-login'>
         <div className='card-login'>
@@ -41,7 +38,6 @@ function Login() {
           <button className='botao-login'>Entrar</button>
           <h3>Não tem conta?</h3>
           <button className='botao-criar-conta'>Registrar Agora</button>
-
         </div>
       </div>
     </div>

@@ -19,15 +19,12 @@ body{
     flex-direction: column;
 }
 
-
-
 .direita-login{
     width: 40vw;
     height: 100vh; 
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
 
 .card-login{
