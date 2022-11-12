@@ -1,5 +1,5 @@
 body{
-    background-image: url('./Imagens/fundo-branco.jpg');
+    background-image: url('../../shared/images/fundo-branco.jpg');
 }
 
 .main-login{
@@ -132,3 +132,7 @@ h2 {
     cursor: pointer;
     text-decoration: underline;
 }
+
+.navbar {
+    display: none;
+  }
