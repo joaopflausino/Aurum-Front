@@ -1,8 +1,8 @@
 import React from 'react';
 import './login.css';
-import imagem from '../../shared/images/Carteira.png';
+import imagem1 from '../../shared/images/Carteira.png';
+import imagem2 from '../../shared/images/logo.png';
 import { useEffect } from 'react';
-
 
 function Login() {
   useEffect(() => {
@@ -11,6 +11,9 @@ function Login() {
   return (
     <>
       <div className='main-login'>
+        <header className='header'>
+          <img src={imagem2} className='logo' alt="logo" />  
+        </header>   
         <div className='esquerda-login'>
           <div className='texto1'>
             <h1>A melhor plataforma</h1>
@@ -25,7 +28,7 @@ function Login() {
               <h2>e muito mais...</h2>
             </div>
             <div className='img-carteira'>
-              <img src={imagem} className='carteira' alt="carteira" />
+              <img src={imagem1} className='carteira' alt="carteira" />
             </div>
           </div>
         </div>
@@ -34,10 +37,10 @@ function Login() {
           <div className='card-login'>
             <h1>Login</h1>
             <div className='campo-texto'>
-              <input type="text" name="email" placeholder="E-mail" />
+              <input id='email' type="text" name="email" placeholder="E-mail" />
             </div>
             <div className='campo-texto'>
-              <input type="password" name="senha" placeholder="Senha" />
+              <input id='senha' type="password" name="senha" placeholder="Senha" />
             </div>
             <button className='botao-esqueceu-senha'>Esqueceu a senha?</button>
             <button className='botao-login'>Entrar</button>

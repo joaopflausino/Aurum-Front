@@ -1,15 +1,21 @@
 import React from 'react';
 import { useEffect } from 'react';
 import './registration.css';
+import imagem1 from '../../shared/images/logo.png';
 
 function Cadastro() {
   useEffect(() => {
     document.title = "Cadastro"
  }, []);
   return (
-    <div className='cadastro'>
-        <h3>Cadastro</h3>
-    </div>
+    <>
+      <header className='header'>
+          <img src={imagem1} className='logo' alt="logo" />  
+      </header> 
+      <div className='main'>
+        <div className='container'></div>
+      </div>
+    </>
   );
 }
 

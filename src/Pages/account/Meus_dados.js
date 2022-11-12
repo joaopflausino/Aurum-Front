@@ -9,12 +9,11 @@ function MD() {
  }, []);
   return (
     <>
-      <Navbar />
-      <div className='md'>
-        <h3>Meus Dados</h3>
+    <Navbar/>
+      <div className='main'>
+        <div className='container'></div>
       </div>
     </>
-
   );
 }
 
