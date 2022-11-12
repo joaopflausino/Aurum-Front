@@ -1,7 +1,7 @@
 import React from 'react';
 import './login.css';
 import imagem1 from '../../shared/images/Carteira.png';
-import imagem2 from '../../shared/images/logo.png';
+import imagem2 from '../../shared/images/logo-aurum.png';
 import { useEffect } from 'react';
 
 function Login() {

@@ -1,7 +1,7 @@
 import React from 'react';
 import { useEffect } from 'react';
 import './registration.css';
-import imagem1 from '../../shared/images/logo.png';
+import imagem1 from '../../shared/images/logo-aurum.png';
 
 function Cadastro() {
   useEffect(() => {
