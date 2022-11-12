@@ -9,49 +9,57 @@ import * as BsIcons from "react-icons/bs";
 export const SidebarData = [
     {
         title : 'Página Inicial',
-        path: '/',
+        path: '/home',
         icon: <AiIcons.AiFillHome/>,
-        cName: 'nav-text'
+        cName: 'nav-text',
+        id: 'home'
     },
     {
         title : 'Notícias',
         path: '/news',
         icon: <FaIcons.FaRegNewspaper/>,
-        cName: 'nav-text'
+        cName: 'nav-text',
+        id: 'news'
     },
     {
         title : 'Principais ações',
         path: '/pa',
         icon: <MdIcons.MdOutlineTableChart/>,
-        cName: 'nav-text'
+        cName: 'nav-text',
+        id: 'stocks'
     },
     {
         title : 'Meus Investimentos',
         path: '/mi',
         icon: <FaIcons.FaWallet/>,
-        cName: 'nav-text'
+        cName: 'nav-text',
+        id: 'investments'
     },
     {
         title : 'Adicionar Investimentos',
         path: '/ai',
         icon: <Io5Icons.IoBagAddSharp/>,
-        cName: 'nav-text'
+        cName: 'nav-text',
+        id: 'add-investments'
     },
     {
         title : 'Simular Investimentos',
         path: '/si',
         icon: <BsIcons.BsGraphUp/>,
-        cName: 'nav-text'
+        cName: 'nav-text',
+        id: 'simulate'
     },
     {
         title : 'Meus dados',
         path: '/md',
         icon: <BsIcons.BsFillGearFill/>,
-        cName: 'nav-text'
+        cName: 'nav-text',
+        id: 'account'
     },
     {
         title : 'Sair',
         icon: <MdIcons.MdLogout/>,
-        cName: 'nav-text'
+        cName: 'nav-text',
+        id: 'logout'
     },
 ]
