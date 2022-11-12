@@ -35,7 +35,7 @@ body{
     display: flex;
     align-items: center;
     flex-direction: column;
-    padding: 0px 35px;
+    padding: 30px 0px 30px 70px;
     margin-bottom: 50px;
 }
 
@@ -87,7 +87,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: start;  
-    margin: 0px 0px 100px 130px;
+    margin: 0px 0px 100px 0px;
 }
 
 h2 {   
@@ -103,7 +103,7 @@ h2 {
 }
 
 .carteira{
-    width: 30vw;
+    width: 27vw;
     margin: 50px 50px 0px 0px;
 }
 
