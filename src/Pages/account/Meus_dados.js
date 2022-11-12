@@ -11,7 +11,7 @@ function MD() {
     <>
     <Navbar/>
       <div className='main'>
-        <div className='container'></div>
+        <div className='container-dados'></div>
       </div>
     </>
   );
