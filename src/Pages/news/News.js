@@ -8,31 +8,22 @@ function News() {
 
 
   async function APIGET() {
-    let response = await fetch("https://newsapi.org/v2/everything?q=bitcoin&apiKey=5a7f60e7d5164715bef3a0f5b0b0301d");
+    let response = await fetch("https://newsapi.org/v2/everything?q=mercado-financeiro&from=2022-11-11&to=2022-11-11&sortBy=popularity&apiKey=572353a32aed49179c9463f5eee0e609");
     let result = await response.json();
-    console.log(result)
-    console.log(result.articles);
-    let p = result.articles.map((a) => {
-      return <div class="p-8">
-        <div class="max-w-sm rounded overflow-hidden shadow-lg">
-          <img class="w-full" src={a.urlToImage} />
-          <div class="px-6 py-4">
-            <div class="font-bold text-xl mb-2">{a.title}</div>
-            <p class="text-gray-700 text-base">
-              {a.description}
-            </p>
-            <button class="font-bold text-xl mb-2"> <a href={a.url}>Read more</a></button>
-          </div>
-          <div class="px-6 pt-4 pb-2">
-            <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#coding</span>
-            <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#Akhilesh</span>
-            <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#AI</span>
-          </div>
+
+    const news = result.articles.slice(0, 10).map(noticia => {
+      return <a className="noticia" href={noticia.url}>
+        <div className="imagem">
+          <img className="imagem-noticia" src={noticia.urlToImage} />
         </div>
-      </div>
+        <div className="texto">
+          <div className="titulo">{noticia.title}</div>
+          <div className="subtitulo">{noticia.description}</div>
+        </div>
+      </a>
     });
-    console.log(p);
-    setValue(p);
+
+    setValue(news);
   }
 
   useEffect(() => {
@@ -41,16 +32,16 @@ function News() {
 
   useEffect(() => {
     document.title = "Notícias"
- }, []);
+  }, []);
 
   return (
     <>
       <Navbar />
-      <div className='news'>
-        <h3>News {value}</h3>
+      <div className='container'>
+        <h3>Notícias do dia</h3>
+        <div className='noticias'>{value}</div>
       </div>
     </>
-
   );
 }
 

@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500;700&display=swap');
+
+* {
+    font-family: 'Inter', sans-serif;
+}
+
+/* h3 {
+    margin-top: 10vh;
+} */
+
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+h3 {
+    margin: 6vh 0 3vh 0;
+    text-align: center;
+    margin-left: 6vw;
+    font-size: 40px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.noticias {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    align-items: center;
+    flex-direction: column;
+    margin-left: 6vw;
+}
+
+.noticia {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    width: 70%;
+    background-color: rgba(234, 234, 234, 0.531);
+    border: 1px solid rgb(216, 214, 214);
+    padding: 3vw;
+    margin: 2vw;
+    transition: transform .2s;
+}
+
+.noticia:hover {
+    transform: scale(1.1);
+}
+
+.imagem-noticia {
+    width: 30vw;
+}
+
+.texto {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    margin: 1em 0 0 1em;
+}
+
+.titulo {
+    font-weight: 700;
+    font-size: 30px;
+}
+
+.subtitulo {
+    font-size: 20px;
+    margin: .5em 0 0 1em;
+}
