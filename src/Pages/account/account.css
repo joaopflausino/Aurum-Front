@@ -11,7 +11,7 @@
     width: 40vw;
     height: 72vh;
     display: flex;
-    justify-content: center;
+    justify-content:flex-start;
     align-items: center;
     background: #b2b2b2a2;
     border:none;
@@ -22,23 +22,23 @@
 
 .h1-meus-dados{
     font-size: 2em;
-    margin: 0px 0px 5% 0px;
+    margin: 12% 0px 8% 0px;
 }
 
-
-
 .texto-e-input-md{
-    width: 60%;
+    width: 90%;
     display: flex;
     flex-direction:row;
     align-items: center;
     justify-content:center ;
+    margin: 2% 0px;
 }
 
 .texto-e-input-md > label{
+    margin-left: 10%;
+    width: 22%;
     font-size: 13pt;
     font-weight: 600;
-     
 }
 
 .texto-e-input-md > input{
@@ -55,7 +55,8 @@
 }
 
 .check-md{
-    width: 60%;
+    margin: 10px 10% 0px 5px;
+    width: 20%;
     display: flex;
     flex-direction:column;
     align-items: center;
@@ -77,11 +78,11 @@
 .botao-salvar{
     width: 50%;
     padding: 16px 0px;
-    margin: 25px;
+    margin-top: 5%;
     border:none;
     border-radius: 10px;
     outline: none;
-    font-size: 12pt;
+    font-size: 13pt;
     background: #fce91b;
     font-weight: 800;
     cursor: pointer;
