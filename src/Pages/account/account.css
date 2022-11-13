@@ -21,29 +21,11 @@
 }
 
 .h1-meus-dados{
-    margin: 5% 0px;
+    font-size: 2em;
+    margin: 0px 0px 5% 0px;
 }
 
-.editar-foto{
-    width: 60%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content:center ;
-}
 
-.botao-editar-foto{
-    width: 50%;
-    padding: 16px 0px;
-    margin: 25px;
-    border:none;
-    border-radius: 10px;
-    outline: none;
-    font-size: 12pt;
-    background: #fce91b;
-    font-weight: 800;
-    cursor: pointer;
-}
 
 .texto-e-input-md{
     width: 60%;
@@ -104,3 +86,111 @@
     font-weight: 800;
     cursor: pointer;
 }
+
+
+/*  ------------------------TUDO ABAIXO É RESPOSAVEL PELO CHECKBOX ------------------------------------- */
+
+.toggler-wrapper.style-27 {
+    width: 54px;
+    height: 32px;
+}
+
+.toggler-wrapper.style-27 input[type="checkbox"]:checked+.toggler-slider .toggler-knob:before {
+    left: -100%;
+}
+  
+.toggler-wrapper.style-27 input[type="checkbox"]:checked+.toggler-slider .toggler-knob:after {
+    right: 3px;
+}
+  
+.toggler-wrapper.style-27 .toggler-knob {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+  
+.toggler-wrapper.style-27 .toggler-knob:before {
+    content: 'Não';
+    position: absolute;
+    width: calc(30px - 6px);
+    height: calc(30px - 6px);
+    border-radius: 50%;
+    left: 3px;
+    top: 3px;
+    background-color: #fff;
+    -webkit-transition: all 300ms ease;
+    transition: all 300ms ease;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    font-size: 70%;
+    font-weight: 600;
+}
+  
+.toggler-wrapper.style-27 .toggler-knob:after {
+    content: 'Sim';
+    position: absolute;
+    width: calc(30px - 6px);
+    height: calc(30px - 6px);
+    border-radius: 50%;
+    right: -100%;
+    top: 3px;
+    background-color: #fff;
+    -webkit-transition: all 300ms ease;
+    transition: all 300ms ease;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    font-size: 70%;
+    font-weight: 600;
+}
+  
+.toggler-wrapper {
+    display: block;
+    width: 45px;
+    height: 25px;
+    cursor: pointer;
+    position: relative;
+}
+
+.toggler-wrapper input[type="checkbox"] {
+    display: none;
+}
+
+.toggler-wrapper input[type="checkbox"]:checked+.toggler-slider {
+    background-color: #fce91b;
+}
+
+.toggler-wrapper .toggler-slider {
+    border: solid;
+    border-color: #03030336;
+    border-width: 1px;
+    border-radius: 50%;
+    background-color: #ccc;
+    position: absolute;
+    border-radius: 100px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    -webkit-transition: all 300ms ease;
+    transition: all 300ms ease;
+}
+
+.toggler-wrapper .toggler-knob {
+    position: absolute;
+    -webkit-transition: all 300ms ease;
+    transition: all 300ms ease;
+}
+
+/*  ------------------------TUDO ACIMA É RESPOSAVEL PELO CHECKBOX ------------------------------------- */
