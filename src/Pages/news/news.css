@@ -4,14 +4,13 @@
     font-family: 'Inter', sans-serif;
 }
 
-
-.container-noticia {
+.container-news {
     display: flex;
     flex-direction: column;
 }
 
-.h3-noticias-do-dia {
-    margin: 6vh 0 3vh 0;
+.news-h3 {
+    margin: 6vh 0 3vh 6vw;
     text-align: center;
     font-size: 40px;
 }
@@ -50,19 +49,19 @@
     width: 30vw;
 }
 
-.texto-noticia {
+.text {
     display: flex;
     flex-direction: column;
     height: 100%;
     margin: 1em 0 0 1em;
 }
 
-.titulo-noticia {
+.news-title {
     font-weight: 700;
     font-size: 30px;
 }
 
-.subtitulo-noticia {
+.news-subtitle {
     font-size: 20px;
     margin: .5em 0 0 1em;
 }

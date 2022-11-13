@@ -12,13 +12,13 @@ function News() {
     let result = await response.json();
 
     const news = result.articles.slice(0, 10).map(noticia => {
-      return <a className="noticia" href={noticia.url}>
-        <div className="imagem-not">
-          <img className="imagem-noticia" src={noticia.urlToImage} />
+      return <a className="single-news" href={noticia.url}>
+        <div className="image">
+          <img className="img-news" src={noticia.urlToImage} />
         </div>
-        <div className="texto-noticia">
-          <div className="titulo-noticia">{noticia.title}</div>
-          <div className="subtitulo-noticia">{noticia.description}</div>
+        <div className="text">
+          <div className="news-title">{noticia.title}</div>
+          <div className="news-subtitle">{noticia.description}</div>
         </div>
       </a>
     });
@@ -37,9 +37,9 @@ function News() {
   return (
     <>
       <Navbar />
-      <div className='container-noticia'>
-        <h3 className='h3-noticias-do-dia'>Notícias do dia</h3>
-        <div className='noticias'>{value}</div>
+      <div className='container-news'>
+        <h3 className='news-h3'>Notícias do dia</h3>
+        <div className='news'>{value}</div>
       </div>
     </>
   );
