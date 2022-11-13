@@ -11,7 +11,7 @@ function Cadastro() {
     <>
       <header className='header-cadastro'>
           <img src={imagem1} className='logo-cadastro' alt="logo" />  
-      </header> 
+      </header>
       <div className='main'>
         <div className='container-cadastro'>
           <h1>Cadastro</h1>

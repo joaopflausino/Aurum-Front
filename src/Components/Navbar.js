@@ -2,8 +2,6 @@ import './Navbar.css';
 import { Link } from 'react-router-dom';
 import React, { useState } from 'react';
 import { IconContext } from 'react-icons';
-import * as FaIcons from 'react-icons/fa';
-import * as AiIcons from 'react-icons/ai';
 import imagem from '../shared/images/nome-aurum-investing.png';
 import { SidebarData } from './SidebarData';
 
