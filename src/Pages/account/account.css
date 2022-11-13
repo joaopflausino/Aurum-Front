@@ -32,13 +32,65 @@
     justify-content:center ;
 }
 
+.botao-editar-foto{
+    width: 50%;
+    padding: 16px 0px;
+    margin: 25px;
+    border:none;
+    border-radius: 10px;
+    outline: none;
+    font-size: 12pt;
+    background: #fce91b;
+    font-weight: 800;
+    cursor: pointer;
+}
+
 .texto-e-input-md{
     width: 60%;
     display: flex;
     flex-direction:row;
-    align-items: flex-start;
+    align-items: center;
     justify-content:center ;
 }
+
+.texto-e-input-md > label{
+    font-size: 13pt;
+    font-weight: 600;
+     
+}
+
+.texto-e-input-md > input{
+    width: 100%;
+    border:solid;
+    border-width: 1px;
+    border-color: #3a3a3a9f;
+    border-radius: 10px;
+    padding: 15px;
+    font-size: 12pt;
+    outline: none;
+    box-sizing: border-box;
+    
+}
+
+.check-md{
+    width: 60%;
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content:center ;
+}
+
+.check-md > input{
+    width: 90px;
+
+}
+
+.check-md > label{
+    font-size: 10pt;
+    font-weight: 600;
+    
+}
+
 
 .botao-salvar{
     width: 50%;
