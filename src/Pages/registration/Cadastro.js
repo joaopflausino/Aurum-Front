@@ -14,7 +14,7 @@ function Cadastro() {
       </header> 
       <div className='main-cadastro'>
         <div className='container-cadastro'>
-          <h1>Cadastro</h1>
+          <h1 className='h1-cadastro'>Cadastro</h1>
           <div className='texto-e-input-cadastro'>
             <label for='nome'>Nome</label>
             <input id='nome' type="text" name="nome" placeholder="Nome" />

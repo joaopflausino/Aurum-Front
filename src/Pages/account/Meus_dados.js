@@ -10,7 +10,7 @@ function MD() {
   return (
     <>
     <Navbar/>
-      <div className='main'>
+      <div className='main-md'>
         <div className='container-dados'></div>
       </div>
     </>

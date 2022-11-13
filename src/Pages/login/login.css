@@ -26,6 +26,11 @@ body{
     align-items: center;
 }
 
+.h1-texto-login{
+    width: 100%;
+
+}
+
 .esquerda-login{
     width: 50vw;
     height: 60vh; 
@@ -108,7 +113,7 @@ body{
     align-items: center;  
 }
 
-.h2-subtexto-login {   
+.h2-subtexto-login{   
     font-weight: 200;
 }
 

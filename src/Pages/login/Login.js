@@ -16,8 +16,8 @@ function Login() {
         </header>   
         <div className='esquerda-login'>
           <div className='texto1-login'>
-            <h1>A melhor plataforma</h1>
-            <h1>para acompanhar seus investimentos...</h1>
+            <h1 className='h1-texto-login'>A melhor plataforma</h1>
+            <h1 className='h1-texto-login'>para acompanhar seus investimentos...</h1>
           </div>
           <div className='baixo-esquerda-login'>
             <div className='texto2-login'>
