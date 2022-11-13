@@ -13,7 +13,30 @@ function Cadastro() {
           <img src={imagem1} className='logo-cadastro' alt="logo" />  
       </header> 
       <div className='main'>
-        <div className='container-cadastro'></div>
+        <div className='container-cadastro'>
+          <h1>Cadastro</h1>
+          <div className='texto-e-input'>
+            <label for='nome'>Nome</label>
+            <input id='nome' type="text" name="nome" placeholder="Nome" />
+          </div>
+          <div className='texto-e-input'>
+            <label for='email'>Email</label>
+            <input id='email' type="text" name="email" placeholder="Email" />
+          </div>
+          <div className='texto-e-input'>
+            <label for='senha'>Senha</label>
+            <input id='senha' type="password" name="senha" placeholder="Senha" />
+          </div>
+          <div className='texto-e-input'>
+            <label for='confirmar-senha'>Confirmar Senha</label>
+            <input id='confirmar-senha' type="password" name="confirmar-senha" placeholder="Confirmar Senha" />
+          </div>
+          <div className='texto-e-input'>
+            <label for='cpf'>CPF</label>
+            <input id='cpf' type="text" name="cpf" placeholder="CPF" />
+          </div>
+          <button className='botao-cadastrar'>Cadastrar</button>
+        </div>
       </div>
     </>
   );
