@@ -45,7 +45,7 @@ function Login() {
             <button className='botao-esqueceu-senha'>Esqueceu a senha?</button>
             <button className='botao-login'>Entrar</button>
             <h3 className='h3-nao-tem-conta'>Não tem conta?</h3>
-            <button className='botao-criar-conta'>Registrar Agora</button>
+            <a className='botao-criar-conta' href='/cadastro'>Registrar Agora</a>
           </div>
         </div>
       </div>

@@ -157,6 +157,7 @@ body{
     font-size: 18pt;
     font-weight: 900;
     cursor: pointer;
+    color: inherit;
     text-decoration: underline;
 }
 
