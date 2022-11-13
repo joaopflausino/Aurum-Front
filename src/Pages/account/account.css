@@ -37,7 +37,7 @@
 .texto-e-input-md > label{
     margin-left: 10%;
     width: 22%;
-    font-size: 13pt;
+    font-size: 14pt;
     font-weight: 600;
 }
 
@@ -51,7 +51,6 @@
     font-size: 12pt;
     outline: none;
     box-sizing: border-box;
-    
 }
 
 .check-md{
@@ -65,15 +64,12 @@
 
 .check-md > input{
     width: 90px;
-
 }
 
 .check-md > label{
     font-size: 10pt;
     font-weight: 600;
-    
 }
-
 
 .botao-salvar{
     width: 50%;
