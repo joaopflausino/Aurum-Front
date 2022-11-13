@@ -1,3 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap');
+
+* {
+  font-family: 'Inter', sans-serif;
+}
+
+
 .navbar{
     background-color: #000000;
     height : 80px;
@@ -17,11 +24,12 @@
     width: 270px;
     height: 100vh;
     display: flex;
-    justify-content: center;
     position: fixed;
     top: 0;
     left: -100%;
     transition: 850ms;
+    flex-direction: column;
+    align-items: center;
 }
 
 .nav-menu.active{
@@ -36,6 +44,8 @@
     padding: 5px;
     list-style: none;
     height: 70px;
+    margin: 0;
+    padding: 0;
 }
 
 .nav-text a {
@@ -47,13 +57,18 @@
     display: flex;
     align-items: center;
     padding: 0 16px;
+    transition: .6s;
+    margin: 0;
 }
 
 .nav-text a:hover{
     background-color: #FFC600;
     color: #000000;
-    font-weight: bold;
 }
+
+/* .nav-text a:hover > svg{
+    color: #000000;
+} */
 
 .nav-menu-items{
     width: 100%;
@@ -70,4 +85,9 @@
 
 span{
     margin-left: 16px;
+}
+
+.logo-aurum{
+    width: 6vw;
+    margin: 2em 0 1em 0;
 }

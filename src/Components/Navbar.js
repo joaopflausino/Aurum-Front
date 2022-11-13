@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import { IconContext } from 'react-icons';
 import * as FaIcons from 'react-icons/fa';
 import * as AiIcons from 'react-icons/ai';
+import imagem from '../shared/images/nome-aurum-investing.png';
 import { SidebarData } from './SidebarData';
 
 function Navbar() {
@@ -11,22 +12,14 @@ function Navbar() {
 
     const showSidebar = () => setSidebar(!sidebar);
 
-
     return (
         <>
             <IconContext.Provider value={{ color: '#fff' }}>
-                {/* <div className='navbar'>
-                <Link to='#' classname='menu-bars'>
-                    <FaIcons.FaBars onClick={showSidebar}/>
-                </Link>
-            </div> */}
                 <nav className={'nav-menu active'}>
+                    <div class="imagem">
+                    <img src={imagem} className="logo-aurum"/>
+                    </div>
                     <ul className='nav-menu-items' onClick={showSidebar}>
-                        {/* <li className='navbar-toggle'>
-                            <Link>
-                                <AiIcons.AiOutlineClose />
-                            </Link>
-                        </li> */}
                         {SidebarData.map((item, index) => {
                             return (
                                 <li key={index} className={item.cName} id={item.id}>
