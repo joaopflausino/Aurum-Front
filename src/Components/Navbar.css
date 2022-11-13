@@ -4,6 +4,9 @@
   font-family: 'Inter', sans-serif;
 }
 
+.nav-menu-items {
+    padding: 0;
+}
 
 .navbar{
     background-color: #000000;

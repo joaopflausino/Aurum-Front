@@ -37,7 +37,7 @@ export const SidebarData = [
     },
     {
         title : 'Adicionar Investimentos',
-        path: '/ai',
+        path: '/add-investment',
         icon: <Io5Icons.IoBagAddSharp/>,
         cName: 'nav-text',
         id: 'add-investments'
