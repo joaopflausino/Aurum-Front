@@ -4,7 +4,7 @@ import './news.css';
 
 function News() {
 
-  let [value, setValue] = useState("joao");
+  let [value, setValue] = useState("");
 
 
   async function APIGET() {
