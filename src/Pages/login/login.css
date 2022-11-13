@@ -26,6 +26,11 @@ body{
     align-items: center;
 }
 
+.h1-texto-login{
+    width: 100%;
+
+}
+
 .esquerda-login{
     width: 50vw;
     height: 60vh; 
@@ -62,7 +67,7 @@ body{
     margin: 0px 0px 50px 0px;
 }
 
-.campo-texto{
+.campo-texto-login{
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -70,7 +75,7 @@ body{
     justify-content: center;
 }
 
-.campo-texto > input{
+.campo-texto-login > input{
     width: 100%;
     border:solid;
     border-width: 1px;
@@ -96,23 +101,23 @@ body{
     cursor: pointer;
 }
 
-.texto1{
+.texto1-login{
     font-size: 17pt;
     margin: 100px 100px 0px 00px;
 }
 
-.baixo-esquerda{
+.baixo-esquerda-login{
     width: 60vw;
     display: flex;
     justify-content:start;
     align-items: center;  
 }
 
-.h2-subtexto {   
+.h2-subtexto-login{   
     font-weight: 200;
 }
 
-.texto2{
+.texto2-login{
     box-sizing: border-box;
     display: flex;
     justify-content: center;

@@ -14,7 +14,7 @@
     height: 100%; 
 }
 
-.main{
+.main-cadastro{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -35,7 +35,7 @@
     flex-direction: column;    
 }
 
-.texto-e-input{
+.texto-e-input-cadastro{
     width: 60%;
     display: flex;
     flex-direction: column;
@@ -43,13 +43,13 @@
     justify-content:center ;
 }
 
-.texto-e-input > label{
+.texto-e-input-cadastro > label{
     font-size: 13pt;
     font-weight: 600;
     margin-bottom: 2px;
     margin-left: 4px;
 }
-.texto-e-input > input{
+.texto-e-input-cadastro > input{
     width: 100%;
     border:solid;
     border-width: 1px;
@@ -62,7 +62,7 @@
     margin-bottom: 15px;
 }
 
-.container-cadastro > h1{
+.h1-cadastro{
     margin: 5% 0px;
 }
 
