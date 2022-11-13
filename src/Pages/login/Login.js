@@ -21,11 +21,11 @@ function Login() {
           </div>
           <div className='baixo-esquerda'>
             <div className='texto2'>
-              <h2>Notícias,</h2>
-              <h2>Cotações,</h2>
-              <h2>Simulações,</h2>
-              <h2>Rentabilidade,</h2>
-              <h2>e muito mais...</h2>
+              <h2 className='h2-subtexto'>Notícias,</h2>
+              <h2 className='h2-subtexto'>Cotações,</h2>
+              <h2 className='h2-subtexto'>Simulações,</h2>
+              <h2 className='h2-subtexto'>Rentabilidade,</h2>
+              <h2 className='h2-subtexto'>e muito mais...</h2>
             </div>
             <div className='img-carteira'>
               <img src={imagem1} className='carteira' alt="carteira" />
@@ -35,7 +35,7 @@ function Login() {
 
         <div className='direita-login'>
           <div className='card-login'>
-            <h1>Login</h1>
+            <h1 className='h1-login'>Login</h1>
             <div className='campo-texto'>
               <input id='email' type="text" name="email" placeholder="E-mail" />
             </div>
@@ -44,7 +44,7 @@ function Login() {
             </div>
             <button className='botao-esqueceu-senha'>Esqueceu a senha?</button>
             <button className='botao-login'>Entrar</button>
-            <h3 className='sem-conta'>Não tem conta?</h3>
+            <h3 className='h3-nao-tem-conta'>Não tem conta?</h3>
             <button className='botao-criar-conta'>Registrar Agora</button>
           </div>
         </div>

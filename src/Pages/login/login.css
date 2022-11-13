@@ -57,7 +57,7 @@ body{
     overflow:hidden;
 }
 
-.card-login > h1{
+.h1-login{
     font-weight: 800;
     margin: 0px 0px 50px 0px;
 }
@@ -108,7 +108,7 @@ body{
     align-items: center;  
 }
 
-h2 {   
+.h2-subtexto {   
     font-weight: 200;
 }
 
@@ -139,7 +139,7 @@ h2 {
     cursor: pointer;
 }
 
-.sem-conta{
+.h3-nao-tem-conta{
     margin-top: 50px;
     font-weight: 200;
     font-size: 16pt;
