@@ -15,17 +15,17 @@ function Login() {
           <img src={imagem2} className='logo-login' alt="logo" />  
         </header>   
         <div className='esquerda-login'>
-          <div className='texto1'>
+          <div className='texto1-login'>
             <h1>A melhor plataforma</h1>
             <h1>para acompanhar seus investimentos...</h1>
           </div>
-          <div className='baixo-esquerda'>
-            <div className='texto2'>
-              <h2 className='h2-subtexto'>Notícias,</h2>
-              <h2 className='h2-subtexto'>Cotações,</h2>
-              <h2 className='h2-subtexto'>Simulações,</h2>
-              <h2 className='h2-subtexto'>Rentabilidade,</h2>
-              <h2 className='h2-subtexto'>e muito mais...</h2>
+          <div className='baixo-esquerda-login'>
+            <div className='texto2-login'>
+              <h2 className='h2-subtexto-login'>Notícias,</h2>
+              <h2 className='h2-subtexto-login'>Cotações,</h2>
+              <h2 className='h2-subtexto-login'>Simulações,</h2>
+              <h2 className='h2-subtexto-login'>Rentabilidade,</h2>
+              <h2 className='h2-subtexto-login'>e muito mais...</h2>
             </div>
             <div className='img-carteira'>
               <img src={imagem1} className='carteira' alt="carteira" />
@@ -36,10 +36,10 @@ function Login() {
         <div className='direita-login'>
           <div className='card-login'>
             <h1 className='h1-login'>Login</h1>
-            <div className='campo-texto'>
+            <div className='campo-texto-login'>
               <input id='email' type="text" name="email" placeholder="E-mail" />
             </div>
-            <div className='campo-texto'>
+            <div className='campo-texto-login'>
               <input id='senha' type="password" name="senha" placeholder="Senha" />
             </div>
             <button className='botao-esqueceu-senha'>Esqueceu a senha?</button>

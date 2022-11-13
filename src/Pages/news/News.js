@@ -13,12 +13,12 @@ function News() {
 
     const news = result.articles.slice(0, 10).map(noticia => {
       return <a className="noticia" href={noticia.url}>
-        <div className="imagem">
+        <div className="imagem-not">
           <img className="imagem-noticia" src={noticia.urlToImage} />
         </div>
-        <div className="texto">
-          <div className="titulo">{noticia.title}</div>
-          <div className="subtitulo">{noticia.description}</div>
+        <div className="texto-noticia">
+          <div className="titulo-noticia">{noticia.title}</div>
+          <div className="subtitulo-noticia">{noticia.description}</div>
         </div>
       </a>
     });
@@ -37,8 +37,8 @@ function News() {
   return (
     <>
       <Navbar />
-      <div className='container'>
-        <h3>Notícias do dia</h3>
+      <div className='container-noticia'>
+        <h3 className='h3-noticias-do-dia'>Notícias do dia</h3>
         <div className='noticias'>{value}</div>
       </div>
     </>
