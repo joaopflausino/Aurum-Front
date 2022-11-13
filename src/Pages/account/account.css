@@ -19,3 +19,36 @@
     outline: none;
     flex-direction: column;    
 }
+
+.h1-meus-dados{
+    margin: 5% 0px;
+}
+
+.editar-foto{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:center ;
+}
+
+.texto-e-input-md{
+    width: 60%;
+    display: flex;
+    flex-direction:row;
+    align-items: flex-start;
+    justify-content:center ;
+}
+
+.botao-salvar{
+    width: 50%;
+    padding: 16px 0px;
+    margin: 25px;
+    border:none;
+    border-radius: 10px;
+    outline: none;
+    font-size: 12pt;
+    background: #fce91b;
+    font-weight: 800;
+    cursor: pointer;
+}

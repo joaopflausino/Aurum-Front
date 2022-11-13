@@ -11,7 +11,30 @@ function MD() {
     <>
     <Navbar/>
       <div className='main-md'>
-        <div className='container-dados'></div>
+        <div className='container-dados'>
+          <h1 className='h1-meus-dados'>Meus Dados</h1>
+          <div className='editar-foto'>
+            
+
+          </div>
+          <div className='texto-e-input-md'>
+
+
+          </div>
+          <div className='texto-e-input-md'>
+
+
+          </div>
+          <div className='texto-e-input-md'>
+
+
+          </div>
+          <div className='texto-e-input-md'>
+
+
+          </div>
+          <button className='botao-salvar'>Salvar</button>
+        </div>
       </div>
     </>
   );
