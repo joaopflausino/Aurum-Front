@@ -4,7 +4,7 @@ import './news.css';
 
 function News() {
 
-  let [value, setValue] = useState("joao");
+  let [value, setValue] = useState("");
 
 
   async function APIGET() {
@@ -12,13 +12,13 @@ function News() {
     let result = await response.json();
 
     const news = result.articles.slice(0, 10).map(noticia => {
-      return <a className="noticia" href={noticia.url}>
-        <div className="imagem">
-          <img className="imagem-noticia" src={noticia.urlToImage} />
+      return <a className="single-news" href={noticia.url}>
+        <div className="image">
+          <img className="img-news" src={noticia.urlToImage} />
         </div>
-        <div className="texto">
-          <div className="titulo">{noticia.title}</div>
-          <div className="subtitulo">{noticia.description}</div>
+        <div className="text">
+          <div className="news-title">{noticia.title}</div>
+          <div className="news-subtitle">{noticia.description}</div>
         </div>
       </a>
     });
@@ -37,9 +37,9 @@ function News() {
   return (
     <>
       <Navbar />
-      <div className='container'>
-        <h3>Notícias do dia</h3>
-        <div className='noticias'>{value}</div>
+      <div className='container-news'>
+        <h3 className='news-h3'>Notícias do dia</h3>
+        <div className='news'>{value}</div>
       </div>
     </>
   );
