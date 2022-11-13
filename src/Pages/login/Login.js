@@ -11,8 +11,8 @@ function Login() {
   return (
     <>
       <div className='main-login'>
-        <header className='header'>
-          <img src={imagem2} className='logo' alt="logo" />  
+        <header className='header-login'>
+          <img src={imagem2} className='logo-login' alt="logo" />  
         </header>   
         <div className='esquerda-login'>
           <div className='texto1'>

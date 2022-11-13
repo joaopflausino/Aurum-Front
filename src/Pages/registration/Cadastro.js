@@ -9,8 +9,8 @@ function Cadastro() {
  }, []);
   return (
     <>
-      <header className='header'>
-          <img src={imagem1} className='logo' alt="logo" />  
+      <header className='header-cadastro'>
+          <img src={imagem1} className='logo-cadastro' alt="logo" />  
       </header> 
       <div className='main'>
         <div className='container-cadastro'></div>
