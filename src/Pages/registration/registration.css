@@ -32,6 +32,7 @@
     background: #b2b2b2a2;
     border:none;
     border-radius: 15px;
+    box-sizing: border-box;
     flex-direction: column;    
 }
 
@@ -59,7 +60,7 @@
     font-size: 12pt;
     outline: none;
     box-sizing: border-box;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
 }
 
 .h1-cadastro{
@@ -69,7 +70,7 @@
 .botao-cadastrar{
     width: 50%;
     padding: 16px 0px;
-    margin: 25px;
+    margin: 1vw;
     border:none;
     border-radius: 10px;
     outline: none;
