@@ -13,6 +13,7 @@
     margin: 6vh 0 3vh 6vw;
     text-align: center;
     font-size: 40px;
+    font-weight: 800;
 }
 
 .single-news {
@@ -26,7 +27,7 @@
     height: 100vh;
     align-items: center;
     flex-direction: column;
-    margin-left: 6vw;
+    margin-left: 8vw;
 }
 
 .single-news {

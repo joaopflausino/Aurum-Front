@@ -38,7 +38,6 @@ function News() {
     <>
       <Navbar />
       <div className='container-news'>
-        <h3 className='news-h3'>Notícias do dia</h3>
         <div className='news'>{value}</div>
       </div>
     </>
