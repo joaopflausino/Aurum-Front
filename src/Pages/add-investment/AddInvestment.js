@@ -34,10 +34,10 @@ function AddInvestment() {
       <Navbar />
       <div className='main-add-investment'>
         <div className='investment-options'>
-          <Button color="danger" onClick={openCheckingAccount}>Conta Corrente</Button>
-          <Button color="danger" onClick={openDirectTreasuary}>Tesouro Direto</Button>
-          <Button color="danger" onClick={openFixedRate}>Renda Fixa</Button>
-          <Button color="danger" onClick={openStock}>Ação</Button>
+          <Button onClick={openCheckingAccount}>Conta Corrente</Button>
+          <Button onClick={openDirectTreasuary}>Tesouro Direto</Button>
+          <Button onClick={openFixedRate}>Renda Fixa</Button>
+          <Button onClick={openStock}>Ação</Button>
         </div>
 
 
