@@ -1,0 +1,38 @@
+.main-mi{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    flex-direction: column;
+}
+
+.container-cima-mi{
+    margin:3vh 0px 0px 16vw;
+    width: 60vw;
+    height: 43vh;
+    display: flex;
+    justify-content:flex-start;
+    align-items: center;
+    background: #b2b2b2a2;
+    border:none;
+    border-radius: 15px;
+    outline: none;
+    flex-direction: column;  
+}
+
+.container-baixo-mi{
+    margin:20px 0px 3vh 16vw;
+    width: 60vw;
+    height: 57vh;
+    display: flex;
+    justify-content:flex-start;
+    align-items: center;
+    background: #b2b2b2a2;
+    border:none;
+    border-radius: 15px;
+    outline: none;
+    flex-direction: column;  
+
+
+}

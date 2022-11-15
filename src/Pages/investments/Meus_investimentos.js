@@ -10,8 +10,9 @@ function MI() {
   return (
     <>
       <Navbar />
-      <div className='mi'>
-        <h3>Meus Investimentos</h3>
+      <div className='main-mi'>
+        <div className='container-cima-mi'></div>
+        <div className='container-baixo-mi'></div>
       </div>
     </>
   );
