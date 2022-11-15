@@ -1,4 +1,10 @@
-.main-si{
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+.main-si {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -6,99 +12,107 @@
     height: 100vh;
 }
 
-.container-si{
-    margin:0px 0px 0px 14%;
+.container-si {
+    margin: 0px 0px 0px 14%;
     width: 40vw;
     height: 72vh;
     display: flex;
-    justify-content:flex-start;
+    justify-content: flex-start;
     align-items: center;
-    background: #b2b2b2a2;
-    border:none;
-    border-radius: 15px;
+    background: #d9d9d9b3;
+    border: none;
     outline: none;
-    flex-direction: column;  
+    flex-direction: column;
 }
 
-.h3-si{
+.h3-si {
     padding: 1vw;
     font-size: 2.1em;
     font-weight: 700;
 }
 
-.texto-e-input-si-first{
+.texto-e-input-si-first {
     width: 90%;
     display: flex;
-    flex-direction:row;
+    flex-direction: row;
     align-items: flex-start;
-    justify-content:center;
-    flex-direction: column; 
+    justify-content: center;
+    flex-direction: column;
     margin-bottom: 2vh;
 }
 
-.texto-e-input-si-first >input{
+.texto-e-input-si-first>input {
     width: 100%;
     padding: 0.7vh;
     outline: none;
 }
 
-.texto-e-input-si{
+.texto-e-input-si {
     width: 90%;
     display: flex;
-    flex-direction:row;
+    flex-direction: row;
     align-items: flex-start;
-    justify-content:center;
-    flex-direction: column; 
-    margin-bottom: 2vh; 
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 2vh;
 }
 
 #aporte-periodico,
 #taxa-juros,
 #taxa-inflacao,
 #saque-periodico,
-#tempo{
+#tempo {
     width: 70%;
+}
+
+#aporte-periodico,
+#taxa-juros,
+#taxa-inflacao,
+#saque-periodico,
+#tempo,
+#valor-investido {
+    border: none;
 }
 
 #aporte-periodico1,
 #taxa-juros1,
 #taxa-inflacao1,
 #saque-periodico1,
-#tempo1{
+#tempo1 {
     width: 17px;
     height: 17px;
     margin: 0px 4px 0px 15px;
 }
 
-.dois-checkbox{
+.dois-checkbox {
     width: 100%;
     display: flex;
     align-items: center;
-    justify-content:flex-start;
+    justify-content: flex-start;
     flex-direction: row;
 }
 
 
-.checkbox-e-texto-si{
+.checkbox-e-texto-si {
     width: 100%;
     display: flex;
     align-items: center;
-    justify-content:flex-start;
-    flex-direction: row;  
+    justify-content: flex-start;
+    flex-direction: row;
 }
 
-.checkbox-e-texto-si > input{
+.checkbox-e-texto-si>input {
     padding: 0.7vh;
     outline: none;
 }
 
 
-.checkbox-si{
+.checkbox-si {
     width: 40%;
     display: flex;
     align-items: center;
-    justify-content:center;
-    flex-direction: row;  
+    justify-content: center;
+    flex-direction: row;
 }
 
 
@@ -110,11 +124,11 @@
 
 
 
-.botao-calcular{
+.botao-calcular {
     width: 45%;
     padding: 14px 0px;
     margin-top: 2vh;
-    border:none;
+    border: none;
     border-radius: 10px;
     outline: none;
     font-size: 13pt;

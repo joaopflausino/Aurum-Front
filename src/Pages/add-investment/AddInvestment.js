@@ -60,39 +60,24 @@ function AddInvestment() {
           <ModalHeader toggle={openFixedRate}>Cadastro de Renda Fixa</ModalHeader>
           <ModalFixedRate />
           <ModalFooter>
-            <Button color="primary" onClick={openFixedRate}>
-              Do Something
+            <Button form="modalForm" type="submit" color="primary" onClick={openFixedRate}>
+              Salvar
             </Button>{' '}
             <Button color="secondary" onClick={openFixedRate}>
-              Cancel
+              Cancelar
             </Button>
           </ModalFooter>
         </Modal>
-
-
-        <Modal isOpen={modalFixedRate} toggle={openFixedRate}>
-          <ModalHeader toggle={openFixedRate}>Cadastro de Renda Fixa</ModalHeader>
-          <ModalFixedRate />
-          <ModalFooter>
-            <Button color="primary" onClick={openFixedRate}>
-              Do Something
-            </Button>{' '}
-            <Button color="secondary" onClick={openFixedRate}>
-              Cancel
-            </Button>
-          </ModalFooter>
-        </Modal>
-
 
         <Modal isOpen={modalDirectTreasuary} toggle={openDirectTreasuary}>
           <ModalHeader toggle={openDirectTreasuary}>Cadastro de Tesouro Direto</ModalHeader>
           <ModalDirectTreasuary />
           <ModalFooter>
-            <Button color="primary" onClick={openDirectTreasuary}>
-              Do Something
+            <Button form="modalForm" type="submit" color="primary" onClick={openDirectTreasuary}>
+              Salvar
             </Button>{' '}
             <Button color="secondary" onClick={openDirectTreasuary}>
-              Cancel
+              Cancelar
             </Button>
           </ModalFooter>
         </Modal>
@@ -102,11 +87,11 @@ function AddInvestment() {
           <ModalHeader toggle={openCheckingAccount}>Cadastro de Conta Corrente</ModalHeader>
           <ModalCheckingAccount />
           <ModalFooter>
-            <Button color="primary" onClick={openCheckingAccount}>
-              Do Something
+            <Button form="modalForm" color="primary" type="submit" onClick={openCheckingAccount}>
+              Salvar
             </Button>{' '}
             <Button color="secondary" onClick={openCheckingAccount}>
-              Cancel
+              Cancelar
             </Button>
           </ModalFooter>
         </Modal>

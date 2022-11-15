@@ -16,7 +16,7 @@
     align-items:flex-start;
     background: #b2b2b2a2;
     border:none;
-    border-radius: 15px;
+    /* border-radius: 15px; */
     outline: none;
     flex-direction: row; 
 }
@@ -27,7 +27,7 @@
     padding: 16px 0px;
     margin:20px 10px 0px 10px;
     border:none;
-    border-radius: 10px;
+    /* border-radius: 10px; */
     outline: none;
     font-size: 13pt;
     background: #000000;

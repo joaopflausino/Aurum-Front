@@ -1,44 +1,77 @@
 import React, { useState } from 'react';
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
+import api from "../../../services/api";
 
 function ModalCheckingAccount(args) {
-  const [modal, setModal] = useState(true);
+  const [broker, setBroker] = React.useState(null);
 
-  const toggle = () => setModal(!modal);
+  React.useEffect(() => {
+    api.get("/broker").then((response) => {
+      setBroker(response.data);
+    });
+  }, []);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const formData = new FormData(e.target);
+    const data = Object.fromEntries(formData);
+    const json = {
+      "broker": {
+        "id": 1
+      },
+      "title": data.title,
+      "initialDate": data.initialDate,
+      "yieldRate": parseFloat(data.yieldRate),
+      "initialValue": parseFloat(data.initialValue)
+    };
+    api
+      .post("/checkingAccount", json)
+      .then((response) => {
+        console.log(response);
+      });
+  }
+
+  if (!broker) return null;
 
   return (
     <div>
         <ModalBody>
-          <Form>
+          <Form  id="modalForm" onSubmit={handleSubmit}>
             <FormGroup>
               <Label for="broker">
                 Instituição
               </Label>
               <Input
-                id="broker"
-                name="brokerName"
-                placeholder="Instituição"
-                type="text"
-              />
+                  id="broker"
+                  name="broker"
+                  type="select"
+                >
+                  {broker.map((b, index) => {
+                    return (
+                      <>
+                        <option key={index}>{b.name}</option>
+                      </>);
+                  })}
+                </Input>
             </FormGroup>
             <FormGroup>
-              <Label for="stockId">
+              <Label for="title">
                 Título
               </Label>
               <Input
-                id="stockId"
-                name="stockName"
-                placeholder="Nome da renda fixa"
+                id="title"
+                name="title"
+                placeholder="Título da conta corrente"
                 type="text"
               />
             </FormGroup>
             <FormGroup>
-              <Label for="buyDate">
+              <Label for="initialDate">
                 Data Inicial
               </Label>
               <Input
-                id="buyDate"
-                name="buyDateName"
+                id="initialDate"
+                name="initialDate"
                 type="date"
               />
             </FormGroup>
@@ -48,25 +81,22 @@ function ModalCheckingAccount(args) {
               </Label>
               <Input
                 id="initialValue"
-                name="initialValueName"
+                name="initialValue"
                 placeholder="Valor investido"
                 type="text"
               />
             </FormGroup>
             <FormGroup>
-              <Label for="yield">
+              <Label for="yieldRate">
                 Rendimento
               </Label>
               <Input
-                id="yield"
-                name="yieldName"
+                id="yieldRate"
+                name="yieldRate"
                 placeholder="Rendimento anual"
                 type="text"
               />
             </FormGroup>
-            <Button>
-              Adicionar ação
-            </Button>
           </Form>
         </ModalBody>
     </div>

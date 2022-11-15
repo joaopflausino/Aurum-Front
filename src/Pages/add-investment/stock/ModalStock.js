@@ -26,7 +26,7 @@ function ModalStock(args) {
     e.preventDefault();
     const formData = new FormData(e.target);
     const data = Object.fromEntries(formData);
-    const jsonStock = {
+    const json = {
       "stock": {
         "id": data.stock
       },
@@ -39,7 +39,7 @@ function ModalStock(args) {
       "price": parseFloat(data.price)
     };
     api
-      .post("/stock", jsonStock)
+      .post("/stock", json)
       .then((response) => {
         console.log(response);
       });

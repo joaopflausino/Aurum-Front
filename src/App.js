@@ -27,7 +27,6 @@ function App() {
           <Route path='/mi' element={<MI />} />
           <Route path='/si' element={<SI />} />
           <Route path='/md' element={<MD />} />
-          <Route path='/teste' element={<ModalStock/>}/>
         </Routes>
       </Router>
     </>
