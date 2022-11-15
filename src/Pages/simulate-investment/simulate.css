@@ -19,3 +19,106 @@
     outline: none;
     flex-direction: column;  
 }
+
+.h3-si{
+    padding: 1vw;
+    font-size: 2.1em;
+    font-weight: 700;
+}
+
+.texto-e-input-si-first{
+    width: 90%;
+    display: flex;
+    flex-direction:row;
+    align-items: flex-start;
+    justify-content:center;
+    flex-direction: column; 
+    margin-bottom: 2vh;
+}
+
+.texto-e-input-si-first >input{
+    width: 100%;
+    padding: 0.7vh;
+    outline: none;
+}
+
+.texto-e-input-si{
+    width: 90%;
+    display: flex;
+    flex-direction:row;
+    align-items: flex-start;
+    justify-content:center;
+    flex-direction: column; 
+    margin-bottom: 2vh; 
+}
+
+#aporte-periodico,
+#taxa-juros,
+#taxa-inflacao,
+#saque-periodico,
+#tempo{
+    width: 70%;
+}
+
+#aporte-periodico1,
+#taxa-juros1,
+#taxa-inflacao1,
+#saque-periodico1,
+#tempo1{
+    width: 17px;
+    height: 17px;
+    margin: 0px 4px 0px 15px;
+}
+
+.dois-checkbox{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content:flex-start;
+    flex-direction: row;
+}
+
+
+.checkbox-e-texto-si{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content:flex-start;
+    flex-direction: row;  
+}
+
+.checkbox-e-texto-si > input{
+    padding: 0.7vh;
+    outline: none;
+}
+
+
+.checkbox-si{
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    flex-direction: row;  
+}
+
+
+
+
+
+
+
+
+
+
+.botao-calcular{
+    width: 45%;
+    padding: 14px 0px;
+    margin-top: 2vh;
+    border:none;
+    border-radius: 10px;
+    outline: none;
+    font-size: 13pt;
+    background: #fce91b;
+    font-weight: 800;
+    cursor: pointer;
+}

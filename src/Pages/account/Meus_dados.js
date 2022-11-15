@@ -60,7 +60,7 @@ function MD() {
           </div>
 
           <div className='texto-e-input-md'> {/* DIV RESPONSAVEL PELA LINHA 4 COMPLETA */}
-           <label for='senha'>CPF</label>
+           <label for='cpf'>CPF</label>
             <input id='cpf-md' type="text" name="senha" placeholder="CPF" />
             <div className='check-md'> {/* DIV RESPONSAVEL PELO CHECKBOX */}
               <label className="toggler-wrapper style-27">
