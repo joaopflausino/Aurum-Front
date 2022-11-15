@@ -34,20 +34,28 @@
     display: flex;
     align-items: center;
     flex-direction: row;
-    width: 70%;
+    width: 65%;
     background-color: rgba(234, 234, 234, 0.531);
     border: 1px solid rgb(216, 214, 214);
-    padding: 3vw;
-    margin: 2vw;
+    padding: 1vw;
+    margin: 0.6vw;
     transition: transform .2s;
 }
 
+.single-news:nth-child(1){
+    margin-top: 3vw;
+}
+
 .single-news:hover {
+    background-color: #00000021;
+    font-weight: 600;
+    color: #a8821ad0;
     transform: scale(1.1);
 }
 
 .img-news {
-    width: 30vw;
+    width: 20vw;
+    height: 25vh;
 }
 
 .text {
