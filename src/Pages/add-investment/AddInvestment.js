@@ -42,7 +42,7 @@ function AddInvestment() {
         </div>
 
 
-        <Modal isOpen={modalStock} toggle={openStock}>
+        <Modal isOpen={modalStock} toggle={openStock} size="lg">
           <ModalHeader toggle={openStock}>Cadastro de Ativos</ModalHeader>
           <ModalStock />
           <ModalFooter>
@@ -56,7 +56,7 @@ function AddInvestment() {
         </Modal>
 
 
-        <Modal isOpen={modalFixedRate} toggle={openFixedRate}>
+        <Modal isOpen={modalFixedRate} toggle={openFixedRate} size="lg">
           <ModalHeader toggle={openFixedRate}>Cadastro de Renda Fixa</ModalHeader>
           <ModalFixedRate />
           <ModalFooter>
@@ -69,7 +69,7 @@ function AddInvestment() {
           </ModalFooter>
         </Modal>
 
-        <Modal isOpen={modalDirectTreasuary} toggle={openDirectTreasuary}>
+        <Modal isOpen={modalDirectTreasuary} toggle={openDirectTreasuary} size="lg">
           <ModalHeader toggle={openDirectTreasuary}>Cadastro de Tesouro Direto</ModalHeader>
           <ModalDirectTreasuary />
           <ModalFooter>
@@ -83,7 +83,7 @@ function AddInvestment() {
         </Modal>
 
 
-        <Modal isOpen={modalCheckingAccount} toggle={openCheckingAccount}>
+        <Modal isOpen={modalCheckingAccount} toggle={openCheckingAccount} size="lg">
           <ModalHeader toggle={openCheckingAccount}>Cadastro de Conta Corrente</ModalHeader>
           <ModalCheckingAccount />
           <ModalFooter>

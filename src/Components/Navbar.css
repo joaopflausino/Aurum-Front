@@ -5,9 +5,8 @@
 }
 
 .nav-menu-items {
-    padding-left: 15px;
     width: 100%;
-    
+    padding: 0;
 }
 
 .navbar{
@@ -88,8 +87,8 @@ span{
 }
 
 .logo-aurum{
-    width: 6vw;
-    margin: 4em 0 ;
+    width: 10vw;
+    margin: 3em 0 2em 0;
 }
 
 #account.nav-text{
