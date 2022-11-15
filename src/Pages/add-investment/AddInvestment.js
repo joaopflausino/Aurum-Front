@@ -7,6 +7,7 @@ import ModalStock from './stock/ModalStock';
 import ModalFixedRate from './fixedrate/ModalFixedRate';
 import ModalDirectTreasuary from './directtreasury/ModalDirectTreasury';
 import ModalCheckingAccount from './checkingaccount/ModalCheckingAccount';
+import api from "../../services/api";
 
 function AddInvestment() {
   useEffect(() => {
@@ -28,7 +29,7 @@ function AddInvestment() {
   const [modalCheckingAccount, setModalCheckingAccount] = useState(false);
   const openCheckingAccount = () => setModalCheckingAccount(!modalCheckingAccount);
 
-
+  
   return (
     <>
       <Navbar />
@@ -45,10 +46,24 @@ function AddInvestment() {
           <ModalHeader toggle={openStock}>Cadastro de Ativos</ModalHeader>
           <ModalStock />
           <ModalFooter>
-            <Button color="primary" onClick={openStock}>
-              Do Something
+            <Button form="modalForm" color="primary" type="submit" onClick={openStock}>
+              Salvar
             </Button>{' '}
             <Button color="secondary" onClick={openStock}>
+              Cancelar
+            </Button>
+          </ModalFooter>
+        </Modal>
+
+
+        <Modal isOpen={modalFixedRate} toggle={openFixedRate}>
+          <ModalHeader toggle={openFixedRate}>Cadastro de Renda Fixa</ModalHeader>
+          <ModalFixedRate />
+          <ModalFooter>
+            <Button color="primary" onClick={openFixedRate}>
+              Do Something
+            </Button>{' '}
+            <Button color="secondary" onClick={openFixedRate}>
               Cancel
             </Button>
           </ModalFooter>

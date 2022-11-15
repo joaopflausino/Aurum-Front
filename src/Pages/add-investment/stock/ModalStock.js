@@ -1,74 +1,126 @@
 import React, { useState } from 'react';
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
+import api from "../../../services/api";
 
 function ModalStock(args) {
   const [modal, setModal] = useState(true);
 
   const toggle = () => setModal(!modal);
 
+  const [stock, setStock] = React.useState(null);
+  const [broker, setBroker] = React.useState(null);
+
+  React.useEffect(() => {
+    api.get("/stockdb").then((response) => {
+      setStock(response.data);
+    });
+  }, []);
+
+  React.useEffect(() => {
+    api.get("/broker").then((response) => {
+      setBroker(response.data);
+    });
+  }, []);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const formData = new FormData(e.target);
+    const data = Object.fromEntries(formData);
+    const jsonStock = {
+      "stock": {
+        "id": data.stock
+      },
+      "broker": {
+        "id": 1
+      },
+      "quantity": parseFloat(data.quantity),
+      "initialValue": (parseFloat(data.quantity) * parseFloat(data.price)),
+      "initialDate": data.initialDate,
+      "price": parseFloat(data.price)
+    };
+    api
+      .post("/stock", jsonStock)
+      .then((response) => {
+        console.log(response);
+      });
+  }
+
+  if (!stock) return null;
+
+  if (!broker) return null;
+
   return (
     <div>
         <ModalBody>
-          <Form>
-            <FormGroup>
-              <Label for="broker">
-                Instituição
-              </Label>
-              <Input
-                id="broker"
-                name="brokerName"
-                placeholder="Instituição"
-                type="text"
-              />
-            </FormGroup>
-            <FormGroup>
-              <Label for="stockId">
-                Ativo
-              </Label>
-              <Input
-                id="stockId"
-                name="stockName"
-                placeholder="Nome do Ativo"
-                type="text"
-              />
-            </FormGroup>
-            <FormGroup>
-              <Label for="buyDate">
-                Data
-              </Label>
-              <Input
-                id="buyDate"
-                name="buyDateName"
-                type="date"
-              />
-            </FormGroup>
-            <FormGroup>
-              <Label for="quotation">
-                Cotação
-              </Label>
-              <Input
-                id="quotation"
-                name="quotationName"
-                placeholder="Cotação do Ativo"
-                type="text"
-              />
-            </FormGroup>
-            <FormGroup>
-              <Label for="quantity">
-                Quantidade
-              </Label>
-              <Input
-                id="quantity"
-                name="quantityName"
-                placeholder="Quantidade de ativos investida"
-                type="text"
-              />
-            </FormGroup>
-            <Button>
-              Adicionar ação
-            </Button>
-          </Form>
-        </ModalBody>
+            <Form id="modalForm" onSubmit={handleSubmit}>
+              <FormGroup>
+                <Label for="broker">
+                  Instituição
+                </Label>
+                <Input
+                  id="broker"
+                  name="broker"
+                  type="select"
+                >
+                  {broker.map((b, index) => {
+                    return (
+                      <>
+                        <option key={index}>{b.name}</option>
+                      </>);
+                  })}
+                </Input>
+              </FormGroup>
+              <FormGroup>
+                <Label for="stock">
+                  Ativo
+                </Label>
+                <Input
+                  id="stock"
+                  name="stock"
+                  type="select"
+                >
+                  {stock.map((s, index) => {
+                    return (
+                      <>
+                        <option key={index}>{s.id}</option>
+                      </>);
+                  })}
+                </Input>
+              </FormGroup>
+              <FormGroup>
+                <Label for="initialDate">
+                  Data
+                </Label>
+                <Input
+                  id="initialDate"
+                  name="initialDate"
+                  type="date"
+                />
+              </FormGroup>
+              <FormGroup>
+                <Label for="price">
+                  Cotação
+                </Label>
+                <Input
+                  id="price"
+                  name="price"
+                  placeholder="Cotação do Ativo"
+                  type="text"
+                />
+              </FormGroup>
+              <FormGroup>
+                <Label for="quantity">
+                  Quantidade
+                </Label>
+                <Input
+                  id="quantity"
+                  name="quantity"
+                  placeholder="Quantidade de ativos investida"
+                  type="text"
+                />
+              </FormGroup>
+            </Form>
+          </ModalBody>
     </div>
   );
 }
