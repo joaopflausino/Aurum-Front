@@ -1,6 +1,21 @@
-.investment-options {
+.main-add-investment{
     display: flex;
-    flex-direction: column;
-    align-items: center;
     justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+.investment-options {
+    margin:0px 0px 0px 14%;
+    width: 40vw;
+    height: 72vh;
+    display: flex;
+    justify-content:flex-start;
+    align-items: center;
+    background: #b2b2b2a2;
+    border:none;
+    border-radius: 15px;
+    outline: none;
+    flex-direction: row; 
 }

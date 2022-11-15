@@ -32,8 +32,7 @@ function AddInvestment() {
   return (
     <>
       <Navbar />
-      <div className='add-investment'>
-        <h3>Adicionar investimento</h3>
+      <div className='main-add-investment'>
         <div className='investment-options'>
           <Button color="danger" onClick={openCheckingAccount}>Conta Corrente</Button>
           <Button color="danger" onClick={openDirectTreasuary}>Tesouro Direto</Button>
