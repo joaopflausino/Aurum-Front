@@ -1,6 +1,6 @@
+import Axios from 'axios';
 import React, { useState } from 'react';
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
-import api from "../../../services/api";
 
 function ModalStock(args) {
   const [modal, setModal] = useState(true);
@@ -9,6 +9,10 @@ function ModalStock(args) {
 
   const [stock, setStock] = React.useState(null);
   const [broker, setBroker] = React.useState(null);
+
+  const api = Axios.create({
+    baseURL: "http://localhost:8080/api",
+  });
 
   React.useEffect(() => {
     api.get("/stockdb").then((response) => {

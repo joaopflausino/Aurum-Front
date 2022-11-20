@@ -1,12 +1,9 @@
 import React from 'react';
 import { useEffect } from 'react';
-import Navbar from '../../Components/Navbar';
+import Navbar from '../../components/Navbar';
 import './stocks.css';
 
-function PA() {
-  useEffect(() => {
-    document.title = "Principais ações"
- }, []);
+function MainStocks() {
   return (
     <>
       <Navbar />
@@ -17,4 +14,4 @@ function PA() {
   );
 }
 
-export default PA;
+export default MainStocks;

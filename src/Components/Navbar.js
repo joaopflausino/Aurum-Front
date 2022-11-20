@@ -14,7 +14,7 @@ function Navbar() {
         <>
             <IconContext.Provider value={{ color: '#fff' }}>
                 <nav className={'nav-menu active'}>
-                    <div class="imagem">
+                    <div className="imagem">
                     <img src={imagem} className="logo-aurum"/>
                     </div>
                     <ul className='nav-menu-items' onClick={showSidebar}>

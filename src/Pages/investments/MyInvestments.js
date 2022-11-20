@@ -1,12 +1,10 @@
 import React from 'react';
 import { useEffect } from 'react';
-import Navbar from '../../Components/Navbar';
+import Navbar from '../../components/Navbar';
+
 import './investments.css';
 
-function MI() {
-  useEffect(() => {
-    document.title = "Meus investimentos"
- }, []);
+function MyInvestments() {
   return (
     <>
       <Navbar />
@@ -18,4 +16,4 @@ function MI() {
   );
 }
 
-export default MI;
+export default MyInvestments;

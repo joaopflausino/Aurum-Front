@@ -1,18 +1,14 @@
 import React, { useState } from 'react';
 import { useEffect } from 'react';
-import Navbar from '../../Components/Navbar';
 import './add-investment.css';
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
 import ModalStock from './stock/ModalStock';
 import ModalFixedRate from './fixedrate/ModalFixedRate';
 import ModalDirectTreasuary from './directtreasury/ModalDirectTreasury';
 import ModalCheckingAccount from './checkingaccount/ModalCheckingAccount';
-import api from "../../services/api";
+import Navbar from '../../components/Navbar';
 
 function AddInvestment() {
-  useEffect(() => {
-    document.title = "Adicionar investimento"
-  }, []);
   // modal stock
   const [modalStock, setModalStock] = useState(false);
   const openStock = () => setModalStock(!modalStock);

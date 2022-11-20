@@ -49,8 +49,9 @@
 .single-news:hover {
     background-color: #00000021;
     font-weight: 600;
-    color: #a8821ad0;
     transform: scale(1.1);
+    text-decoration: none;
+    color: inherit;
 }
 
 .img-news {
