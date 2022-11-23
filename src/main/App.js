@@ -8,6 +8,7 @@ import 'toastr/build/toastr.css';
 import 'primereact/resources/themes/nova-light/theme.css';
 import 'primereact/resources/primereact.min.css';
 import 'primeicons/primeicons.css';
+import 'anychart-react/dist/anychart-react.min.js';
 
 class App extends React.Component {
   render() {
