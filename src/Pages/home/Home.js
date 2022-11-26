@@ -77,7 +77,7 @@ class Home extends React.Component {
   // "11/21,100\n12/21,50\n1/22,34\n2/22,72\n3/22,123\n4/22,122\n5/22,153\n6/22,200\n"
 
   chart = {
-    width: 1000,
+    width: 1200,
     height: 600,
     type: 'area',
     data: this.dados,
@@ -109,7 +109,6 @@ class Home extends React.Component {
     return (
       <>
         <Navbar />
-        <AnyChart {...this.chart} />
       </>
     )
   }

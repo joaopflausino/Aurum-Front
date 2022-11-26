@@ -5,6 +5,7 @@
     width: 100vw;
     height: 100vh;
     flex-direction: column;
+    margin-left: 9%;
 }
 
 .container-cima-mi{
@@ -14,9 +15,8 @@
     display: flex;
     justify-content:flex-start;
     align-items: center;
-    background: #b2b2b2a2;
+    background: #d9d9d9b3;
     border:none;
-    border-radius: 15px;
     outline: none;
     flex-direction: column;  
 }
@@ -28,11 +28,16 @@
     display: flex;
     justify-content:flex-start;
     align-items: center;
-    background: #b2b2b2a2;
+    background: #d9d9d9b3;
     border:none;
-    border-radius: 15px;
     outline: none;
     flex-direction: column;  
+}
 
+.anychart-credits {
+    display: none;
+}
 
+.row {
+    background: #d9d9d9b3;
 }
