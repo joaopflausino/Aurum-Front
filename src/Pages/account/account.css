@@ -94,7 +94,7 @@
 }
 
 .toggler-wrapper.style-27 input[type="checkbox"]:checked+.toggler-slider .toggler-knob:before {
-    left: 100%;
+    left: -100%;
 }
   
 .toggler-wrapper.style-27 input[type="checkbox"]:checked+.toggler-slider .toggler-knob:after {
@@ -137,7 +137,7 @@
     width: calc(30px - 6px);
     height: calc(30px - 6px);
     border-radius: 50%;
-    right: 100%;
+    right: -100%;
     top: 3px;
     background-color: #fff;
     -webkit-transition: all 300ms ease;
