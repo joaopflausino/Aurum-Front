@@ -5,7 +5,7 @@ import './simulate.css';
 
 function SI() {
   useEffect(() => {
-    document.title = "Simular investimento"
+    document.title = "Aurum Investing"
  }, []);
   return (
     <>

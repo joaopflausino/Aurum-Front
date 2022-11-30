@@ -5,7 +5,7 @@ import imagem1 from '../../shared/images/logo-aurum.png';
 
 function Cadastro() {
   useEffect(() => {
-    document.title = "Cadastro"
+    document.title = "Aurum Investing"
  }, []);
   return (
     <>

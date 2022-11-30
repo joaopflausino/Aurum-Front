@@ -11,7 +11,7 @@ import api from "../../services/api";
 
 function AddInvestment() {
   useEffect(() => {
-    document.title = "Adicionar investimento"
+    document.title = "Aurum Investing"
   }, []);
   // modal stock
   const [modalStock, setModalStock] = useState(false);

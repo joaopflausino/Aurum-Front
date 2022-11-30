@@ -5,7 +5,7 @@ import './stocks.css';
 
 function PA() {
   useEffect(() => {
-    document.title = "Principais ações"
+    document.title = "Aurum Investing"
  }, []);
   return (
     <>

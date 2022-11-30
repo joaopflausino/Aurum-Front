@@ -7,7 +7,7 @@ import Areachart from '../../Components/Areachart';
 
 function MI() {
   useEffect(() => {
-    document.title = "Meus investimentos"
+    document.title = "Aurum Investing"
  }, []);
   return (
     <>
