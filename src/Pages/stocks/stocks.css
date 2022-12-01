@@ -43,10 +43,15 @@
     background: #06081D;
     border: 1px solid #ffffff;
     border-radius: 16px;
-    margin-bottom: 16px;
+    margin-bottom: 20px;
 }
 
-.col-md-auto{
 
-    padding: 8px;
+.stock:hover{ 
+    transition: all 0.7s;
+    font-weight: 600;
+    color: #a8821ad0;
+    transform: scale(1.13);
+    cursor: pointer;
+    filter: drop-shadow(10px 10px 5px rgba(0,0,0,.5));
 }
