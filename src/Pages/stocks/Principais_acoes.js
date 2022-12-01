@@ -10,8 +10,50 @@ function PA() {
   return (
     <>
       <Navbar />
-      <div className='pa'>
-        <h3>Principais acoes</h3>
+      <div className='main-pa'>
+        <div className='container-cima-pa'>
+        </div>
+        <div className='container-baixo-pa'>
+          <div class="container text-center">
+            <div class="row justify-content-md-center">
+            <div class="col-md-auto">
+              {/*⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩ COLUNA 1 ⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩*/}
+              <div className='stock'></div>
+              <div className='stock'></div>
+              <div className='stock'></div>
+              <div className='stock'></div>
+            </div>
+            <div class="col-md-auto">
+              {/*⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩ COLUNA 2 ⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩*/}
+              <div className='stock'></div>
+              <div className='stock'></div>
+              <div className='stock'></div>
+              <div className='stock'></div>
+            </div>
+            <div class="col-md-auto">
+              {/*⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩ COLUNA 3 ⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩*/}
+              <div className='stock'></div>
+              <div className='stock'></div>
+              <div className='stock'></div>
+              <div className='stock'></div>
+            </div>
+            <div class="col-md-auto">
+              {/*⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩ COLUNA 4 ⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩*/}
+              <div className='stock'></div>
+              <div className='stock'></div>
+              <div className='stock'></div>
+              <div className='stock'></div>
+            </div>
+            <div class="col-md-auto">
+              {/*⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩ COLUNA 5 ⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩*/}
+              <div className='stock'></div>
+              <div className='stock'></div>
+              <div className='stock'></div>
+              <div className='stock'></div>
+            </div>
+            </div>
+          </div>
+        </div>
       </div>
     </>
   );

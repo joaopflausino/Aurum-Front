@@ -8,7 +8,7 @@
 }
 
 .container-cima-mi{
-    margin:3vh 0px 0px 16vw;
+    margin:3vh 0px 0px 320px;
     width: 60vw;
     height: 43vh;
     display: flex;
@@ -22,7 +22,7 @@
 }
 
 .container-baixo-mi{
-    margin:20px 0px 3vh 16vw;
+    margin:20px 0px 3vh 320px;
     width: 60vw;
     height: 57vh;
     display: flex;
@@ -33,6 +33,4 @@
     border-radius: 15px;
     outline: none;
     flex-direction: column;  
-
-
 }
