@@ -7,6 +7,7 @@
     flex-direction: column;
 }
 
+/*  ⇩⇩⇩⇩⇩⇩⇩⇩⇩ CIMA ⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩  */
 .container-cima-pa{
     margin:3vh 0px 0px 320px;
     width: 60%;
@@ -18,9 +19,34 @@
     border:none;
     border-radius: 15px;
     outline: none;
-    flex-direction: column;  
+    flex-direction: column; 
+    overflow: auto; 
 }
 
+.nasdaq-logo{
+    width: 153px;
+    height: 40px;
+}
+
+.sub-titulo-nasdaq{
+    font-weight: 700;
+    font-size: 21px;
+
+}
+
+.texto-nasdaq{
+    font-weight: 400;
+    font-size: 20px;
+    width: 33vw;
+    height: 10vh;
+    text-align: justify;
+}
+
+
+
+
+
+/*  ⇩⇩⇩⇩⇩⇩⇩⇩⇩ BAIXO ⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩  */
 .container-baixo-pa{
     margin:20px 0px 3vh 320px;
     width: 80vw;
