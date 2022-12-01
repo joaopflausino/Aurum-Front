@@ -6,7 +6,7 @@ import { useEffect } from 'react';
 
 function Login() {
   useEffect(() => {
-    document.title = "Login"
+    document.title = "Aurum Investing"
  }, []);
   return (
     <>

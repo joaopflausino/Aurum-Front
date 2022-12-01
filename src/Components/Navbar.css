@@ -69,10 +69,6 @@
     color: #000000;
 }
 
-/* .nav-text a:hover > svg{
-    color: #000000;
-} */
-
 .navbar-toggle{
     background-color: #000000;
     width: 100%;
@@ -92,7 +88,7 @@ span{
 }
 
 #account.nav-text{
-    margin-top: 80%;
+    margin-top: 190px;
     height: 55px;
 }
 #logout.nav-text{

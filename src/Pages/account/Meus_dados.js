@@ -6,7 +6,7 @@ import imagem from '../../shared/images/nome-aurum-investing.png';
 
 function MD() {
   useEffect(() => {
-    document.title = "Meus dados"
+    document.title = "Aurum Investing"
  }, []);
   return (
     <>

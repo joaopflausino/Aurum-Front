@@ -31,7 +31,7 @@ function News() {
   }, [])
 
   useEffect(() => {
-    document.title = "Notícias"
+    document.title = "Aurum Investing"
   }, []);
 
   return (
