@@ -68,7 +68,7 @@
     border-radius: 16px;
     display: flex;
     flex-direction: row; 
-    padding: 7px 15px 20px 15px;
+    padding: 9px 15px 20px 15px;
     margin: 0px 2px 20px 2px;
 }
 
@@ -86,19 +86,21 @@
     display: flex;
     flex-direction: column; 
     align-items: flex-start;
+    width: 70%;
 }
 
 .stock-symbol{
     font-size: 19px;
-
+    margin-bottom: 2px;
 }
 
 .stock-name{
     font-size: 19px;
-    
+    margin-bottom: 8px;
 }
 
 .img-stock{
+    margin-top: 3px;
     width: 70px;
     height: 70px;
 }
@@ -109,10 +111,23 @@
     align-items: flex-start;
 }
 
-.gain-variation{
+.stock-div-price{
+    font-size: 20px;
+}
+
+.gain-variation1{
     display: flex;
+    color: green;
+}
+
+.gain-variation2{
+    display: flex;
+    color: red;
 }
 
 .stock-div-gain{
-    margin-right: 15px;
+    margin-right: 10px;
+    
 }
+
+
