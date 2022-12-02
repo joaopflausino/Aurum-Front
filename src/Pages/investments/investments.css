@@ -45,6 +45,10 @@
     display: none;
 }
 
+
+/*
+não pode usar .row no css pq é classe generica, senão muda todas as row
+
 .row {
     background: #d9d9d9b3;
-}
+}*/

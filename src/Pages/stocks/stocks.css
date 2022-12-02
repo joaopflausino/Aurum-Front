@@ -53,7 +53,6 @@
     display: flex;
     justify-content:flex-start;
     align-items: center;
-    
     border:none;
     border-radius: 15px;
     outline: none;
@@ -66,17 +65,22 @@
     width: 210px;
     height: 130px;
     top: 385px;
-    background: #06081D;
+    background: #050718;
     border: 1px solid #ffffff;
     border-radius: 16px;
     margin-bottom: 20px;
 }
 
 .stock:hover{ 
-    transition: all 0.7s;
-    font-weight: 600;
-    color: #ffffffd0;
-    transform: scale(1.13);
+    border: 1px solid #e0e0e0;
+    transition: all .2s;
+    color: rgb(255, 255, 255);
+    background: #070920;
+    transform: scale(1.14);
     cursor: pointer;
     filter: drop-shadow(10px 10px 5px rgba(0,0,0,.5));
+    font-weight: 500;
+    font-size: 19px;
 }
+
+

@@ -84,7 +84,7 @@ function PA() {
             <div class="row justify-content-md-center">
             <div class="col-md-auto">
               {/*⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩ COLUNA 1 ⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩*/}
-              <div className='stock'>{stock1}</div>
+              <div className='stock'>{/*stock1*/}</div>
               <div className='stock'></div>
               <div className='stock'></div>
               <div className='stock'></div>
