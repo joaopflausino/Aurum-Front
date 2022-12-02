@@ -1,12 +1,10 @@
-import React from 'react';
-import { useEffect } from 'react';
+import React, { Suspense } from 'react';
 import Navbar from '../../components/Navbar';
 import AnyChart from 'anychart-react/dist/anychart-react.min.js';
 
 import './investments.css';
 import UsuarioService from '../../app/service/usuarioService';
-import { FaBlackTie } from 'react-icons/fa';
-import { Table } from 'reactstrap';
+import { Spinner, Table } from 'reactstrap';
 
 class MyInvestments extends React.Component {
   constructor() {
@@ -131,8 +129,63 @@ class MyInvestments extends React.Component {
     background: "#b2b2b200"
   };
 
+  state = {
+    hist: null,
+  };
+
+  _asyncRequest = null;
+
+  componentDidMount() {
+    this._asyncRequest = this.apiService.historicoDaCarteira(7)
+      .then(response => {
+        const historico = response.data;
+        this.setState({ hist: historico });
+        console.log(historico);
+        console.log(this.state.hist);
+      })
+      .catch(erro => {
+        console.log(erro.response.data);
+      })
+  }
+
+  // componentWillUnmount() {
+  //   if (this._asyncRequest) {
+  //     this._asyncRequest.cancel();
+  //   }
+  // }
+
 
   render() {
+    if (this.state.hist === null) {
+      return (<><Navbar /> <div className='spinner'><Spinner></Spinner></div></>)
+    }
+
+    const tudo = "";
+    const h = this.state.hist.forEach((invest) => this.tudo += `${invest.month}/${invest.year},${invest.price}\n`);
+
+    const areaDois = {
+      width: 1100,
+      height: 400,
+      type: 'area',
+      data: this.tudo,
+      title: 'Gráfico de rentabilidade da carteira',
+      yAxis: [1, {
+        orientation: 'right',
+        enabled: true,
+        labels: {
+          format: '{%Value}{decimalPoint:\\,}'
+        }
+      }],
+      legend: {
+        background: 'lightgreen 0.4',
+        padding: 0
+      },
+      lineMarker: {
+        value: 4.5
+      },
+      background: "#b2b2b200"
+    };
+
     return (
       <>
         <Navbar />
@@ -178,7 +231,7 @@ class MyInvestments extends React.Component {
               </div>
             </div>
             <div className='row align-items-center'>
-              <div className='col'><AnyChart id='area-chart' {...this.area} /></div>
+              <div className='col'><AnyChart id='area-chart' {...areaDois} /></div>
             </div>
           </div>
           {/* <div className='container-baixo-mi'></div> */}

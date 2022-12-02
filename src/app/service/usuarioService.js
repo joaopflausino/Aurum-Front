@@ -4,19 +4,19 @@ import ErrosValidacaoException from './errosValidacao'
 
 class UsuarioService extends Api {
   constructor() {
-    super('/api/user')
+    super('/api')
   }
 
   autenticar(credenciais) {
-    return this.post('/authenticate', credenciais)
-  }
-
-  obterSaldoUsuario(id) {
-    return this.get(`/${id}/saldo`)
+    return this.post('/user/authenticate', credenciais);
   }
 
   cadastrarUsuario(usuario) {
-    return this.post('/', usuario);
+    return this.post('/user', usuario);
+  }
+
+  historicoDaCarteira(idCarteira) {
+    return this.get("/investment/history/" + idCarteira);
   }
 
   validar(usuario) {

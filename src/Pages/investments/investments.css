@@ -8,6 +8,17 @@
     margin-left: 9%;
 }
 
+.spinner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    margin-left: 9%;
+    margin-top: 30%;
+}
+
 .container-cima-mi{
     margin:3vh 0px 0px 16vw;
     width: 60vw;
