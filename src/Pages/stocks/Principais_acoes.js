@@ -8,41 +8,52 @@ import imagem_nasdak from '../../shared/images/nasdaq-logo.png';
 function PA() {
 
 
-  //se der problema é isso
-  let [stock1, setStock1] = useState("");
 
-// A PORRA DA DATA DE ONTEM 
-  let data = new Date();
-  let dia = "";
+// ⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩  DATA DE ONTEM  ⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩
+  let dataO = new Date();
+  let diaO = "";
 
-  data.setDate(data.getDate() - 1);
-  if (data.getDate() <= 9){
-    dia = "0" + data.getDate()
+  dataO.setDate(dataO.getDate() - 1);
+  if (dataO.getDate() <= 9){
+    diaO = "0" + dataO.getDate()
   }
   else{
-    dia =  data.getDate()
+    diaO =  dataO.getDate()
   }
-  let dataFormatada = (data.getFullYear()) + "-" + ((data.getMonth() + 1)) + "-" + (dia); 
-
-  
+  let dataOntem = (dataO.getFullYear()) + "-" + ((dataO.getMonth() + 1)) + "-" + (diaO); 
   
 
 
+  // ⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩  DATA DE HOJE ⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩
+  let dataH = new Date();
+  let diaH = "";
 
+  dataH.setDate(dataH.getDate());
+  if (dataH.getDate() <= 9){
+    diaH = "0" + dataH.getDate()
+  }
+  else{
+    diaH =  dataH.getDate()
+  }
+  let dataHoje = (dataH.getFullYear()) + "-" + ((dataH.getMonth() + 1)) + "-" + (diaH); 
+  
+  
+  //se der problema é isso
+  let [stock1, setStock1] = useState("");
+  
+  
 
   ///⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩ API POR AÇÃO - APPLE ⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩
 
     async function APIGET() {
-      let response = await fetch("https://www.alphavantage.co/query?function=TIME_SERIES_DAILY_ADJUSTED&symbol=AAPL&apikey=GL7OCY3JYIA7LDPG");
+      let response = await fetch("https://www.alphavantage.co/query?function=GLOBAL_QUOTE&symbol=AAPL&apikey=GL7OCY3JYIA7LDPG");
       let result = await response.json();
-
-      const stock1_symbol = result["Meta Data"]["2. Symbol"];
-      console.log(stock1_symbol);
-
-      const stock1_price = result["Time Series (Daily)"][dataFormatada]["4. close"];
-      console.log(stock1_price);
-
-      const stock1 =  <div>{stock1_symbol}</div>
+      const stock1_price = parseFloat(result["Global Quote"]["05. price"]);
+      const stock1_gain = parseFloat(result["Global Quote"]["09. change"]);
+      const stock1_variation = result["Global Quote"]["10. change percent"];
+      const stock1 = <><div>{stock1_price}</div><div className='gain-variation'><div className='stock-div-gain'>{stock1_gain}</div><div>{stock1_variation}</div></div>
+      
+      </>
 
       //se der problema é isso
       setStock1(stock1);
@@ -51,20 +62,14 @@ function PA() {
     
 
 
-    useEffect(() => {
-      APIGET();
-    }, [])
-
-
-
-
-
-
-
+  useEffect(() => {
+    APIGET();
+  }, [])
 
   useEffect(() => {
     document.title = "Aurum Investing"
  }, []);
+
   return (
     <>
       <Navbar />
@@ -84,7 +89,16 @@ function PA() {
             <div class="row justify-content-md-center">
             <div class="col-md-auto">
               {/*⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩ COLUNA 1 ⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩*/}
-              <div className='stock'>{/*stock1*/}</div>
+              <div className='stock'>
+                <div className='stock-esquerda'>
+                  <h3 className='stock-symbol'>AAPL</h3>
+                  <h3 className='stock-name'>Apple Inc</h3>
+                  <div className='stock-num'>{stock1}</div>
+                </div>
+                <div>
+                  <img className='img-stock' src="https://br.advfn.com/common/images/company/N_AAPL.png"></img>
+                </div> 
+              </div>
               <div className='stock'></div>
               <div className='stock'></div>
               <div className='stock'></div>

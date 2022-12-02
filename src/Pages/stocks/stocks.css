@@ -43,8 +43,6 @@
 
 
 
-
-
 /*  ⇩⇩⇩⇩⇩⇩⇩⇩⇩ BAIXO ⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩  */
 .container-baixo-pa{
     margin:20px 0px 3vh 320px;
@@ -65,22 +63,56 @@
     width: 210px;
     height: 130px;
     top: 385px;
-    background: #050718;
+    background: #080c2b;
     border: 1px solid #ffffff;
     border-radius: 16px;
-    margin-bottom: 20px;
+    display: flex;
+    flex-direction: row; 
+    padding: 7px 15px 20px 15px;
+    margin: 0px 2px 20px 2px;
 }
 
 .stock:hover{ 
     border: 1px solid #e0e0e0;
     transition: all .2s;
     color: rgb(255, 255, 255);
-    background: #070920;
-    transform: scale(1.14);
+    background: #0c103a;
+    transform: scale(1.2);
     cursor: pointer;
     filter: drop-shadow(10px 10px 5px rgba(0,0,0,.5));
-    font-weight: 500;
-    font-size: 19px;
 }
 
+.stock-esquerda{
+    display: flex;
+    flex-direction: column; 
+    align-items: flex-start;
+}
 
+.stock-symbol{
+    font-size: 19px;
+
+}
+
+.stock-name{
+    font-size: 19px;
+    
+}
+
+.img-stock{
+    width: 70px;
+    height: 70px;
+}
+
+.stock-num{
+    display: flex;
+    flex-direction: column; 
+    align-items: flex-start;
+}
+
+.gain-variation{
+    display: flex;
+}
+
+.stock-div-gain{
+    margin-right: 15px;
+}
