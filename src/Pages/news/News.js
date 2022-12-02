@@ -6,7 +6,6 @@ function News() {
 
   let [value, setValue] = useState("");
 
-
   async function APIGET() {
     let response = await fetch("https://newsapi.org/v2/everything?q=mercado-financeiro&from=2022-11-11&to=2022-11-11&sortBy=popularity&apiKey=572353a32aed49179c9463f5eee0e609");
     let result = await response.json();

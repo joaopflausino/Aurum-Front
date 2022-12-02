@@ -1,10 +1,67 @@
 import React from 'react';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import Navbar from '../../Components/Navbar';
 import './stocks.css';
 import imagem_nasdak from '../../shared/images/nasdaq-logo.png';
 
+
 function PA() {
+
+
+  //se der problema é isso
+  let [stock1, setStock1] = useState("");
+
+// A PORRA DA DATA DE ONTEM 
+  let data = new Date();
+  let dia = "";
+
+  data.setDate(data.getDate() - 1);
+  if (data.getDate() <= 9){
+    dia = "0" + data.getDate()
+  }
+  else{
+    dia =  data.getDate()
+  }
+  let dataFormatada = (data.getFullYear()) + "-" + ((data.getMonth() + 1)) + "-" + (dia); 
+
+  
+  
+
+
+
+
+  ///⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩ API POR AÇÃO - APPLE ⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩
+
+    async function APIGET() {
+      let response = await fetch("https://www.alphavantage.co/query?function=TIME_SERIES_DAILY_ADJUSTED&symbol=AAPL&apikey=GL7OCY3JYIA7LDPG");
+      let result = await response.json();
+
+      const stock1_symbol = result["Meta Data"]["2. Symbol"];
+      console.log(stock1_symbol);
+
+      const stock1_price = result["Time Series (Daily)"][dataFormatada]["4. close"];
+      console.log(stock1_price);
+
+      const stock1 =  <div>{stock1_symbol}</div>
+
+      //se der problema é isso
+      setStock1(stock1);
+    }
+
+    
+
+
+    useEffect(() => {
+      APIGET();
+    }, [])
+
+
+
+
+
+
+
+
   useEffect(() => {
     document.title = "Aurum Investing"
  }, []);
@@ -27,7 +84,7 @@ function PA() {
             <div class="row justify-content-md-center">
             <div class="col-md-auto">
               {/*⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩ COLUNA 1 ⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩*/}
-              <div className='stock'></div>
+              <div className='stock'>{stock1}</div>
               <div className='stock'></div>
               <div className='stock'></div>
               <div className='stock'></div>

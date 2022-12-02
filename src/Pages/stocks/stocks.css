@@ -15,7 +15,7 @@
     display: flex;
     justify-content:flex-start;
     align-items: center;
-    background: #b2b2b2a2;
+    
     border:none;
     border-radius: 15px;
     outline: none;
@@ -31,7 +31,6 @@
 .sub-titulo-nasdaq{
     font-weight: 700;
     font-size: 21px;
-
 }
 
 .texto-nasdaq{
@@ -54,7 +53,7 @@
     display: flex;
     justify-content:flex-start;
     align-items: center;
-    background: #b2b2b2a2;
+    
     border:none;
     border-radius: 15px;
     outline: none;
@@ -62,6 +61,7 @@
 }
 
 .stock{
+    color: #ffffffd0;
     box-sizing: border-box;
     width: 210px;
     height: 130px;
@@ -75,7 +75,7 @@
 .stock:hover{ 
     transition: all 0.7s;
     font-weight: 600;
-    color: #a8821ad0;
+    color: #ffffffd0;
     transform: scale(1.13);
     cursor: pointer;
     filter: drop-shadow(10px 10px 5px rgba(0,0,0,.5));
