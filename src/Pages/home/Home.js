@@ -10,8 +10,18 @@ function Home() {
   return (
     <>
     <Navbar/>
-      <div className='home'>
-        <h3>Home</h3>
+      <div className='main-home'>
+        <div className='container-cima'>
+
+        </div>
+        <div className='container-meio'>
+          <div className='container-meio-esquerda'></div>
+          <div className='container-meio-direita'></div>
+
+        </div>
+        <div className='container-baixo'>
+
+        </div>
       </div>
     </>
   );
