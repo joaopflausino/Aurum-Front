@@ -7,35 +7,91 @@ import { Table } from 'reactstrap';
 import SpanningTable from './TableComponent';
 import AccordionComponent from './AccordionComponent';
 
-const TAX_RATE = 0.07;
 
-function ccyFormat(num) {
-  return `${num.toFixed(2)}`;
+
+
+
+const bla = {
+  "totalStock": 248.81,
+  "stock": [
+      {
+          "id": 34,
+          "stock": {
+              "id": "AAPL",
+              "name": "Apple Inc."
+          },
+          "broker": {
+              "id": 2,
+              "name": "XP Investimentos"
+          },
+          "quantity": 10.0,
+          "initialValue": 10.0,
+          "initialDate": "2022-01-02 00:00:00",
+          "price": 179.26
+      },
+      {
+          "id": 35,
+          "stock": {
+              "id": "ABNB",
+              "name": "Airbnb, Inc."
+          },
+          "broker": {
+              "id": 2,
+              "name": "XP Investimentos"
+          },
+          "quantity": 10.0,
+          "initialValue": 10.0,
+          "initialDate": "2022-06-02 00:00:00",
+          "price": 121.26
+      }
+  ],
+  "totalCheckingAccount": 0.0,
+  "checkingAccount": [],
+  "totalFixedIncome": 1100.0,
+  "fixedIncome": [
+      {
+          "id": 11,
+          "paper": "LCA",
+          "issuer": "Bradesco",
+          "yieldRate": 1.1,
+          "initialDate": "2021-12-15 00:00:00",
+          "finalDate": "2022-12-15 00:00:00",
+          "initialValue": 1000.0,
+          "broker": {
+              "id": 1,
+              "name": "Binance"
+          }
+      }
+  ]
 }
 
-function priceRow(qty, unit) {
-  return qty * unit;
-}
 
-function createRow(desc, qty, unit) {
-  const price = priceRow(qty, unit);
-  return { desc, qty, unit, price };
-}
 
-function subtotal(items) {
-  return items.map(({ price }) => price).reduce((sum, i) => sum + i, 0);
-}
+const data_Acoes = bla.stock.map(objeto => {
 
-const rows = [
-  createRow('AAPL', 100, 1.15),
-  createRow('TSLA', 10, 45.99),
-  createRow('AMZN', 2, 500),
-];
+  return {x : objeto.stock.name,value : objeto.quantity * objeto.price}
+})
 
-const invoiceSubtotal = subtotal(rows);
-const invoiceTaxes = TAX_RATE * invoiceSubtotal;
-const invoiceTotal = invoiceTaxes + invoiceSubtotal;
+const data_ContaCorrente = bla.stock.map(objeto => {
+  return {x : objeto.stock.name,value : objeto.quantity * objeto.price}
+})
 
+const data_Tesouro = bla.stock.map(objeto => {
+  return {x : objeto.stock.name,value : objeto.quantity * objeto.price}
+})
+
+const data_RendaFixa = bla.fixedIncome.map(objeto => {
+  var startTime = new Date(objeto.initialDate);
+  var endTime = new Date(objeto.finalDate);
+
+  var difference = (endTime.getTime() - startTime.getTime());
+  let TotalDays = Math.ceil(difference / (1000 * 3600 * 24));
+  console.log(TotalDays);
+
+  return {x : objeto.paper + ' ' +  objeto.issuer,value : TotalDays * objeto.initialValue}
+})
+
+console.log(data_Acoes);
 
 class MyInvestments extends React.Component {
   /*constructor() {
@@ -43,7 +99,6 @@ class MyInvestments extends React.Component {
     this.apiService = new UsuarioService();
   }*/
 
-  
   investmentsPerMonth = [
     {
       month: 10,
@@ -97,30 +152,10 @@ class MyInvestments extends React.Component {
     }
   ];
 
-  totalValuePerInvestment = {
-    stock: {
-      value: 50
-    },
-    checkingAccount: {
-      value: 50
-    },
-    treasuryDirect: {
-      value: 50
-    },
-    fixedRate: {
-      value: 50
-    }
-  }
+
+
 
   dados = "";
-
-  //dado = this.investmentsPerMonth.forEach((invest) => this.dados += `${invest.month}/${invest.year},${invest.value}\n`);
-
-  pizza = "";
-
-  // pizzaData = this.totalValuePerInvestment.forEach((investment) => this.pizza += `${}`)
-
-  // "11/21,100\n12/21,50\n1/22,34\n2/22,72\n3/22,123\n4/22,122\n5/22,153\n6/22,200\n"
 
   data_geral = [
     { x: "Ação", value: 500 },
@@ -138,36 +173,47 @@ class MyInvestments extends React.Component {
     background: "#b2b2b200"
   };
 
-  json = [
-    {
-      name : "AAPL",
-      value: 400,
-    },
-    {
-      name : "TSLA",
-      value: 300,
-    },
-    {      
-    name : "AMZN",
-    value: 100,
-    }
-  ]
-  data_acoes =[
-    {x: "AMZN",value: 400},
-    {x: "AMZN",value: 400},
-    {x: "AMZN",value: 100}
-  ];
 
-  torta = {
+
+
+
+
+
+  torta_acoes = {
     type: 'pie',
     width: 600,
     height: 400,
-    data: this.data_acoes,
+    data: data_Acoes,
     title: 'Gráfico de pizza',
     background: "#b2b2b200"
   }
 
+  torta_tesouro = {
+    type: 'pie',
+    width: 600,
+    height: 400,
+    data: data_Tesouro,
+    title: 'Gráfico de pizza',
+    background: "#b2b2b200"
+  };
 
+  torta_contacorrente = {
+    type: 'pie',
+    width: 600,
+    height: 400,
+    data: data_ContaCorrente,
+    title: 'Gráfico de pizza',
+    background: "#b2b2b200"
+  };
+
+  torta_rendafixa = {
+    type: 'pie',
+    width: 600,
+    height: 400,
+    data: data_RendaFixa,
+    title: 'Gráfico de pizza',
+    background: "#b2b2b200"
+  }
 
 
 
@@ -245,23 +291,23 @@ class MyInvestments extends React.Component {
               <div className='col'><AnyChart id='area-chart' {...this.area} /></div>
               <AccordionComponent 
               Title = {'Renda Fixa'} 
-              Content1 = {<AnyChart id='Renda Fixa' {...this.torta}/>} 
+              Content1 = {<AnyChart id='Renda Fixa' {...this.torta_rendafixa}/>} 
               Content2 = {<SpanningTable TAX_RATE = {0.7} />}
               />
 
               <AccordionComponent 
               Title = {'conta Corrente'} 
-              Content1 = {<AnyChart id = 'Conta Corrente'{...this.torta}/>}
+              Content1 = {<AnyChart id = 'Conta Corrente'{...this.torta_contacorrente}/>}
               Content2 = {<SpanningTable TAX_RATE = {0.9} />}
               />
               <AccordionComponent 
               Title={'Tesouro Direto'}
-              Content1 = {<AnyChart id='Tesouro Direto' {...this.torta}/>}
+              Content1 = {<AnyChart id='Tesouro Direto' {...this.torta_tesouro}/>}
               Content2 = {<SpanningTable TAX_RATE = {0.9} />}
               />
               <AccordionComponent
               Title={'Ações'}
-              Content1 = {<AnyChart id='Ações' {...this.torta}/>}
+              Content1 = {<AnyChart id='Ações' {...this.torta_acoes}/>}
               Content2 = {<SpanningTable TAX_RATE = {0.1} />}
               />
             </div>
