@@ -2,13 +2,7 @@ import React from "react";
 import { useEffect, useState } from "react";
 import Navbar from "../../Components/Navbar";
 import "./home.css";
-import {
-  Carousel,
-  CarouselItem,
-  CarouselControl,
-  CarouselIndicators,
-  CarouselCaption,
-} from "reactstrap";
+import { Carousel, CarouselItem, CarouselControl, CarouselIndicators, CarouselCaption } from "reactstrap";
 
 //⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩  NOTICIAS CARROSSEL  ⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇧⇧⇧⇧
 const items = [
@@ -56,16 +50,9 @@ function Home() {
 
   const slides = items.map((item) => {
     return (
-      <CarouselItem
-        onExiting={() => setAnimating(true)}
-        onExited={() => setAnimating(false)}
-        key={item.src}
-      >
+      <CarouselItem onExiting={() => setAnimating(true)} onExited={() => setAnimating(false)} key={item.src}>
         <img src={item.src} alt={item.altText} />
-        <CarouselCaption
-          captionText={item.caption}
-          captionHeader={item.caption}
-        />
+        <CarouselCaption captionText={item.caption} captionHeader={item.caption} />
       </CarouselItem>
     );
   });
@@ -86,9 +73,7 @@ function Home() {
     let result = await response.json();
     const stock1_price = parseFloat(result["Global Quote"]["05. price"]);
     const stock1_gain = parseFloat(result["Global Quote"]["09. change"]);
-    const stock1_variation = parseFloat(
-      result["Global Quote"]["10. change percent"]
-    ).toFixed(2);
+    const stock1_variation = parseFloat(result["Global Quote"]["10. change percent"]).toFixed(2);
     if (stock1_gain >= 0) {
       var stock1 = (
         <>
@@ -119,9 +104,7 @@ function Home() {
     let result2 = await response2.json();
     const stock2_price = parseFloat(result2["Global Quote"]["05. price"]);
     const stock2_gain = parseFloat(result2["Global Quote"]["09. change"]);
-    const stock2_variation = parseFloat(
-      result2["Global Quote"]["10. change percent"]
-    ).toFixed(2);
+    const stock2_variation = parseFloat(result2["Global Quote"]["10. change percent"]).toFixed(2);
     if (stock2_gain >= 0) {
       var stock2 = (
         <>
@@ -152,9 +135,7 @@ function Home() {
     let result4 = await response4.json();
     const stock4_price = parseFloat(result4["Global Quote"]["05. price"]);
     const stock4_gain = parseFloat(result4["Global Quote"]["09. change"]);
-    const stock4_variation = parseFloat(
-      result4["Global Quote"]["10. change percent"]
-    ).toFixed(2);
+    const stock4_variation = parseFloat(result4["Global Quote"]["10. change percent"]).toFixed(2);
     if (stock4_gain >= 0) {
       var stock4 = (
         <>
@@ -185,9 +166,7 @@ function Home() {
     let result5 = await response5.json();
     const stock5_price = parseFloat(result5["Global Quote"]["05. price"]);
     const stock5_gain = parseFloat(result5["Global Quote"]["09. change"]);
-    const stock5_variation = parseFloat(
-      result5["Global Quote"]["10. change percent"]
-    ).toFixed(2);
+    const stock5_variation = parseFloat(result5["Global Quote"]["10. change percent"]).toFixed(2);
     if (stock5_gain >= 0) {
       var stock5 = (
         <>
@@ -235,10 +214,7 @@ function Home() {
                     <div className="stock-num">{stock1}</div>
                   </div>
                   <div>
-                    <img
-                      className="img-stock"
-                      src="https://br.advfn.com/common/images/company/N_AAPL.png"
-                    ></img>
+                    <img className="img-stock" src="https://br.advfn.com/common/images/company/N_AAPL.png"></img>
                   </div>
                 </div>
                 <div className="stock">
@@ -290,22 +266,10 @@ function Home() {
         </div>
         <div className="container-baixo">
           <Carousel activeIndex={activeIndex} next={next} previous={previous}>
-            <CarouselIndicators
-              items={items}
-              activeIndex={activeIndex}
-              onClickHandler={goToIndex}
-            />
+            <CarouselIndicators items={items} activeIndex={activeIndex} onClickHandler={goToIndex} />
             {slides}
-            <CarouselControl
-              direction="prev"
-              directionText="Previous"
-              onClickHandler={previous}
-            />
-            <CarouselControl
-              direction="next"
-              directionText="Next"
-              onClickHandler={next}
-            />
+            <CarouselControl direction="prev" directionText="Previous" onClickHandler={previous} />
+            <CarouselControl direction="next" directionText="Next" onClickHandler={next} />
           </Carousel>
         </div>
       </div>
