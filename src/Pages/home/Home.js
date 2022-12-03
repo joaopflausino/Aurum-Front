@@ -42,7 +42,7 @@ class Home extends React.Component {
       width: 1100,
       height: 400,
       type: 'area',
-      data: [{ x: 'Rentabilidade Geral', value: this.tudo }],
+      data: this.tudo,
       title: 'Gráfico de rentabilidade da carteira',
       yAxis: [1, {
         orientation: 'right',
