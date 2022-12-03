@@ -118,7 +118,7 @@ function PA() {
                 <div className='stock-esquerda'>
                   <h3 className='stock-symbol'>SBUX</h3>
                   <h3 className='stock-name'>Starbucks</h3>
-                  <div className='stock-num'></div>
+                  <div className='stock-num'>{stock2}</div>
                 </div>
                 <div>
                   <img className='img-stock' src="https://www.pngplay.com/wp-content/uploads/8/Starbucks-Coffee-Logo-PNG-Clipart-Background.png"></img>
@@ -128,7 +128,7 @@ function PA() {
                 <div className='stock-esquerda'>
                   <h3 className='stock-symbol'>ABNB</h3>
                   <h3 className='stock-name'>Airbnb</h3>
-                  <div className='stock-num'></div>
+                  <div className='stock-num'>{stock4}</div>
                 </div>
                 <div>
                   <img className='img-stock' src="https://logodownload.org/wp-content/uploads/2016/10/airbnb-logo-1-1-1386x1536.png"></img>
@@ -138,7 +138,7 @@ function PA() {
                 <div className='stock-esquerda'>
                   <h3 className='stock-symbol'>ADSK</h3>
                   <h3 className='stock-name'>Autodesk</h3>
-                  <div className='stock-num'></div>
+                  <div className='stock-num'>{stock5}</div>
                 </div>
                 <div>
                   <img className='img-stock' src="https://www.freepnglogos.com/uploads/logo-3d-png/autodesk-logo-3d-logo-brands-6.png"></img>
@@ -161,7 +161,7 @@ function PA() {
                 <div className='stock-esquerda'>
                   <h3 className='stock-symbol'>MSFT</h3>
                   <h3 className='stock-name'>Microsoft</h3>
-                  <div className='stock-num'></div>
+                  <div className='stock-num'>{stock2}</div>
                 </div>
                 <div>
                   <img className='img-stock' src="https://www.pngplay.com/wp-content/uploads/3/Windows-Microsoft-Logo-Transparent-Image.png"></img>
@@ -171,7 +171,7 @@ function PA() {
                 <div className='stock-esquerda'>
                   <h3 className='stock-symbol'>BKNG</h3>
                   <h3 className='stock-name'>Booking</h3>
-                  <div className='stock-num'></div>
+                  <div className='stock-num'>{stock2}</div>
                 </div>
                 <div>
                   <img className='img-stock' src="https://cf.bstatic.com/static/img/booking_logo_knowledge_graph/247454a990efac1952e44dddbf30c58677aa0fd8.png"></img>
@@ -181,7 +181,7 @@ function PA() {
                 <div className='stock-esquerda'>
                   <h3 className='stock-symbol'>EBAY</h3>
                   <h3 className='stock-name'>eBay Inc</h3>
-                  <div className='stock-num'></div>
+                  <div className='stock-num'>{stock1}</div>
                 </div>
                 <div>
                   <img className='img-stock' src="https://www.pngplay.com/wp-content/uploads/2/EBay-PNG-HD-Quality.png"></img>
@@ -204,7 +204,7 @@ function PA() {
                 <div className='stock-esquerda'>
                   <h3 className='stock-symbol'>MRVL</h3>
                   <h3 className='stock-name'>Marvell</h3>
-                  <div className='stock-num'></div>
+                  <div className='stock-num'>{stock5}</div>
                 </div>
                 <div>
                   <img className='img-stock' src="https://www.freepnglogos.com/uploads/marvel-logo-png/marvel-logo-hd-5.png"></img>
@@ -214,7 +214,7 @@ function PA() {
                 <div className='stock-esquerda'>
                   <h3 className='stock-symbol'>PYPL</h3>
                   <h3 className='stock-name'>PayPal</h3>
-                  <div className='stock-num'></div>
+                  <div className='stock-num'>{stock4}</div>
                 </div>
                 <div>
                   <img className='img-stock' src="https://www.pngplay.com/wp-content/uploads/8/Paypal-Logo-Background-PNG-Image.png"></img>
@@ -224,7 +224,7 @@ function PA() {
                 <div className='stock-esquerda'>
                   <h3 className='stock-symbol'>CSCO</h3>
                   <h3 className='stock-name'>Cisco</h3>
-                  <div className='stock-num'></div>
+                  <div className='stock-num'>{stock3}</div>
                 </div>
                 <div>
                   <img className='img-stock' src="https://www.freepnglogos.com/uploads/cisco-png-logo/new-cisco-logo-png-1.png"></img>
@@ -247,7 +247,7 @@ function PA() {
                 <div className='stock-esquerda'>
                   <h3 className='stock-symbol'>INTC</h3>
                   <h3 className='stock-name'>Intel</h3>
-                  <div className='stock-num'></div>
+                  <div className='stock-num'>{stock2}</div>
                 </div>
                 <div>
                   <img className='img-stock' src="https://www.pngplay.com/wp-content/uploads/3/Intel-Logo-Transparent-Image.png"></img>
@@ -257,7 +257,7 @@ function PA() {
                 <div className='stock-esquerda'>
                   <h3 className='stock-symbol'>META</h3>
                   <h3 className='stock-name'>Meta Inc</h3>
-                  <div className='stock-num'></div>
+                  <div className='stock-num'>{stock1}</div>
                 </div>
                 <div>
                   <img className='img-stock' src="https://1000logos.net/wp-content/uploads/2021/10/logo-Meta-500x281.png"></img>
@@ -267,7 +267,7 @@ function PA() {
                 <div className='stock-esquerda'>
                   <h3 className='stock-symbol'>ZS</h3>
                   <h3 className='stock-name'>Zscaler</h3>
-                  <div className='stock-num'></div>
+                  <div className='stock-num'>{stock5}</div>
                 </div>
                 <div>
                   <img className='img-stock' src="https://logosandtypes.com/wp-content/uploads/2022/04/zscaler.svg"></img>
@@ -290,7 +290,7 @@ function PA() {
                 <div className='stock-esquerda'>
                   <h3 className='stock-symbol'>AMD</h3>
                   <h3 className='stock-name'>AMD Inc</h3>
-                  <div className='stock-num'></div>
+                  <div className='stock-num'>{stock3}</div>
                 </div>
                 <div>
                   <img className='img-stock' src="https://logosmarcas.net/wp-content/uploads/2020/04/AMD-Simbolo-650x366.jpg"></img>
@@ -300,7 +300,7 @@ function PA() {
                 <div className='stock-esquerda'>
                   <h3 className='stock-symbol'>MELI</h3>
                   <h3 className='stock-name'>MercLibre</h3>
-                  <div className='stock-num'></div>
+                  <div className='stock-num'>{stock4}</div>
                 </div>
                 <div>
                   <img className='img-stock' src="https://seeklogo.com/images/M/mercado-livre-logo-D1DC52B13E-seeklogo.com.png"></img>
@@ -309,8 +309,8 @@ function PA() {
               <div className='stock'>
                 <div className='stock-esquerda'>
                   <h3 className='stock-symbol'>ZM</h3>
-                  <h3 className='stock-name'>Zoom Video</h3>
-                  <div className='stock-num'></div>
+                  <h3 className='stock-name'>ZoomVideo</h3>
+                  <div className='stock-num'>{stock4}</div>
                 </div>
                 <div>
                   <img className='img-stock' src="https://www.freepnglogos.com/uploads/zoom-logo-png/zoom-meeting-logo-video-icon-25.png"></img>
