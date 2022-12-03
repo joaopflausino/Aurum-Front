@@ -15,7 +15,6 @@
     display: flex;
     justify-content:flex-start;
     align-items: center;
-    
     border:none;
     border-radius: 15px;
     outline: none;
@@ -23,14 +22,25 @@
     overflow: auto; 
 }
 
+.indice-preco{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content:space-between;
+    width: 470px;
+    margin: 50px 0 30px 0;
+}
+
 .nasdaq-logo{
-    width: 153px;
-    height: 40px;
+    width: 190px;
+    height: 50px;
+    margin-right: 10px;
 }
 
 .sub-titulo-nasdaq{
     font-weight: 700;
     font-size: 21px;
+    margin: 10px 0;
 }
 
 .texto-nasdaq{
@@ -41,7 +51,19 @@
     text-align: justify;
 }
 
+.indice-nasdaq{
+    font-weight: 500;
+    font-size: 24px;
+    margin: 9px 0px 0px 0px;
+}
 
+.variation-nasdaq{
+    font-weight: 400;
+    font-size: 20px;
+    font-size: 18px;
+    color: red;  
+    margin: 9px 0px 0px 0px;
+}
 
 /*  ⇩⇩⇩⇩⇩⇩⇩⇩⇩ BAIXO ⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩  */
 .container-baixo-pa{
