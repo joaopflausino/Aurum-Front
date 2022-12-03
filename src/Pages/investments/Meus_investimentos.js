@@ -138,9 +138,23 @@ class MyInvestments extends React.Component {
     background: "#b2b2b200"
   };
 
+  json = [
+    {
+      name : "AAPL",
+      value: 400,
+    },
+    {
+      name : "TSLA",
+      value: 300,
+    },
+    {      
+    name : "AMZN",
+    value: 100,
+    }
+  ]
   data_acoes =[
-    {x: "AAPL",value: 200},
-    {x: "TSLA",value: 400},
+    {x: "AMZN",value: 400},
+    {x: "AMZN",value: 400},
     {x: "AMZN",value: 100}
   ];
 
@@ -237,7 +251,7 @@ class MyInvestments extends React.Component {
 
               <AccordionComponent 
               Title = {'conta Corrente'} 
-              Content1 = {'......'}
+              Content1 = {<AnyChart id = 'Conta Corrente'{...this.torta}/>}
               Content2 = {<SpanningTable TAX_RATE = {0.9} />}
               />
               <AccordionComponent 
@@ -247,7 +261,7 @@ class MyInvestments extends React.Component {
               />
               <AccordionComponent
               Title={'Ações'}
-              Content1 = {<AnyChart id='Tesouro Direto' {...this.torta}/>}
+              Content1 = {<AnyChart id='Ações' {...this.torta}/>}
               Content2 = {<SpanningTable TAX_RATE = {0.1} />}
               />
             </div>

@@ -6,6 +6,7 @@ import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
+import { json } from 'react-router-dom';
 
 
 function ccyFormat(num) {
@@ -26,11 +27,72 @@ function subtotal(items) {
 }
 
 const rows = [
-  createRow('AAPL', 100, 1.15),
-  createRow('Paper (Case)', 10, 45.99),
-  createRow('Waste Basket', 2, 17.99),
 ];
 
+const bla = {
+  "totalStock": 248.81,
+  "stock": [
+      {
+          "id": 34,
+          "stock": {
+              "id": "AAPL",
+              "name": "Apple Inc."
+          },
+          "broker": {
+              "id": 2,
+              "name": "XP Investimentos"
+          },
+          "quantity": 10.0,
+          "initialValue": 10.0,
+          "initialDate": "2022-01-02 00:00:00",
+          "price": 179.26
+      },
+      {
+          "id": 35,
+          "stock": {
+              "id": "ABNB",
+              "name": "Airbnb, Inc."
+          },
+          "broker": {
+              "id": 2,
+              "name": "XP Investimentos"
+          },
+          "quantity": 10.0,
+          "initialValue": 10.0,
+          "initialDate": "2022-06-02 00:00:00",
+          "price": 121.26
+      }
+  ],
+  "totalCheckingAccount": 0.0,
+  "checkingAccount": [],
+  "totalFixedIncome": 1100.0,
+  "fixedIncome": [
+      {
+          "id": 11,
+          "paper": "LCA",
+          "issuer": "Bradesco",
+          "yieldRate": 1.1,
+          "initialDate": "2021-12-15 00:00:00",
+          "finalDate": "2022-12-15 00:00:00",
+          "initialValue": 1000.0,
+          "broker": {
+              "id": 1,
+              "name": "Binance"
+          }
+      }
+  ]
+}
+
+const teste = bla.stock.map(objeto => {
+  return createRow(objeto.stock.name,objeto.quantity,objeto.price)
+})
+
+teste.forEach(row => {
+  rows.push(row)  
+
+});
+
+console.log(rows)
 
 export default function SpanningTable({TAX_RATE}) {
     const invoiceSubtotal = subtotal(rows);
