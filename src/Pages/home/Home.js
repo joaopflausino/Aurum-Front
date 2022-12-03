@@ -4,6 +4,7 @@ import UsuarioService from '../../app/service/usuarioService';
 import { AuthContext } from '../../main/ProvedorDeAutentificacao';
 import Navbar from '../../components/Navbar';
 import AnyChart from 'anychart-react/dist/anychart-react.min.js';
+import { Spinner } from 'reactstrap';
 
 class Home extends React.Component {
   constructor() {
@@ -12,103 +13,71 @@ class Home extends React.Component {
   }
 
   state = {
-    user: '',
-    saldo: 0,
-    saldoClass: ''
-  }
-
-  json = [
-    {
-      month: 10,
-      year: 2021,
-      value: 100
-    },
-    {
-      month: 11,
-      year: 2021,
-      value: 108
-    },
-    {
-      month: 12,
-      year: 2021,
-      value: 112
-    },
-    {
-      month: 1,
-      year: 2022,
-      value: 105
-    },
-    {
-      month: 2,
-      year: 2022,
-      value: 117
-    },
-    {
-      month: 3,
-      year: 2022,
-      value: 122.5
-    },
-    {
-      month: 4,
-      year: 2022,
-      value: 135.12
-    },
-    {
-      month: 5,
-      year: 2022,
-      value: 142
-    },
-    {
-      month: 6,
-      year: 2022,
-      value: 145
-    },
-    {
-      month: 7,
-      year: 2022,
-      value: 136.78
-    }
-  ];
-
-  dados = "";
-
-  dado = this.json.forEach((invest) => this.dados += `${invest.month}/${invest.year},${invest.value}\n`);
-
-  // "11/21,100\n12/21,50\n1/22,34\n2/22,72\n3/22,123\n4/22,122\n5/22,153\n6/22,200\n"
-
-  chart = {
-    width: 1200,
-    height: 600,
-    type: 'area',
-    data: this.dados,
-    title: 'Gráfico de rentabilidade da carteira',
-    yAxis: [1, {
-      orientation: 'right',
-      enabled: true,
-      labels: {
-        format: '{%Value}{decimalPoint:\\,}'
-      }
-    }],
-    legend: {
-      background: 'lightgreen 0.4',
-      padding: 0
-    },
-    lineMarker: {
-      value: 4.5
-    }
+    hist: null,
   };
-
 
   componentDidMount() {
     const user = this.context.usuarioAutenticado;
     console.log(user);
+    this._asyncRequest = this.apiService.historicoDaCarteira(user.wallet.id)
+      .then(response => {
+        const historico = response.data;
+        this.setState({ hist: historico });
+      })
+      .catch(erro => {
+        console.log(erro.response.data);
+      })
   }
 
   render() {
 
+    if (this.state.hist === null || this.state.lista === null) {
+      return (<><Navbar /> <div className='spinner'><Spinner></Spinner></div></>)
+    }
+
+    const tudo = "";
+    const h = this.state.hist.forEach((invest) => this.tudo += `${invest.month}/${invest.year},${invest.price}\n`);
+
+    const areaDois = {
+      width: 1100,
+      height: 400,
+      type: 'area',
+      data: [{ x: 'Rentabilidade Geral', value: this.tudo }],
+      title: 'Gráfico de rentabilidade da carteira',
+      yAxis: [1, {
+        orientation: 'right',
+        enabled: true,
+        labels: {
+          format: '{%Value}{decimalPoint:\\,}'
+        }
+      }],
+      legend: {
+        background: 'lightgreen 0.4',
+        padding: 0
+      },
+      lineMarker: {
+        value: 4.5
+      },
+      background: "#b2b2b200"
+    };
+
+
     return (
       <>
         <Navbar />
+        <div className='main-home'>
+          <div className='container-cima'>
+            <AnyChart id='area-chart' {...areaDois} />
+          </div>
+          <div className='container-meio'>
+            <div className='container-meio-esquerda'></div>
+            <div className='container-meio-direita'></div>
+
+          </div>
+          <div className='container-baixo'>
+
+          </div>
+        </div>
       </>
     )
   }
