@@ -106,7 +106,6 @@
     outline: none;
 }
 
-
 .checkbox-si {
     width: 40%;
     display: flex;
@@ -114,15 +113,6 @@
     justify-content: center;
     flex-direction: row;
 }
-
-
-
-
-
-
-
-
-
 
 .botao-calcular {
     width: 45%;

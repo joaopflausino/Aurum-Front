@@ -10,57 +10,57 @@ const e = new ProvedorAutenticado();
 
 export const SidebarData = [
     {
-        title : 'Página Inicial',
+        title: 'Página Inicial',
         path: '/home',
-        icon: <AiIcons.AiFillHome/>,
+        icon: <AiIcons.AiFillHome />,
         cName: 'nav-text',
         id: 'home'
     },
     {
-        title : 'Notícias',
+        title: 'Notícias',
         path: '/noticias',
-        icon: <FaIcons.FaRegNewspaper/>,
+        icon: <FaIcons.FaRegNewspaper />,
         cName: 'nav-text',
         id: 'news'
     },
     {
-        title : 'Principais ações',
+        title: 'Principais ações',
         path: '/principais-acoes',
-        icon: <MdIcons.MdOutlineTableChart/>,
+        icon: <MdIcons.MdOutlineTableChart />,
         cName: 'nav-text',
         id: 'stocks'
     },
     {
-        title : 'Meus Investimentos',
+        title: 'Meus Investimentos',
         path: '/meus-investimentos',
-        icon: <FaIcons.FaWallet/>,
+        icon: <FaIcons.FaWallet />,
         cName: 'nav-text',
         id: 'investments'
     },
     {
-        title : 'Adicionar Investimentos',
+        title: 'Adicionar Investimentos',
         path: '/adicionar-investimento',
-        icon: <Io5Icons.IoBagAddSharp/>,
+        icon: <Io5Icons.IoBagAddSharp />,
         cName: 'nav-text',
         id: 'add-investments'
     },
     {
-        title : 'Simular Investimentos',
+        title: 'Simular Investimentos',
         path: '/simular-investimento',
-        icon: <BsIcons.BsGraphUp/>,
+        icon: <BsIcons.BsGraphUp />,
         cName: 'nav-text',
         id: 'simulate'
     },
     {
-        title : 'Meus dados',
+        title: 'Meus dados',
         path: '/meus-dados',
-        icon: <BsIcons.BsFillGearFill/>,
+        icon: <BsIcons.BsFillGearFill />,
         cName: 'nav-text',
         id: 'account'
     },
     {
-        title : 'Sair',
-        icon: <MdIcons.MdLogout/>,
+        title: 'Sair',
+        icon: <MdIcons.MdLogout />,
         cName: 'nav-text',
         id: 'logout'
     },

@@ -90,21 +90,21 @@ class MyInvestments extends React.Component {
 
   // "11/21,100\n12/21,50\n1/22,34\n2/22,72\n3/22,123\n4/22,122\n5/22,153\n6/22,200\n"
 
-  data = [
-    { x: "Ação", value: 500 },
-    { x: "Renda Fixa", value: 350 },
-    { x: "Conta Corrente", value: 120 },
-    { x: "Tesouro Direto", value: 220 }
-  ];
+  // data = [
+  //   { x: "Ação", value: 500 },
+  //   { x: "Renda Fixa", value: 350 },
+  //   { x: "Conta Corrente", value: 120 },
+  //   { x: "Tesouro Direto", value: 220 }
+  // ];
 
-  pie = {
-    type: 'pie',
-    width: 600,
-    height: 400,
-    data: this.data,
-    title: 'Gráfico de pizza',
-    background: "#b2b2b200"
-  };
+  // pie = {
+  //   type: 'pie',
+  //   width: 600,
+  //   height: 400,
+  //   data: this.data,
+  //   title: 'Gráfico de pizza',
+  //   background: "#b2b2b200"
+  // };
 
   area = {
     width: 600,
@@ -131,6 +131,7 @@ class MyInvestments extends React.Component {
 
   state = {
     hist: null,
+    lista: null,
   };
 
   _asyncRequest = null;
@@ -140,8 +141,17 @@ class MyInvestments extends React.Component {
       .then(response => {
         const historico = response.data;
         this.setState({ hist: historico });
-        console.log(historico);
-        console.log(this.state.hist);
+      })
+      .catch(erro => {
+        console.log(erro.response.data);
+      })
+
+    this.apiService.listarCarteira(7)
+      .then(response => {
+        const lista = response.data;
+        this.setState({ lista: lista });
+        console.log(lista);
+        console.log(this.state);
       })
       .catch(erro => {
         console.log(erro.response.data);
@@ -156,7 +166,7 @@ class MyInvestments extends React.Component {
 
 
   render() {
-    if (this.state.hist === null) {
+    if (this.state.hist === null || this.state.lista === null) {
       return (<><Navbar /> <div className='spinner'><Spinner></Spinner></div></>)
     }
 
@@ -186,15 +196,30 @@ class MyInvestments extends React.Component {
       background: "#b2b2b200"
     };
 
+    const data2 = [
+      { x: "Ação", value: this.state.lista.totalStock  },
+      { x: "Renda Fixa", value: this.state.lista.totalFixedIncome },
+      { x: "Conta Corrente", value: this.state.lista.totalCheckingAccount }
+    ];
+  
+    const pie2 = {
+      type: 'pie',
+      width: 600,
+      height: 400,
+      data: data2,
+      title: 'Gráfico de pizza',
+      background: "#b2b2b200"
+    };
+
     return (
       <>
         <Navbar />
         <div className='main-mi'>
           <div className='container'>
             <div className='row align-items-center mb-3'>
-              <div className='col-8'><AnyChart id='pie-chart' {...this.pie} /></div>
+              <div className='col-8'><AnyChart id='pie-chart' {...pie2} /></div>
               <div className='col-4'>
-                <Table dark>
+                {/* <Table dark>
                   <thead>
                     <tr>
                       <th></th>
@@ -227,7 +252,7 @@ class MyInvestments extends React.Component {
                       <td>2.57%</td>
                     </tr>
                   </tbody>
-                </Table>
+                </Table> */}
               </div>
             </div>
             <div className='row align-items-center'>

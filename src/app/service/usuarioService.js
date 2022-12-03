@@ -19,6 +19,10 @@ class UsuarioService extends Api {
     return this.get("/investment/history/" + idCarteira);
   }
 
+  listarCarteira(idCarteira) {
+    return this.get("/investment/" + idCarteira);
+  }
+
   validar(usuario) {
     const erros = [];
 

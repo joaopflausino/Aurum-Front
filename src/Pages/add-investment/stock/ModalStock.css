@@ -1,0 +1,23 @@
+#price,
+#initialDate,
+#quantity {
+    border: none;
+    outline: none;
+    border-radius: 0;
+}
+
+.modalStockBody {
+    background-color: #d9d9d9b3;
+    font-size: 15pt;
+}
+
+.select-inputs {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.select-inputs-inside {
+    display: flex;
+    flex-direction: column;
+}

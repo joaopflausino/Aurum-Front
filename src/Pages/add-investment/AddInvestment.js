@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useEffect } from 'react';
 import './add-investment.css';
-import { Button, Modal, ModalHeader, ModalBody, ModalFooter, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
+import { Modal, ModalHeader, ModalFooter, Button, Tooltip } from 'reactstrap';
 import ModalStock from './stock/ModalStock';
 import ModalFixedRate from './fixedrate/ModalFixedRate';
 import ModalDirectTreasuary from './directtreasury/ModalDirectTreasury';
@@ -25,16 +25,40 @@ function AddInvestment() {
   const [modalCheckingAccount, setModalCheckingAccount] = useState(false);
   const openCheckingAccount = () => setModalCheckingAccount(!modalCheckingAccount);
 
-  
+  const [tooltipOpenCC, setTooltipOpenCC] = useState(false);
+  const toggleCC = () => setTooltipOpenCC(!tooltipOpenCC);
+
+  const [tooltipOpenRF, setTooltipOpenRF] = useState(false);
+  const toggleRF = () => setTooltipOpenRF(!tooltipOpenRF);
+
+  const [tooltipOpenAcao, setTooltipOpenAcao] = useState(false);
+  const toggleAcao = () => setTooltipOpenAcao(!tooltipOpenAcao);
+
+
   return (
     <>
       <Navbar />
       <div className='main-add-investment'>
         <div className='investment-options'>
-          <Button onClick={openCheckingAccount}>Conta Corrente</Button>
-          <Button onClick={openDirectTreasuary}>Tesouro Direto</Button>
-          <Button onClick={openFixedRate}>Renda Fixa</Button>
-          <Button onClick={openStock}>Ação</Button>
+          <div className='title-investment'>
+            <h1>Adicionar Investimento</h1>
+          </div>
+          <Button onClick={openCheckingAccount} id="btn-conta-corrente">Conta Corrente</Button>
+          <Tooltip placement="right" isOpen={tooltipOpenCC}
+            target="btn-conta-corrente"
+            toggle={toggleCC} id="tooltip-cc">
+              Aqui é possível que você adicione um investimento que esteja aplicado em uma conta corrente. 
+              Desse modo, é necessário que o rendimento mensal seja informado, além da data inicial e a instiuição que se encontra esse investimento.</Tooltip>
+          <Button onClick={openFixedRate} id="btn-renda-fixa">Renda Fixa</Button>
+          <Tooltip placement="right" isOpen={tooltipOpenRF}
+            target="btn-renda-fixa"
+            toggle={toggleRF} id="tooltip-rf" >Aqui é possível que você adicione um investimento que esteja aplicado em uma renda fixa. 
+            Desse modo, é necessário que o rendimento total seja informado, além da data inicial, data final e a instiuição que se encontra esse investimento.</Tooltip>
+          <Button onClick={openStock} id="btn-acao">Ação</Button>
+          <Tooltip placement="right" isOpen={tooltipOpenAcao}
+            target="btn-acao"
+            toggle={toggleAcao} id="tooltip-acao">Aqui é possível que você adicione um investimento que esteja aplicado em um ativo. 
+            Nessa categoria de investimento, é possível a adição de 100 diferentes ações da bolsa americana (NASDAQ) e da bolsa de ativos brasileira (B3)</Tooltip>
         </div>
 
 
@@ -50,7 +74,6 @@ function AddInvestment() {
             </Button>
           </ModalFooter>
         </Modal>
-
 
         <Modal isOpen={modalFixedRate} toggle={openFixedRate} size="lg">
           <ModalHeader toggle={openFixedRate}>Cadastro de Renda Fixa</ModalHeader>
@@ -78,7 +101,6 @@ function AddInvestment() {
           </ModalFooter>
         </Modal>
 
-
         <Modal isOpen={modalCheckingAccount} toggle={openCheckingAccount} size="lg">
           <ModalHeader toggle={openCheckingAccount}>Cadastro de Conta Corrente</ModalHeader>
           <ModalCheckingAccount />
@@ -92,7 +114,6 @@ function AddInvestment() {
           </ModalFooter>
         </Modal>
       </div>
-
     </>
   );
 }

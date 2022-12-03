@@ -1,41 +1,68 @@
-.main-add-investment{
+.main-add-investment {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: row;
     width: 100vw;
     height: 100vh;
 }
 
 .investment-options {
     padding: 20px;
-    margin:0px 0px 0px 14%;
+    margin: 0px 0px 0px 14%;
     width: 40vw;
     height: 72vh;
     display: flex;
-    justify-content:flex-start;
-    align-items:flex-start;
+    justify-content: flex-start;
+    align-items: flex-start;
     background: #b2b2b2a2;
-    border:none;
-    /* border-radius: 15px; */
+    border: none;
     outline: none;
-    flex-direction: row; 
+    flex-direction: column;
 }
 
-.investment-options > button{
+.investment-options>button {
     color: #ffffff;
     width: 50%;
-    padding: 16px 0px;
-    margin:20px 10px 0px 10px;
-    border:none;
-    /* border-radius: 10px; */
+    padding: 26px 0px;
+    margin: 20px 10px 0px 10px;
+    border: none;
     outline: none;
-    font-size: 13pt;
+    font-size: 20pt;
     background: #000000;
     font-weight: 800;
     cursor: pointer;
+    border-radius: 0;
 }
 
-.investment-options > button:hover{
+.investment-options>button:hover {
     background-color: #FFC600;
     color: #000000;
+}
+
+.title-investment {
+    font-size: 30pt;
+    color:#ffffff;
+    padding: 20px 0;
+    background-color: #606060;
+    text-align: center;
+    font-style: italic;
+    font-weight: 800;
+    width: 100%;
+}
+
+.modal-header, .modal-footer {
+    background-color: #d9d9d9b3;
+    font-size: 25pt;
+}
+
+.texto-auxiliar {
+    display: none;
+}
+
+#tooltip-rf,
+#tooltip-cc,
+#tooltip-acao {
+    margin-left: 10px;
+    margin-top: 50px;
 }

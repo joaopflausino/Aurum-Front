@@ -1,6 +1,7 @@
 import Axios from 'axios';
 import React, { useState } from 'react';
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
+import './ModalStock.css';
 
 function ModalStock(args) {
   const [modal, setModal] = useState(true);
@@ -54,77 +55,79 @@ function ModalStock(args) {
   if (!broker) return null;
 
   return (
-    <div>
-        <ModalBody>
-            <Form id="modalForm" onSubmit={handleSubmit}>
-              <FormGroup>
-                <Label for="broker">
-                  Instituição
-                </Label>
-                <Input
-                  id="broker"
-                  name="broker"
-                  type="select"
-                >
-                  {broker.map((b, index) => {
-                    return (
-                      <>
-                        <option key={index}>{b.name}</option>
-                      </>);
-                  })}
-                </Input>
-              </FormGroup>
-              <FormGroup>
-                <Label for="stock">
-                  Ativo
-                </Label>
-                <Input
-                  id="stock"
-                  name="stock"
-                  type="select"
-                >
-                  {stock.map((s, index) => {
-                    return (
-                      <>
-                        <option key={index}>{s.id}</option>
-                      </>);
-                  })}
-                </Input>
-              </FormGroup>
-              <FormGroup>
-                <Label for="initialDate">
-                  Data
-                </Label>
-                <Input
-                  id="initialDate"
-                  name="initialDate"
-                  type="date"
-                />
-              </FormGroup>
-              <FormGroup>
-                <Label for="price">
-                  Cotação
-                </Label>
-                <Input
-                  id="price"
-                  name="price"
-                  placeholder="Cotação do Ativo"
-                  type="text"
-                />
-              </FormGroup>
-              <FormGroup>
-                <Label for="quantity">
-                  Quantidade
-                </Label>
-                <Input
-                  id="quantity"
-                  name="quantity"
-                  placeholder="Quantidade de ativos investida"
-                  type="text"
-                />
-              </FormGroup>
-            </Form>
-          </ModalBody>
+    <div className='modalStockBody'>
+      <ModalBody>
+        <Form id="modalForm" onSubmit={handleSubmit}>
+          <div className='select-inputs'>
+            <FormGroup className='select-inputs-inside'>
+              <Label for="broker">
+                Instituição
+              </Label>
+              <Input
+                id="broker"
+                name="broker"
+                type="select"
+              >
+                {broker.map((b, index) => {
+                  return (
+                    <>
+                      <option key={index}>{b.name}</option>
+                    </>);
+                })}
+              </Input>
+            </FormGroup>
+            <FormGroup className='select-inputs-inside'>
+              <Label for="stock">
+                Ativo
+              </Label>
+              <Input
+                id="stock"
+                name="stock"
+                type="select"
+              >
+                {stock.map((s, index) => {
+                  return (
+                    <>
+                      <option key={index}>{s.id}</option>
+                    </>);
+                })}
+              </Input>
+            </FormGroup>
+          </div>
+          <FormGroup>
+            <Label for="initialDate">
+              Data
+            </Label>
+            <Input
+              id="initialDate"
+              name="initialDate"
+              type="date"
+            />
+          </FormGroup>
+          <FormGroup>
+            <Label for="price">
+              Cotação
+            </Label>
+            <Input
+              id="price"
+              name="price"
+              placeholder="Cotação do Ativo"
+              type="text"
+            />
+          </FormGroup>
+          <FormGroup>
+            <Label for="quantity">
+              Quantidade
+            </Label>
+            <Input
+              id="quantity"
+              name="quantity"
+              placeholder="Quantidade de ativos investida"
+              type="text"
+            />
+          </FormGroup>
+        </Form>
+      </ModalBody>
     </div>
   );
 }

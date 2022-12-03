@@ -12,7 +12,7 @@ function Navbar() {
 
     return (
         <>
-            <IconContext.Provider value={{ color: '#fff' }}>
+            <IconContext.Provider value={{ className: 'qualquer' }}>
                 <nav className={'nav-menu active'}>
                     <div className="imagem">
                     <img src={imagem} className="logo-aurum"/>
@@ -22,7 +22,8 @@ function Navbar() {
                             return (
                                 <li key={index} className={item.cName} id={item.id}>
                                     <Link to={item.path}>
-                                        {item.icon}
+                                        <div className='icon'>
+                                        {item.icon}</div>
                                         <span>
                                             {item.title}
                                         </span>

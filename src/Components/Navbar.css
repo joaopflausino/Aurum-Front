@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap');
 
 * {
-  font-family: 'Inter', sans-serif;
+    font-family: 'Inter', sans-serif;
 }
 
 .nav-menu-items {
@@ -9,15 +9,15 @@
     padding: 0;
 }
 
-.navbar{
+.navbar {
     background-color: #000000;
-    height : 80px;
+    height: 80px;
     display: flex;
     justify-content: start;
     align-items: center;
 }
 
-.menu-bars{
+.menu-bars {
     margin-left: 2rem;
     font-size: 2rem;
     background: none;
@@ -36,12 +36,12 @@
     align-items: center;
 }
 
-.nav-menu.active{
+.nav-menu.active {
     left: 0;
     transition: 350ms;
 }
 
-.nav-text{
+.nav-text {
     display: flex;
     justify-content: start;
     align-items: center;
@@ -64,16 +64,17 @@
     margin: 0;
 }
 
-.nav-text a:hover{
+.nav-text a:hover {
     background-color: #FFC600;
     color: #000000;
+    text-decoration: none;
 }
 
 /* .nav-text a:hover > svg{
     color: #000000;
 } */
 
-.navbar-toggle{
+.navbar-toggle {
     background-color: #000000;
     width: 100%;
     height: 80px;
@@ -82,19 +83,29 @@
     align-items: center;
 }
 
-span{
+span {
     margin-left: 16px;
 }
 
-.logo-aurum{
+.logo-aurum {
     width: 10vw;
     margin: 3em 0 2em 0;
 }
 
-#account.nav-text{
+#account.nav-text {
     margin-top: 80%;
     height: 55px;
 }
-#logout.nav-text{
+
+#logout.nav-text {
     height: 55px;
+}
+
+.icon {
+    color: white;
+}
+
+a:hover .icon{
+    color: black;
+    transition: .6s;
 }
