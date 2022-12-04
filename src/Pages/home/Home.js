@@ -107,8 +107,8 @@ function Home() {
   };
 
   const area2 = {
-    width: 950,
-    height: 250,
+    width: 860,
+    height: 290,
     type: "area",
     data: dados,
     title: "Gráfico de rentabilidade da carteira",
@@ -372,7 +372,7 @@ function Home() {
           </div>
           {/*⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩  PARTE DO MEIO DIREITA ⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩*/}
           <div className="container-meio-direita">
-            <AnyChart id="area-chart-home" {...area2} />
+            <AnyChart id="area-chart2-home" {...area2} />
           </div>
         </div>
         {/*⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩  PARTE DO BAIXO ⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩*/}
