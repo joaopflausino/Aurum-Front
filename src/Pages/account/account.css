@@ -1,194 +1,194 @@
-.main-md{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100vw;
-    height: 100vh;
+.main-md {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
 }
 
-.container-dados{
-    margin:0px 0px 0px 14%;
-    width: 40vw;
-    height: 72vh;
-    display: flex;
-    justify-content:flex-start;
-    align-items: center;
-    background: #b2b2b2a2;
-    border:none;
-    border-radius: 15px;
-    outline: none;
-    flex-direction: column;    
+.container-dados {
+  margin: 0px 0px 0px 14%;
+  width: 40vw;
+  height: 72vh;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background: #d9d9d9b3;
+  border: none;
+  border-radius: 0px;
+  outline: none;
+  flex-direction: column;
 }
 
-.h1-meus-dados{
-    font-size: 2.1em;
-    font-weight: 700;
-    margin: 5% 0px 6% 0px;
+.h1-meus-dados {
+  font-size: 2.1em;
+  font-weight: 700;
+  margin: 5% 0px 6% 0px;
 }
 
-.texto-e-input-md{
-    width: 90%;
-    display: flex;
-    flex-direction:row;
-    align-items: center;
-    justify-content:center ;
-    margin: 2% 0px;
+.texto-e-input-md {
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin: 2% 0px;
+}
+.texto-e-input-md > .div-input {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }
 
-.texto-e-input-md > label{
-    margin-left: 10%;
-    width: 22%;
-    font-size: 14pt;
-    font-weight: 600;
+.texto-e-input-md > div > label {
+  font-size: 14pt;
 }
 
-.texto-e-input-md > input{
-    width: 100%;
-    border:solid;
-    border-width: 1px;
-    border-color: #3a3a3a9f;
-    border-radius: 10px;
-    padding: 15px;
-    font-size: 12pt;
-    outline: none;
-    box-sizing: border-box;
+.texto-e-input-md > div > input {
+  width: 100%;
+  border: solid;
+  border-width: 1px;
+  border: none;
+  border-radius: 0px;
+  padding: 15px;
+  font-size: 12pt;
+  outline: none;
+  box-sizing: border-box;
 }
 
-.check-md{
-    margin: 10px 10% 0px 5px;
-    width: 20%;
-    display: flex;
-    flex-direction:column;
-    align-items: center;
-    justify-content:center ;
+.check-md {
+  margin: 10px 10% 0px 5px;
+  width: 20%;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  justify-content: center;
 }
 
-.check-md > input{
-    width: 90px;
+.check-md > input {
+  width: 90px;
 }
 
-.check-md > label{
-    font-size: 10pt;
-    font-weight: 600;
+.check-md > label {
+  font-size: 10pt;
 }
 
-.botao-salvar{
-    width: 45%;
-    padding: 14px 0px;
-    margin-top: 5%;
-    border:none;
-    border-radius: 10px;
-    outline: none;
-    font-size: 13pt;
-    background: #fce91b;
-    font-weight: 800;
-    cursor: pointer;
+.botao-salvar {
+  width: 45%;
+  padding: 14px 0px;
+  margin-top: 5%;
+  border: none;
+  border-radius: 10px;
+  outline: none;
+  font-size: 13pt;
+  background: #fce91b;
+  font-weight: 800;
+  cursor: pointer;
 }
-
 
 /*  ------------------------TUDO ABAIXO É RESPOSAVEL PELO CHECKBOX ------------------------------------- */
 
 .toggler-wrapper.style-27 {
-    width: 54px;
-    height: 32px;
+  width: 54px;
+  height: 32px;
 }
 
-.toggler-wrapper.style-27 input[type="checkbox"]:checked+.toggler-slider .toggler-knob:before {
-    left: 100%;
+.toggler-wrapper.style-27 input[type="checkbox"]:checked + .toggler-slider .toggler-knob:before {
+  left: 100%;
 }
-  
-.toggler-wrapper.style-27 input[type="checkbox"]:checked+.toggler-slider .toggler-knob:after {
-    right: 3px;
+
+.toggler-wrapper.style-27 input[type="checkbox"]:checked + .toggler-slider .toggler-knob:after {
+  right: 3px;
 }
-  
+
 .toggler-wrapper.style-27 .toggler-knob {
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
 }
-  
+
 .toggler-wrapper.style-27 .toggler-knob:before {
-    content: 'Não';
-    position: absolute;
-    width: calc(30px - 6px);
-    height: calc(30px - 6px);
-    border-radius: 50%;
-    left: 3px;
-    top: 3px;
-    background-color: #fff;
-    -webkit-transition: all 300ms ease;
-    transition: all 300ms ease;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    font-size: 70%;
-    font-weight: 600;
+  content: "Não";
+  position: absolute;
+  width: calc(30px - 6px);
+  height: calc(30px - 6px);
+  border-radius: 50%;
+  left: 3px;
+  top: 3px;
+  background-color: #fff;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  font-size: 70%;
+  font-weight: 600;
 }
-  
+
 .toggler-wrapper.style-27 .toggler-knob:after {
-    content: 'Sim';
-    position: absolute;
-    width: calc(30px - 6px);
-    height: calc(30px - 6px);
-    border-radius: 50%;
-    right: 100%;
-    top: 3px;
-    background-color: #fff;
-    -webkit-transition: all 300ms ease;
-    transition: all 300ms ease;
-    display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    font-size: 70%;
-    font-weight: 600;
+  content: "Sim";
+  position: absolute;
+  width: calc(30px - 6px);
+  height: calc(30px - 6px);
+  border-radius: 50%;
+  right: 100%;
+  top: 3px;
+  background-color: #fff;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  font-size: 70%;
+  font-weight: 600;
 }
-  
+
 .toggler-wrapper {
-    display: block;
-    width: 45px;
-    height: 25px;
-    cursor: pointer;
-    position: relative;
+  display: block;
+  width: 45px;
+  height: 25px;
+  cursor: pointer;
+  position: relative;
 }
 
 .toggler-wrapper input[type="checkbox"] {
-    display: none;
+  display: none;
 }
 
-.toggler-wrapper input[type="checkbox"]:checked+.toggler-slider {
-    background-color: #fce91b;
+.toggler-wrapper input[type="checkbox"]:checked + .toggler-slider {
+  background-color: #fce91b;
 }
 
 .toggler-wrapper .toggler-slider {
-    border: solid;
-    border-color: #03030336;
-    border-width: 1px;
-    border-radius: 50%;
-    background-color: #ccc;
-    position: absolute;
-    border-radius: 100px;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    -webkit-transition: all 300ms ease;
-    transition: all 300ms ease;
+  border: solid;
+  border-color: #03030336;
+  border-width: 1px;
+  border-radius: 50%;
+  background-color: #ccc;
+  position: absolute;
+  border-radius: 100px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
 }
 
 .toggler-wrapper .toggler-knob {
-    position: absolute;
-    -webkit-transition: all 300ms ease;
-    transition: all 300ms ease;
+  position: absolute;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
 }
 
 /*  ------------------------TUDO ACIMA É RESPOSAVEL PELO CHECKBOX ------------------------------------- */
