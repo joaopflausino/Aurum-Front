@@ -94,8 +94,12 @@ const data_RendaFixa = bla.fixedIncome.map(objeto => {
 })
 
 
-const gutterlist_data = bla.stock.map(blason => {
+const gutterlist_data_Ações = bla.stock.map(blason => {
   return {name : blason.stock.name,id : blason.stock.id}
+})
+
+const gutterlist_data_rendafixa = bla.fixedIncome.map(blason =>{
+  return {name : blason.paper + ' ' +  blason.issuer,id : blason.id}
 })
 
 console.log(data_Acoes);
@@ -300,23 +304,26 @@ class MyInvestments extends React.Component {
               Title = {'Renda Fixa'} 
               Content1 = {<AnyChart id='Renda Fixa' {...this.torta_rendafixa}/>} 
               Content2 = {<TableRendafixa />}
+              Content3 = {<GutterlessList objeto = {gutterlist_data_rendafixa}/>}
               />
 
               <AccordionComponent 
               Title = {'conta Corrente'} 
               Content1 = {<AnyChart id = 'Conta Corrente'{...this.torta_contacorrente}/>}
               Content2 = {<TableAcoes />}
-              Content3 = {<GutterlessList objeto = {gutterlist_data}/>}
+              Content3 = {<GutterlessList objeto = {gutterlist_data_Ações}/>}
               />
               <AccordionComponent 
               Title={'Tesouro Direto'}
               Content1 = {<AnyChart id='Tesouro Direto' {...this.torta_tesouro}/>}
               Content2 = {<TableAcoes />}
+              Content3 = {<GutterlessList objeto = {gutterlist_data_Ações}/>}
               />
               <AccordionComponent
               Title={'Ações'}
               Content1 = {<AnyChart id='Ações' {...this.torta_acoes}/>}
               Content2 = {<TableAcoes />}
+              Content3 = {<GutterlessList objeto = {gutterlist_data_Ações}/>}
               />
             </div>
           </div>
