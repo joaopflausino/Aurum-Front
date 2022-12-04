@@ -6,8 +6,6 @@ import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
-import { json } from 'react-router-dom';
-
 
 function ccyFormat(num) {
   return `${num.toFixed(2)}`;
@@ -17,9 +15,9 @@ function priceRow(qty, unit) {
   return qty * unit;
 }
 
-function createRow(desc, qty, unit) {
+function createRow(desc,inst,qty, unit) {
   const price = priceRow(qty, unit);
-  return { desc, qty, unit, price };
+  return { desc, inst, qty, unit, price };
 }
 
 function subtotal(items) {
@@ -83,8 +81,8 @@ const bla = {
   ]
 }
 
-const teste = bla.stock.map(objeto => {
-  return createRow(objeto.stock.name,objeto.quantity,objeto.price)
+const teste = bla.fixedIncome.map(objeto => {
+  return createRow(objeto.paper,objeto.issuer,objeto.initialValue,objeto.yieldRate)
 })
 
 teste.forEach(row => {
@@ -94,28 +92,24 @@ teste.forEach(row => {
 
 console.log(rows)
 
-export default function SpanningTable({TAX_RATE}) {
+export default function TableRendafixa() {
     const invoiceSubtotal = subtotal(rows);
-    console.log(invoiceSubtotal)
-    const invoiceTaxes = TAX_RATE * invoiceSubtotal;
-    console.log(TAX_RATE);
-    console.log(invoiceTaxes);
-    const invoiceTotal = invoiceTaxes + invoiceSubtotal;
-    const maluqinho = (TAX_RATE * 100).toFixed(0);
-    console.log(maluqinho);
 
     return (
     <TableContainer component={Paper}>
       <Table sx={{ minWidth: 700 }} aria-label="spanning table">
         <TableHead>
           <TableRow>
-            <TableCell align="center" colSpan={3}>
+            <TableCell align="center" colSpan={4}>
               Details
             </TableCell>
-            <TableCell align="right">Price</TableCell>
+            <TableCell align="right">
+                Price
+            </TableCell>
           </TableRow>
           <TableRow>
             <TableCell>Desc</TableCell>
+            <TableCell>Instituição</TableCell>
             <TableCell align="right">Qty.</TableCell>
             <TableCell align="right">Unit</TableCell>
             <TableCell align="right">Sum</TableCell>
@@ -125,6 +119,7 @@ export default function SpanningTable({TAX_RATE}) {
           {rows.map((row) => (
             <TableRow key={row.desc}>
               <TableCell>{row.desc}</TableCell>
+              <TableCell>{row.inst}</TableCell>
               <TableCell align="right">{row.qty}</TableCell>
               <TableCell align="right">{row.unit}</TableCell>
               <TableCell align="right">{ccyFormat(row.price)}</TableCell>
@@ -132,18 +127,8 @@ export default function SpanningTable({TAX_RATE}) {
           ))}
 
           <TableRow>
-            <TableCell rowSpan={3} />
-            <TableCell colSpan={2}>Subtotal</TableCell>
-            <TableCell align="right">{ccyFormat(invoiceSubtotal)}</TableCell>
-          </TableRow>
-          <TableRow>
-            <TableCell>Tax</TableCell>
-            <TableCell align="right">{`${(TAX_RATE * 100).toFixed(0)} %`}</TableCell>
-            <TableCell align="right">{ccyFormat(invoiceTaxes)}</TableCell>
-          </TableRow>
-          <TableRow>
             <TableCell colSpan={2}>Total</TableCell>
-            <TableCell align="right">{ccyFormat(invoiceTotal)}</TableCell>
+            <TableCell align="right" colSpan={3}>{ccyFormat(invoiceSubtotal)}</TableCell>
           </TableRow>
         </TableBody>
       </Table>

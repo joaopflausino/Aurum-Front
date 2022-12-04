@@ -4,9 +4,11 @@ import Navbar from '../../Components/Navbar';
 import AnyChart from 'anychart-react/dist/anychart-react';
 import './investments.css';
 import { Table } from 'reactstrap';
-import SpanningTable from './TableComponent';
+import TableAcoes from './TableAcoes';
+import TabelaRendafixa from './TableRendafixa';
 import AccordionComponent from './AccordionComponent';
-
+import TableRendafixa from './TableRendafixa';
+import GutterlessList from './Gutterlesslist';
 
 
 
@@ -89,6 +91,11 @@ const data_RendaFixa = bla.fixedIncome.map(objeto => {
   console.log(TotalDays);
 
   return {x : objeto.paper + ' ' +  objeto.issuer,value : TotalDays * objeto.initialValue}
+})
+
+
+const gutterlist_data = bla.stock.map(blason => {
+  return {name : blason.stock.name,id : blason.stock.id}
 })
 
 console.log(data_Acoes);
@@ -292,23 +299,24 @@ class MyInvestments extends React.Component {
               <AccordionComponent 
               Title = {'Renda Fixa'} 
               Content1 = {<AnyChart id='Renda Fixa' {...this.torta_rendafixa}/>} 
-              Content2 = {<SpanningTable TAX_RATE = {0.7} />}
+              Content2 = {<TableRendafixa />}
               />
 
               <AccordionComponent 
               Title = {'conta Corrente'} 
               Content1 = {<AnyChart id = 'Conta Corrente'{...this.torta_contacorrente}/>}
-              Content2 = {<SpanningTable TAX_RATE = {0.9} />}
+              Content2 = {<TableAcoes />}
+              Content3 = {<GutterlessList objeto = {gutterlist_data}/>}
               />
               <AccordionComponent 
               Title={'Tesouro Direto'}
               Content1 = {<AnyChart id='Tesouro Direto' {...this.torta_tesouro}/>}
-              Content2 = {<SpanningTable TAX_RATE = {0.9} />}
+              Content2 = {<TableAcoes />}
               />
               <AccordionComponent
               Title={'Ações'}
               Content1 = {<AnyChart id='Ações' {...this.torta_acoes}/>}
-              Content2 = {<SpanningTable TAX_RATE = {0.1} />}
+              Content2 = {<TableAcoes />}
               />
             </div>
           </div>
