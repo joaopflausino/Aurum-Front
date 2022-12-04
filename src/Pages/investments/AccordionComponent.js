@@ -5,7 +5,7 @@ import AccordionDetails from '@mui/material/AccordionDetails';
 import Typography from '@mui/material/Typography';
 import {MdOutlineExpandLess,MdOutlineKeyboardArrowDown} from 'react-icons/md';
 
-export default function ({Title,Content1,Content2}) {
+export default function ({Title,Content1,Content2,Content3}) {
   return (
         <Accordion>
             <AccordionSummary
@@ -18,6 +18,7 @@ export default function ({Title,Content1,Content2}) {
                 <AccordionDetails>
                     {Content1}
                     {Content2}
+                    {Content3}
                 </AccordionDetails>
         </Accordion>
   )

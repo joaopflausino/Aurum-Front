@@ -7,7 +7,6 @@ import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 
-
 function ccyFormat(num) {
   return `${num.toFixed(2)}`;
 }
@@ -16,9 +15,9 @@ function priceRow(qty, unit) {
   return qty * unit;
 }
 
-function createRow(desc, qty, unit) {
+function createRow(desc, inst, qty, unit) {
   const price = priceRow(qty, unit);
-  return { desc, qty, unit, price };
+  return { desc,inst, qty, unit, price };
 }
 
 function subtotal(items) {
@@ -26,34 +25,89 @@ function subtotal(items) {
 }
 
 const rows = [
-  createRow('AAPL', 100, 1.15),
-  createRow('Paper (Case)', 10, 45.99),
-  createRow('Waste Basket', 2, 17.99),
 ];
 
+const bla = {
+  "totalStock": 248.81,
+  "stock": [
+      {
+          "id": 34,
+          "stock": {
+              "id": "AAPL",
+              "name": "Apple Inc."
+          },
+          "broker": {
+              "id": 2,
+              "name": "XP Investimentos"
+          },
+          "quantity": 10.0,
+          "initialValue": 10.0,
+          "initialDate": "2022-01-02 00:00:00",
+          "price": 179.26
+      },
+      {
+          "id": 35,
+          "stock": {
+              "id": "ABNB",
+              "name": "Airbnb, Inc."
+          },
+          "broker": {
+              "id": 2,
+              "name": "XP Investimentos"
+          },
+          "quantity": 10.0,
+          "initialValue": 10.0,
+          "initialDate": "2022-06-02 00:00:00",
+          "price": 121.26
+      }
+  ],
+  "totalCheckingAccount": 0.0,
+  "checkingAccount": [],
+  "totalFixedIncome": 1100.0,
+  "fixedIncome": [
+      {
+          "id": 11,
+          "paper": "LCA",
+          "issuer": "Bradesco",
+          "yieldRate": 1.1,
+          "initialDate": "2021-12-15 00:00:00",
+          "finalDate": "2022-12-15 00:00:00",
+          "initialValue": 1000.0,
+          "broker": {
+              "id": 1,
+              "name": "Binance"
+          }
+      }
+  ]
+}
 
-export default function SpanningTable({TAX_RATE}) {
+const teste = bla.stock.map(objeto => {
+  return createRow(objeto.stock.name + " " + objeto.stock.id,objeto.broker.name,objeto.quantity,objeto.price)
+})
+
+teste.forEach(row => {
+  rows.push(row)  
+
+});
+
+console.log(rows)
+
+export default function TableAcoes() {
     const invoiceSubtotal = subtotal(rows);
-    console.log(invoiceSubtotal)
-    const invoiceTaxes = TAX_RATE * invoiceSubtotal;
-    console.log(TAX_RATE);
-    console.log(invoiceTaxes);
-    const invoiceTotal = invoiceTaxes + invoiceSubtotal;
-    const maluqinho = (TAX_RATE * 100).toFixed(0);
-    console.log(maluqinho);
 
     return (
     <TableContainer component={Paper}>
       <Table sx={{ minWidth: 700 }} aria-label="spanning table">
         <TableHead>
           <TableRow>
-            <TableCell align="center" colSpan={3}>
+            <TableCell align="center" colSpan={4}>
               Details
             </TableCell>
             <TableCell align="right">Price</TableCell>
           </TableRow>
           <TableRow>
             <TableCell>Desc</TableCell>
+            <TableCell>Instituição</TableCell>
             <TableCell align="right">Qty.</TableCell>
             <TableCell align="right">Unit</TableCell>
             <TableCell align="right">Sum</TableCell>
@@ -63,25 +117,15 @@ export default function SpanningTable({TAX_RATE}) {
           {rows.map((row) => (
             <TableRow key={row.desc}>
               <TableCell>{row.desc}</TableCell>
+              <TableCell>{row.inst}</TableCell>
               <TableCell align="right">{row.qty}</TableCell>
               <TableCell align="right">{row.unit}</TableCell>
               <TableCell align="right">{ccyFormat(row.price)}</TableCell>
             </TableRow>
           ))}
-
           <TableRow>
-            <TableCell rowSpan={3} />
-            <TableCell colSpan={2}>Subtotal</TableCell>
+            <TableCell colSpan={4}>Total</TableCell>
             <TableCell align="right">{ccyFormat(invoiceSubtotal)}</TableCell>
-          </TableRow>
-          <TableRow>
-            <TableCell>Tax</TableCell>
-            <TableCell align="right">{`${(TAX_RATE * 100).toFixed(0)} %`}</TableCell>
-            <TableCell align="right">{ccyFormat(invoiceTaxes)}</TableCell>
-          </TableRow>
-          <TableRow>
-            <TableCell colSpan={2}>Total</TableCell>
-            <TableCell align="right">{ccyFormat(invoiceTotal)}</TableCell>
           </TableRow>
         </TableBody>
       </Table>
