@@ -258,46 +258,50 @@ class MyInvestments extends React.Component {
       <>
         <Navbar />
         <div className='main-mi'>
-          <div className='container'>
-            <div className='row align-items-center mb-3'>
-              <div className='col-8'><AnyChart id='pie-chart' {...this.pie} /></div>
-              <div className='col-4'>
-                <Table dark>
-                  <thead>
-                    <tr>
-                      <th></th>
-                      <th>Tipo de Investimento</th>
-                      <th>Nome/Título</th>
-                      <th>Valor</th>
-                      <th>Valorização</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <th scope="row">1</th>
-                      <td>Ação</td>
-                      <td>AAPL</td>
-                      <td>99</td>
-                      <td>12.5%</td>
-                    </tr>
-                    <tr>
-                      <th scope="row">2</th>
-                      <td>Tesouro Direto</td>
-                      <td>Banco do Brasil</td>
-                      <td>350</td>
-                      <td>6.9%</td>
-                    </tr>
-                    <tr>
-                      <th scope="row">3</th>
-                      <td>Renda Fixa</td>
-                      <td>Bradesco</td>
-                      <td>230</td>
-                      <td>2.57%</td>
-                    </tr>
-                  </tbody>
-                </Table>
+          <div className='container-cima-mi'>
+            <div className='container'>
+              <div className='row align-items-center mb-3'>
+                <div className='col-8'><AnyChart id='pie-chart' {...this.pie} /></div>
+                <div className='col-4'>
+                  <Table dark>
+                    <thead>
+                      <tr>
+                        <th></th>
+                        <th>Tipo de Investimento</th>
+                        <th>Nome/Título</th>
+                        <th>Valor</th>
+                        <th>Valorização</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">1</th>
+                        <td>Ação</td>
+                        <td>AAPL</td>
+                        <td>99</td>
+                        <td>12.5%</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">2</th>
+                        <td>Tesouro Direto</td>
+                        <td>Banco do Brasil</td>
+                        <td>350</td>
+                        <td>6.9%</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">3</th>
+                        <td>Renda Fixa</td>
+                        <td>Bradesco</td>
+                        <td>230</td>
+                        <td>2.57%</td>
+                      </tr>
+                    </tbody>
+                  </Table>
+                </div>
               </div>
             </div>
+          </div>
+          <div className='container-baixo-mi'>
             <div className='row align-items-center'>
               <div className='col'><AnyChart id='area-chart' {...this.area} /></div>
               <AccordionComponent 
@@ -327,7 +331,6 @@ class MyInvestments extends React.Component {
               />
             </div>
           </div>
-          {/* <div className='container-baixo-mi'></div> */}
         </div>
       </>)
   }
