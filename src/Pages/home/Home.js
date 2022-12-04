@@ -238,11 +238,13 @@ function Home() {
       );
     }
     setStock5(stock5);
+  }
 
-    //⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩  NOTICIA  ⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩
+  //⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩  NOTICIA  ⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩
 
+  async function APIGETNEWS() {
     let responseN = await fetch(
-      "https://newsapi.org/v2/everything?q=mercado-financeiro&from=2022-11-11&to=2022-11-11&sortBy=popularity&apiKey=572353a32aed49179c9463f5eee0e609"
+      "https://newsapi.org/v2/everything?q=mercado-financeiro&sortBy=popularity&apiKey=572353a32aed49179c9463f5eee0e609"
     );
     let resultN = await responseN.json();
 
@@ -261,6 +263,10 @@ function Home() {
 
     setNewsHome(newsHome);
   }
+
+  useEffect(() => {
+    APIGETNEWS();
+  }, []);
 
   useEffect(() => {
     APIGET();
