@@ -97,7 +97,6 @@ function Home() {
       },
     ],
     legend: {
-      background: "lightgreen 0.4",
       padding: 0,
     },
     lineMarker: {
@@ -112,6 +111,7 @@ function Home() {
     type: "area",
     data: dados,
     title: "Gráfico de rentabilidade da carteira",
+
     yAxis: [
       1,
       {
@@ -123,7 +123,6 @@ function Home() {
       },
     ],
     legend: {
-      background: "lightgreen 0.4",
       padding: 0,
     },
     lineMarker: {
