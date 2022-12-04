@@ -1,17 +1,17 @@
 import "./App.css";
 import { React } from "react";
-import Home from "./pages/home/Home";
-import Login from "./pages/login/Login";
-import Cadastro from "./pages/registration/Cadastro";
-import News from "./pages/news/News";
-import PA from "./pages/stocks/Principais_acoes";
-import AI from "./pages/add-investment/AddInvestment";
-import MI from "./pages/investments/Meus_investimentos";
-import SI from "./pages/simulate-investment/Simular_investimentos";
-import MD from "./pages/account/Meus_dados";
+import Home from "./Pages/home/Home";
+import Login from "./Pages/login/Login";
+import Cadastro from "./Pages/registration/Cadastro";
+import News from "./Pages/news/News";
+import PA from "./Pages/stocks/Principais_acoes";
+import AI from "./Pages/add-investment/AddInvestment";
+import MI from "./Pages/investments/Meus_investimentos";
+import SI from "./Pages/simulate-investment/Simular_investimentos";
+import MD from "./Pages/account/Meus_dados";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import ModalStock from "./pages/add-investment/stock/ModalStock";
-import AddInvestment from "./pages/add-investment/AddInvestment";
+import ModalStock from "./Pages/add-investment/stock/ModalStock";
+import AddInvestment from "./Pages/add-investment/AddInvestment";
 
 function App() {
   return (

@@ -106,6 +106,32 @@ function Home() {
     background: "#b2b2b200",
   };
 
+  const area2 = {
+    width: 950,
+    height: 250,
+    type: "area",
+    data: dados,
+    title: "Gráfico de rentabilidade da carteira",
+    yAxis: [
+      1,
+      {
+        orientation: "right",
+        enabled: true,
+        labels: {
+          format: "{%Value}{decimalPoint:\\,}",
+        },
+      },
+    ],
+    legend: {
+      background: "lightgreen 0.4",
+      padding: 0,
+    },
+    lineMarker: {
+      value: 4.5,
+    },
+    background: "#b2b2b200",
+  };
+
   //RECEBE AS AÇÕES
   let [stock1, setStock1] = useState("");
   let [stock2, setStock2] = useState("");
@@ -346,7 +372,7 @@ function Home() {
           </div>
           {/*⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩  PARTE DO MEIO DIREITA ⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩*/}
           <div className="container-meio-direita">
-            <h1>GRAFICO DO FLAUSINO</h1>
+            <AnyChart id="area-chart-home" {...area2} />
           </div>
         </div>
         {/*⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩  PARTE DO BAIXO ⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩*/}
