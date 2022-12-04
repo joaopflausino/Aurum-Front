@@ -1,6 +1,6 @@
 import React from "react";
 import { useEffect, useState } from "react";
-import Navbar from "../../components/Navbar";
+import Navbar from "../../Components/Navbar";
 import "./stocks.css";
 import imagem_nasdak from "../../shared/images/nasdaq-logo.png";
 

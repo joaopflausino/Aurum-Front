@@ -1,6 +1,6 @@
 import React from "react";
 import { useEffect, useState } from "react";
-import Navbar from "../../components/Navbar";
+import Navbar from "../../Components/Navbar";
 import "./home.css";
 import Carousel from "react-bootstrap/Carousel";
 import AnyChart from "anychart-react/dist/anychart-react";
