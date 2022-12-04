@@ -1,6 +1,6 @@
 import React from "react";
 import { useEffect, useState } from "react";
-import Navbar from "../../components/Navbar";
+import Navbar from "../../Components/Navbar";
 import AnyChart from "anychart-react/dist/anychart-react";
 import "./investments.css";
 import { Table } from "reactstrap";
@@ -240,13 +240,14 @@ class MyInvestments extends React.Component {
     return (
       <>
         <Navbar />
-        <div className='main-mi'>
-          <div className='container-cima-mi'>
-            <div className='container'>
-              <div className='row align-items-center mb-3'>
-                <div className='col-8'><AnyChart id='pie-chart' {...this.pie} /></div>
-                <div className='col-4'>
+        <div className="main-mi">
+          <div className="container-cima-mi">
+            <div className="container">
+              <div className="row align-items-center mb-3">
+                <div className="col-8">
+                  <AnyChart id="pie-chart" {...this.pie} />
                 </div>
+                <div className="col-4"></div>
               </div>
             </div>
           </div>

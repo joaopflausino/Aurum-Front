@@ -81,8 +81,8 @@ function Home() {
   console.log(dados);
 
   const area = {
-    width: 600,
-    height: 400,
+    width: 1350,
+    height: 300,
     type: "area",
     data: dados,
     title: "Gráfico de rentabilidade da carteira",
@@ -345,7 +345,9 @@ function Home() {
             </div>
           </div>
           {/*⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩  PARTE DO MEIO DIREITA ⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩*/}
-          <div className="container-meio-direita"></div>
+          <div className="container-meio-direita">
+            <h1>GRAFICO DO FLAUSINO</h1>
+          </div>
         </div>
         {/*⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩  PARTE DO BAIXO ⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩*/}
         <div className="container-baixo">
