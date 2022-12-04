@@ -114,53 +114,53 @@ class MyInvestments extends React.Component {
     {
       month: 10,
       year: 2021,
-      value: 100
+      value: 100,
     },
     {
       month: 11,
       year: 2021,
-      value: 108
+      value: 108,
     },
     {
       month: 12,
       year: 2021,
-      value: 112
+      value: 112,
     },
     {
       month: 1,
       year: 2022,
-      value: 105
+      value: 105,
     },
     {
       month: 2,
       year: 2022,
-      value: 117
+      value: 117,
     },
     {
       month: 3,
       year: 2022,
-      value: 122.5
+      value: 122.5,
     },
     {
       month: 4,
       year: 2022,
-      value: 135.12
+      value: 135.12,
     },
     {
       month: 5,
       year: 2022,
-      value: 142
+      value: 142,
     },
     {
       month: 6,
       year: 2022,
-      value: 145
+      value: 145,
     },
     {
       month: 7,
       year: 2022,
-      value: 136.78
-    }
+      value: 136.78,
+    },
   ];
 
 
@@ -172,16 +172,16 @@ class MyInvestments extends React.Component {
     { x: "Ação", value: 500 },
     { x: "Renda Fixa", value: 350 },
     { x: "Conta Corrente", value: 120 },
-    { x: "Tesouro Direto", value: 220 }
+    { x: "Tesouro Direto", value: 220 },
   ];
 
   pie = {
-    type: 'pie',
+    type: "pie",
     width: 600,
     height: 400,
     data: this.data_geral,
-    title: 'Gráfico de pizza',
-    background: "#b2b2b200"
+    title: "Gráfico de pizza",
+    background: "#b2b2b200",
   };
 
 
@@ -231,27 +231,28 @@ class MyInvestments extends React.Component {
   area = {
     width: 600,
     height: 400,
-    type: 'area',
+    type: "area",
     data: this.investmentsPerMonth,
-    title: 'Gráfico de rentabilidade da carteira',
-    yAxis: [1, {
-      orientation: 'right',
-      enabled: true,
-      labels: {
-        format: '{%Value}{decimalPoint:\\,}'
-      }
-    }],
+    title: "Gráfico de rentabilidade da carteira",
+    yAxis: [
+      1,
+      {
+        orientation: "right",
+        enabled: true,
+        labels: {
+          format: "{%Value}{decimalPoint:\\,}",
+        },
+      },
+    ],
     legend: {
-      background: 'lightgreen 0.4',
-      padding: 0
+      background: "lightgreen 0.4",
+      padding: 0,
     },
     lineMarker: {
-      value: 4.5
+      value: 4.5,
     },
-    background: "#b2b2b200"
+    background: "#b2b2b200",
   };
-
-
 
   render() {
     return (
@@ -332,7 +333,8 @@ class MyInvestments extends React.Component {
             </div>
           </div>
         </div>
-      </>)
+      </>
+    );
   }
 }
 

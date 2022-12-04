@@ -1,10 +1,111 @@
 import React from "react";
 import { useEffect, useState } from "react";
-import Navbar from "../../Components/Navbar";
+import Navbar from "../../components/Navbar";
 import "./home.css";
 import Carousel from "react-bootstrap/Carousel";
+import AnyChart from "anychart-react/dist/anychart-react";
 
 function Home() {
+  const investmentsPerMonth = [
+    {
+      month: 10,
+      year: 2021,
+      value: 100,
+    },
+    {
+      month: 11,
+      year: 2021,
+      value: 108,
+    },
+    {
+      month: 12,
+      year: 2021,
+      value: 112,
+    },
+    {
+      month: 1,
+      year: 2022,
+      value: 105,
+    },
+    {
+      month: 2,
+      year: 2022,
+      value: 117,
+    },
+    {
+      month: 3,
+      year: 2022,
+      value: 122.5,
+    },
+    {
+      month: 4,
+      year: 2022,
+      value: 135.12,
+    },
+    {
+      month: 5,
+      year: 2022,
+      value: 142,
+    },
+    {
+      month: 6,
+      year: 2022,
+      value: 145,
+    },
+    {
+      month: 7,
+      year: 2022,
+      value: 136.78,
+    },
+  ];
+
+  const totalValuePerInvestment = {
+    stock: {
+      value: 50,
+    },
+    checkingAccount: {
+      value: 50,
+    },
+    treasuryDirect: {
+      value: 50,
+    },
+    fixedRate: {
+      value: 50,
+    },
+  };
+
+  let dados = "";
+
+  const dado = investmentsPerMonth.forEach((invest) => (dados += `${invest.month}/${invest.year},${invest.value}\n`));
+
+  console.log(dados);
+
+  const area = {
+    width: 600,
+    height: 400,
+    type: "area",
+    data: dados,
+    title: "Gráfico de rentabilidade da carteira",
+    yAxis: [
+      1,
+      {
+        orientation: "right",
+        enabled: true,
+        labels: {
+          format: "{%Value}{decimalPoint:\\,}",
+        },
+      },
+    ],
+    legend: {
+      background: "lightgreen 0.4",
+      padding: 0,
+    },
+    lineMarker: {
+      value: 4.5,
+    },
+    background: "#b2b2b200",
+  };
+
   //RECEBE AS AÇÕES
   let [stock1, setStock1] = useState("");
   let [stock2, setStock2] = useState("");
@@ -173,7 +274,9 @@ function Home() {
       <Navbar />
       <div className="main-home">
         {/*⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩  PARTE DE CIMA  ⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩*/}
-        <div className="container-cima"></div>
+        <div className="container-cima">
+          <AnyChart id="area-chart-home" {...area} />
+        </div>
 
         <div className="container-meio">
           {/*⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩  PARTE DO MEIO ESQUERDA  ⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩*/}
