@@ -59,7 +59,6 @@ function Home() {
     },
   ];
 
-
   const totalValuePerInvestment = {
     stock: {
       value: 50,
@@ -88,8 +87,8 @@ function Home() {
     data: dados,
     title: "Gráfico de rentabilidade da carteira",
     selectRectangleMarqueeFill: {
-      "color": "#00000",
-      "opacity": 0.4
+      color: "#00000",
+      opacity: 0.4,
     },
     yAxis: [
       1,
@@ -110,13 +109,13 @@ function Home() {
     background: "#b2b2b200",
   };
 
-
   const area2 = {
     width: 860,
     height: 290,
     type: "column",
     data: dados,
     title: "Gráfico de rentabilidade da carteira",
+    background: "none",
 
     yAxis: [
       1,
@@ -134,7 +133,6 @@ function Home() {
     lineMarker: {
       value: 4.5,
     },
-    background: "#b2b2b200",
   };
 
   //RECEBE AS AÇÕES
@@ -377,7 +375,7 @@ function Home() {
           </div>
           {/*⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩  PARTE DO MEIO DIREITA ⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩*/}
           <div className="container-meio-direita">
-            <AnyChart id="area-chart2-home" {...area2}  />
+            <AnyChart id="area-chart2-home" {...area2} />
           </div>
         </div>
         {/*⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩  PARTE DO BAIXO ⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩*/}
