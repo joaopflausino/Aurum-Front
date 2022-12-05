@@ -29,18 +29,15 @@ function SI() {
     if (!isNaN(inflacaoMensal)) {
       const inflacaoAnual = anual(inflacaoMensal)
       taxaMensal = ((1 + taxaAnual / 100) / (1 + inflacaoAnual / 100) - 1) * 100
-      console.log("teste")
     }
 
     if (!isNaN(aporte)) {
       valorFinal = aporte * (((Math.pow(1 + taxaMensal / 100, tempo) - 1) / (taxaMensal / 100)) * (1 + taxaMensal / 100));
       valorFinal = valorFinal + valorInvestido
-      console.log("teste2")
       console.log(valorFinal);
     }
     else {
       valorFinal = valorInvestido * (Math.pow(1 + taxaMensal / 100, tempo));
-      console.log("teste3")
       console.log(valorFinal);
     }
   }
