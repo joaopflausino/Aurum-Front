@@ -19,6 +19,9 @@ import ModalFixedRate from "./fixedrate/ModalFixedRate";
 import ModalDirectTreasuary from "./directtreasury/ModalDirectTreasury";
 import ModalCheckingAccount from "./checkingaccount/ModalCheckingAccount";
 import api from "../../services/api";
+import img_conta_corrente from "../../shared/images/conta-corrente.jpg";
+import img_acoes from "../../shared/images/img-acoes.jpg";
+import img_renda_fixa from "../../shared/images/img-renda-fixaa.png";
 
 function AddInvestment() {
   useEffect(() => {
@@ -43,21 +46,46 @@ function AddInvestment() {
   return (
     <>
       <Navbar />
+
       <div className="main-add-investment">
+        <h1 className="h1-add-invest">Adicionar Investimento</h1>
         <div className="container-ai">
           <div class="card">
-            <img src="src\shared\images\conta-corrente.jpg" class="card-img-top" alt="Error"></img>
+            <img src={img_conta_corrente} class="card-img-top"></img>
             <div class="card-body">
-              <h5 class="card-title">Card title</h5>
+              <h5 class="card-title">Conta Corrente</h5>
               <p class="card-text">
-                Some quick example text to build on the card title and make up the bulk of the card's content.
+                A conta corrente ou conta à ordem é uma conta de depósito mantida num banco ou outra instituição
+                financeira por uma pessoa física ou jurídica com o propósito de segurança e rapidez de acesso à demanda
+                através de uma variedade de diferentes canais.
               </p>
-              <Button onClick={openCheckingAccount}>Conta Corrente</Button>
+              <Button onClick={openCheckingAccount}>Adicionar</Button>
             </div>
           </div>
-
-          <Button onClick={openFixedRate}>Renda Fixa</Button>
-          <Button onClick={openStock}>Ação</Button>
+          <div class="card">
+            <img src={img_acoes} class="card-img-top"></img>
+            <div class="card-body">
+              <h5 class="card-title">Ações</h5>
+              <p class="card-text">
+                Ações são as parcelas que compõem o capital social de uma empresa, ou seja, são as unidades de títulos
+                emitidas. Quando as ações são emitidas por companhias abertas ou assemelhadas, são negociados em bolsa
+                de valores ou no mercado de balcão.
+              </p>
+              <Button onClick={openStock}>Adicionar</Button>
+            </div>
+          </div>
+          <div class="card">
+            <img src={img_renda_fixa} class="card-img-top"></img>
+            <div class="card-body">
+              <h5 class="card-title">Renda Fixa</h5>
+              <p class="card-text">
+                Renda fixa é um termo que se refere a qualquer tipo de investimento que possui regras de remuneração
+                definidas no momento da aplicação no título. Essas regras estipulam o prazo e a forma que a remuneração
+                será calculada e paga ao investidor.
+              </p>
+              <Button onClick={openFixedRate}>Adicionar</Button>
+            </div>
+          </div>
         </div>
 
         <Modal isOpen={modalStock} toggle={openStock} size="lg">
