@@ -270,12 +270,6 @@ class MyInvestments extends React.Component {
                 Content3={<GutterlessList objeto={gutterlist_data_Ações} />}
               />
               <AccordionComponent
-                Title={"Tesouro Direto"}
-                Content1={<AnyChart id="Tesouro Direto" {...this.torta_tesouro} />}
-                Content2={<TableAcoes />}
-                Content3={<GutterlessList objeto={gutterlist_data_Ações} />}
-              />
-              <AccordionComponent
                 Title={"Ações"}
                 Content1={<AnyChart id="Ações" {...this.torta_acoes} />}
                 Content2={<TableAcoes />}

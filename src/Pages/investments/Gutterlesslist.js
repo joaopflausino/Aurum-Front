@@ -18,7 +18,7 @@ export default function GutterlessList({objeto}) {
             <h3>
             {objeto.name}
             </h3>
-            <button type="button" class="btn btn-outline-danger">
+            <button type="button" class="btn btn-outline-danger" onClick={HandleClick}>
               Concluir Investimento
             </button>
 

@@ -86,6 +86,10 @@ function Home() {
     type: "area",
     data: dados,
     title: "Gráfico de rentabilidade da carteira",
+    selectRectangleMarqueeFill: {
+      "color": "#00000",
+      "opacity": 0.4
+    },
     yAxis: [
       1,
       {
@@ -105,11 +109,14 @@ function Home() {
     background: "#b2b2b200",
   };
 
+
   const area2 = {
     width: 860,
     height: 290,
-    type: "area",
+    type: "column",
     data: dados,
+    fill: "#00000",
+    
     title: "Gráfico de rentabilidade da carteira",
 
     yAxis: [
@@ -371,7 +378,7 @@ function Home() {
           </div>
           {/*⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩  PARTE DO MEIO DIREITA ⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩*/}
           <div className="container-meio-direita">
-            <AnyChart id="area-chart2-home" {...area2} />
+            <AnyChart id="area-chart2-home" {...area2}  />
           </div>
         </div>
         {/*⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩  PARTE DO BAIXO ⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩*/}
