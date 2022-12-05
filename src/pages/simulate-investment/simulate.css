@@ -57,26 +57,26 @@
     margin-bottom: 2vh;
 }
 
-#aporte-periodico,
-#taxa-juros,
-#taxa-inflacao,
+#aporteperiodico,
+#taxajuros,
+#taxainflacao,
 #saque-periodico,
 #tempo {
     width: 70%;
 }
 
-#aporte-periodico,
-#taxa-juros,
-#taxa-inflacao,
+#aporteperiodico,
+#taxajuros,
+#taxainflacao,
 #saque-periodico,
 #tempo,
-#valor-investido {
+#valorinvestido {
     border: none;
 }
 
-#aporte-periodico1,
-#taxa-juros1,
-#taxa-inflacao1,
+#aporteperiodico1,
+#taxajuros1,
+#taxainflacao1,
 #saque-periodico1,
 #tempo1 {
     width: 17px;

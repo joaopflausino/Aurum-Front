@@ -10,7 +10,6 @@ import MI from "./pages/investments/Meus_investimentos";
 import SI from "./pages/simulate-investment/Simular_investimentos";
 import MD from "./pages/account/Meus_dados";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import ModalStock from "./pages/add-investment/stock/ModalStock";
 import AddInvestment from "./pages/add-investment/AddInvestment";
 
 function App() {
