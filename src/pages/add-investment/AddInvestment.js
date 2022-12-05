@@ -44,9 +44,18 @@ function AddInvestment() {
     <>
       <Navbar />
       <div className="main-add-investment">
-        <div className="investment-options">
-          <Button onClick={openCheckingAccount}>Conta Corrente</Button>
-          <Button onClick={openDirectTreasuary}>Tesouro Direto</Button>
+        <div className="container-ai">
+          <div class="card">
+            <img src="src\shared\images\conta-corrente.jpg" class="card-img-top" alt="Error"></img>
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up the bulk of the card's content.
+              </p>
+              <Button onClick={openCheckingAccount}>Conta Corrente</Button>
+            </div>
+          </div>
+
           <Button onClick={openFixedRate}>Renda Fixa</Button>
           <Button onClick={openStock}>Ação</Button>
         </div>
