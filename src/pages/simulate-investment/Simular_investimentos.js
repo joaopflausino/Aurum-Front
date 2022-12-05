@@ -1,5 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import { useEffect } from "react";
+import { Form } from "react-bootstrap";
+import { Input } from "reactstrap";
 import Navbar from "../../Components/Navbar";
 import "./simulate.css";
 
@@ -7,118 +9,87 @@ function SI() {
   useEffect(() => {
     document.title = "Aurum Investing";
   }, []);
+
+  const anual = (taxaMensal) => {
+    return (Math.pow(1 + taxaMensal / 100, 12) - 1) * 100;
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const formData = new FormData(e.target);
+    const data = Object.fromEntries(formData);
+    const valorInvestido = parseFloat(data.valorinvestido);
+    const inflacaoMensal = parseFloat(data.taxainflacao);
+    const aporte = parseFloat(data.aporteperiodico);
+    const tempo = parseFloat(data.tempo);
+    let taxaMensal = parseFloat(data.taxajuros);
+    const taxaAnual = anual(taxaMensal);
+    let valorFinal;
+
+    if (!isNaN(inflacaoMensal)) {
+      const inflacaoAnual = anual(inflacaoMensal);
+      taxaMensal = ((1 + taxaAnual / 100) / (1 + inflacaoAnual / 100) - 1) * 100;
+    }
+
+    if (!isNaN(aporte)) {
+      valorFinal =
+        aporte * (((Math.pow(1 + taxaMensal / 100, tempo) - 1) / (taxaMensal / 100)) * (1 + taxaMensal / 100));
+      valorFinal = valorFinal + valorInvestido;
+      console.log(valorFinal);
+    } else {
+      valorFinal = valorInvestido * Math.pow(1 + taxaMensal / 100, tempo);
+      console.log(valorFinal);
+    }
+  };
+
   return (
     <>
       <Navbar />
-      <div className="main-si">
-        <div className="container-si">
-          <h3 className="h3-si">Simular Investimento</h3>
+      <Form id="form-simulate-investment" onSubmit={handleSubmit}>
+        <div className="main-si">
+          <div className="container-si">
+            <h3 className="h3-si">Simular Investimento</h3>
 
-          <div className="texto-e-input-si-first">
-            <label for="valor-investido">Valor Investido</label>
-            <input id="valor-investido" type="text" name="valor-investido" placeholder="Insira montante investido" />
-          </div>
+            <div className="texto-e-input-si-first">
+              <label for="valor-investido">Valor Investido</label>
+              <input id="valorinvestido" type="text" name="valorinvestido" placeholder="Insira montante investido" />
+            </div>
 
-          <div className="texto-e-input-si">
-            <label for="taxa-juros">Taxa de Juros</label>
-            <div className="checkbox-e-texto-si">
-              {" "}
-              {/* DIV RESPONSAVEL PELO INPUT + CHECKBOX */}
-              <input id="taxa-juros" type="text" name="taxa-juros" placeholder="Taxa de Juros" />
-              <div className="checkbox-si">
-                <div className="dois-checkbox">
-                  <input name="taxa-juros" type="radio" id="taxa-juros1" checked />
-                  <label for="taxa-juros">% ao Ano</label>
-                </div>
-                <div className="dois-checkbox">
-                  <input name="taxa-juros" type="radio" id="taxa-juros1" class="custom-radio" />
-                  <label for="taxa-juros">% ao Mês</label>
-                </div>
+            <div className="texto-e-input-si">
+              <label for="taxa-juros">Taxa de Juros</label>
+              <div className="checkbox-e-texto-si">
+                <Input id="taxajuros" type="text" name="taxajuros" placeholder="Taxa de Juros" />
               </div>
             </div>
-          </div>
 
-          <div className="texto-e-input-si">
-            <label for="taxa-inflacao">Taxa de Inflação (opcional)</label>
-            <div className="checkbox-e-texto-si">
-              {" "}
-              {/* DIV RESPONSAVEL PELO INPUT + CHECKBOX */}
-              <input id="taxa-inflacao" type="text" name="taxa-inflacao" placeholder="Taxa de Inflação" />
-              <div className="checkbox-si">
-                <div className="dois-checkbox">
-                  <input name="taxa-inflacao" type="radio" id="taxa-inflacao1" checked />
-                  <label for="taxa-inflacao">% ao Ano</label>
-                </div>
-                <div className="dois-checkbox">
-                  <input name="taxa-inflacao" type="radio" id="taxa-inflacao1" class="custom-radio" />
-                  <label for="taxa-inflacao">% ao Mês</label>
-                </div>
+            <div className="texto-e-input-si">
+              <label for="taxa-inflacao">Taxa de Inflação (opcional)</label>
+              <div className="checkbox-e-texto-si">
+                <input id="taxainflacao" type="text" name="taxainflacao" placeholder="Taxa de Inflação" />
               </div>
             </div>
-          </div>
 
-          <div className="texto-e-input-si">
-            <label for="aporte-periodico">Aporte periódico (opcional)</label>
-            <div className="checkbox-e-texto-si">
-              {" "}
-              {/* DIV RESPONSAVEL PELO INPUT + CHECKBOX */}
-              <input id="aporte-periodico" type="text" name="aporte-periodico" placeholder="Aporte periódico" />
-              <div className="checkbox-si">
-                <div className="dois-checkbox">
-                  <input name="aporte-periodico" type="radio" id="aporte-periodico1" checked />
-                  <label for="aporte-periodico">Por Ano</label>
-                </div>
-                <div className="dois-checkbox">
-                  <input name="aporte-periodico" type="radio" id="aporte-periodico1" class="custom-radio" />
-                  <label for="aporte-periodico">Por Mês</label>
-                </div>
+            <div className="texto-e-input-si">
+              <label for="aporte-periodico">Aporte periódico (opcional)</label>
+              <div className="checkbox-e-texto-si">
+                <input id="aporteperiodico" type="text" name="aporteperiodico" placeholder="Aporte periódico" />
               </div>
             </div>
-          </div>
 
-          <div className="texto-e-input-si">
-            <label for="saque-periodico">Saque periódico (opcional)</label>
-            <div className="checkbox-e-texto-si">
-              {" "}
-              {/* DIV RESPONSAVEL PELO INPUT + CHECKBOX */}
-              <input id="saque-periodico" type="text" name="saque-periodico" placeholder="Saque periódico" />
-              <div className="checkbox-si">
-                <div className="dois-checkbox">
-                  <input name="saque-periodico" type="radio" id="saque-periodico1" checked />
-                  <label for="saque-periodico">Por Ano</label>
-                </div>
-                <div className="dois-checkbox">
-                  <input name="saque-periodico" type="radio" id="saque-periodico1" class="custom-radio" />
-                  <label for="saque-periodico">Por Mês</label>
-                </div>
+            <div className="texto-e-input-si">
+              <label for="tempo">Tempo</label>
+              <div className="checkbox-e-texto-si">
+                <input id="tempo" type="text" name="tempo" placeholder="Tempo" />
               </div>
             </div>
-          </div>
 
-          <div className="texto-e-input-si">
-            <label for="tempo">Tempo</label>
-            <div className="checkbox-e-texto-si">
-              {" "}
-              {/* DIV RESPONSAVEL PELO INPUT + CHECKBOX */}
-              <input id="tempo" type="text" name="tempo" placeholder="Tempo" />
-              <div className="checkbox-si">
-                <div className="dois-checkbox">
-                  <input name="tempo" type="radio" id="tempo1" checked />
-                  <label for="tempo">Ano</label>
-                </div>
-                <div className="dois-checkbox">
-                  <input name="tempo" type="radio" id="tempo1" class="custom-radio" />
-                  <label for="box-shadow">Mês</label>
-                </div>
-              </div>
-            </div>
+            <button form="form-simulate-investment" type="submit" className="botao-calcular">
+              Calcular
+            </button>
           </div>
-
-          <button className="botao-calcular">Calcular</button>
         </div>
-      </div>
+      </Form>
     </>
   );
 }
-
 export default SI;
