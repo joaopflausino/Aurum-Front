@@ -1,27 +1,43 @@
-import React from 'react';
-import Accordion from '@mui/material/Accordion';
-import AccordionSummary from '@mui/material/AccordionSummary';
-import AccordionDetails from '@mui/material/AccordionDetails';
-import Typography from '@mui/material/Typography';
-import {MdOutlineExpandLess,MdOutlineKeyboardArrowDown} from 'react-icons/md';
+import React, {useState} from 'react';
+import {
+  Accordion,
+  AccordionBody,
+  AccordionHeader,
+  AccordionItem,
+  UncontrolledAccordion,
+} from 'reactstrap';
 
 export default function ({Title,Content1,Content2,Content3}) {
+
+    const [open, setOpen] = useState('1');
+    const toggle = (id) => {
+      if (open === id) {
+        setOpen();
+      } else {
+        setOpen(id);
+      }
+    }
+  
   return (
-        <Accordion>
-            <AccordionSummary
-                  expandIcon={< MdOutlineExpandLess />}
-                  aria-controls="panel1a-content"
-                  id="panel1a-header"
-                >
-                  <Typography>{Title}</Typography>
-                </AccordionSummary>
-                <AccordionDetails>
-                    {Content1}
-                    {Content2}
-                    {Content3}
-                </AccordionDetails>
-        </Accordion>
-  )
+        <UncontrolledAccordion
+          defaultOpen={[
+            '1',
+            '2'
+          ]}
+          stayOpen
+        >
+              <AccordionItem>
+                <AccordionHeader targetId="1">
+                  {Title}
+                </AccordionHeader>
+                <AccordionBody accordionId="1">
+                  {Content1}
+                  {Content2}
+                  {Content3}
+                </AccordionBody>
+              </AccordionItem>
+        </UncontrolledAccordion>
+  );
 }
 
                 

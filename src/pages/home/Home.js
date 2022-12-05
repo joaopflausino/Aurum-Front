@@ -1,6 +1,6 @@
 import React from "react";
 import { useEffect, useState } from "react";
-import Navbar from "../../components/Navbar";
+import Navbar from "../../Components/Navbar";
 import "./home.css";
 import Carousel from "react-bootstrap/Carousel";
 import AnyChart from "anychart-react/dist/anychart-react";
@@ -81,8 +81,8 @@ function Home() {
   console.log(dados);
 
   const area = {
-    width: 600,
-    height: 400,
+    width: 1350,
+    height: 300,
     type: "area",
     data: dados,
     title: "Gráfico de rentabilidade da carteira",
@@ -97,7 +97,32 @@ function Home() {
       },
     ],
     legend: {
-      background: "lightgreen 0.4",
+      padding: 0,
+    },
+    lineMarker: {
+      value: 4.5,
+    },
+    background: "#b2b2b200",
+  };
+
+  const area2 = {
+    width: 860,
+    height: 290,
+    type: "area",
+    data: dados,
+    title: "Gráfico de rentabilidade da carteira",
+
+    yAxis: [
+      1,
+      {
+        orientation: "right",
+        enabled: true,
+        labels: {
+          format: "{%Value}{decimalPoint:\\,}",
+        },
+      },
+    ],
+    legend: {
       padding: 0,
     },
     lineMarker: {
@@ -345,7 +370,9 @@ function Home() {
             </div>
           </div>
           {/*⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩  PARTE DO MEIO DIREITA ⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩*/}
-          <div className="container-meio-direita"></div>
+          <div className="container-meio-direita">
+            <AnyChart id="area-chart2-home" {...area2} />
+          </div>
         </div>
         {/*⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩  PARTE DO BAIXO ⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩⇩*/}
         <div className="container-baixo">
