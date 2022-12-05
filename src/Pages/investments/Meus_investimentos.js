@@ -227,7 +227,6 @@ class MyInvestments extends React.Component {
       },
     ],
     legend: {
-      background: "lightgreen 0.4",
       padding: 0,
     },
     lineMarker: {
