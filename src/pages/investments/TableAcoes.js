@@ -1,11 +1,5 @@
 import React from 'react';
-import Table from '@mui/material/Table';
-import TableBody from '@mui/material/TableBody';
-import TableCell from '@mui/material/TableCell';
-import TableContainer from '@mui/material/TableContainer';
-import TableHead from '@mui/material/TableHead';
-import TableRow from '@mui/material/TableRow';
-import Paper from '@mui/material/Paper';
+import { Table } from 'reactstrap';
 
 function ccyFormat(num) {
   return `${num.toFixed(2)}`;
@@ -90,45 +84,73 @@ teste.forEach(row => {
 
 });
 
-console.log(rows)
-
 export default function TableAcoes() {
     const invoiceSubtotal = subtotal(rows);
 
     return (
-    <TableContainer component={Paper}>
-      <Table sx={{ minWidth: 700 }} aria-label="spanning table">
-        <TableHead>
-          <TableRow>
-            <TableCell align="center" colSpan={4}>
-              Details
-            </TableCell>
-            <TableCell align="right">Price</TableCell>
-          </TableRow>
-          <TableRow>
-            <TableCell>Desc</TableCell>
-            <TableCell>Instituição</TableCell>
-            <TableCell align="right">Qty.</TableCell>
-            <TableCell align="right">Unit</TableCell>
-            <TableCell align="right">Sum</TableCell>
-          </TableRow>
-        </TableHead>
-        <TableBody>
-          {rows.map((row) => (
-            <TableRow key={row.desc}>
-              <TableCell>{row.desc}</TableCell>
-              <TableCell>{row.inst}</TableCell>
-              <TableCell align="right">{row.qty}</TableCell>
-              <TableCell align="right">{row.unit}</TableCell>
-              <TableCell align="right">{ccyFormat(row.price)}</TableCell>
-            </TableRow>
-          ))}
-          <TableRow>
-            <TableCell colSpan={4}>Total</TableCell>
-            <TableCell align="right">{ccyFormat(invoiceSubtotal)}</TableCell>
-          </TableRow>
-        </TableBody>
-      </Table>
-    </TableContainer>
+    <Table
+    hover
+    responsive
+    size="sm"
+    >
+      <thead>
+        <tr>
+          <th>
+            Desc
+          </th>
+          <th>
+            Instituição
+          </th>
+          <th>
+            Qty.
+          </th>
+          <th>
+            Unit
+          </th>
+          <th>
+            Soma
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+      {rows.map((row) => (
+        <tr>
+          <th scope="row">
+            {row.desc}
+          </th>
+          <td>
+            {row.inst}
+          </td>
+          <td>
+            {row.qty}
+          </td>
+          <td>
+            {row.unit}
+          </td>
+          <td>
+            {ccyFormat(row.price)}
+          </td>
+        </tr>
+      ))}
+      <tr>
+        <th>
+          Total
+        </th>
+        <th>
+
+        </th>
+        <th>
+
+        </th>
+        <th>
+
+        </th>
+        <td>
+          {ccyFormat(invoiceSubtotal)}
+        </td>
+      </tr>
+      </tbody>
+    </Table>
+
   );
 }

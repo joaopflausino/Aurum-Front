@@ -1,6 +1,6 @@
 import React from "react";
 import { useEffect, useState } from "react";
-import Navbar from "../../components/Navbar";
+import Navbar from "../../Components/Navbar";
 import AnyChart from "anychart-react/dist/anychart-react";
 import "./investments.css";
 import { Table } from "reactstrap";
@@ -227,7 +227,6 @@ class MyInvestments extends React.Component {
       },
     ],
     legend: {
-      background: "lightgreen 0.4",
       padding: 0,
     },
     lineMarker: {
@@ -247,42 +246,7 @@ class MyInvestments extends React.Component {
                 <div className="col-8">
                   <AnyChart id="pie-chart" {...this.pie} />
                 </div>
-                <div className="col-4">
-                  <Table dark>
-                    <thead>
-                      <tr>
-                        <th></th>
-                        <th>Tipo de Investimento</th>
-                        <th>Nome/Título</th>
-                        <th>Valor</th>
-                        <th>Valorização</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <th scope="row">1</th>
-                        <td>Ação</td>
-                        <td>AAPL</td>
-                        <td>99</td>
-                        <td>12.5%</td>
-                      </tr>
-                      <tr>
-                        <th scope="row">2</th>
-                        <td>Tesouro Direto</td>
-                        <td>Banco do Brasil</td>
-                        <td>350</td>
-                        <td>6.9%</td>
-                      </tr>
-                      <tr>
-                        <th scope="row">3</th>
-                        <td>Renda Fixa</td>
-                        <td>Bradesco</td>
-                        <td>230</td>
-                        <td>2.57%</td>
-                      </tr>
-                    </tbody>
-                  </Table>
-                </div>
+                <div className="col-4"></div>
               </div>
             </div>
           </div>
