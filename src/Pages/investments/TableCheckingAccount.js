@@ -18,17 +18,15 @@ function subtotal(items) {
   return items.map(({ price }) => price).reduce((sum, i) => sum + i, 0);
 }
 
-export default function TableAcoes({ stocks }) {
+export default function TableCheckingAccount({ cAccounts }) {
   const rows = [];
-  const row = stocks.map((it) => {
-    return createRow(it.stock.name + " " + it.stock.id, it.broker.name, it.quantity, it.price);
+  const row = cAccounts.map((it) => {
+    return createRow(it.title + " " + it.id, it.broker.name, it.yieldRate, it.initialValue);
   });
 
   row.forEach((it) => {
     rows.push(it);
   });
-
-  console.log(rows);
 
   const invoiceSubtotal = subtotal(rows);
 
@@ -38,9 +36,8 @@ export default function TableAcoes({ stocks }) {
         <tr>
           <th>Descrição</th>
           <th>Instituição</th>
-          <th>Quantidade</th>
-          <th>Cotação atual</th>
-          <th>Valor atual</th>
+          <th>Rendimento mensal</th>
+          <th>Valor total</th>
         </tr>
       </thead>
       <tbody>
@@ -49,8 +46,7 @@ export default function TableAcoes({ stocks }) {
             <th scope="row">{row.desc}</th>
             <td>{row.inst}</td>
             <td>{row.qty}</td>
-            <td>{row.unit}</td>
-            <td>{ccyFormat(row.price)}</td>
+            <td>{row.unit.toFixed(2)}</td>
           </tr>
         ))}
         <tr>
@@ -58,7 +54,6 @@ export default function TableAcoes({ stocks }) {
           <th></th>
           <th></th>
           <th></th>
-          <td>{ccyFormat(invoiceSubtotal)}</td>
         </tr>
       </tbody>
     </Table>

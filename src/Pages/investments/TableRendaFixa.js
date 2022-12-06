@@ -18,84 +18,27 @@ function subtotal(items) {
   return items.map(({ price }) => price).reduce((sum, i) => sum + i, 0);
 }
 
-const rows = [];
+export default function TableRendafixa({ fixedIncome }) {
+  const rows = [];
+  const row = fixedIncome.map((it) => {
+    return createRow(it.paper + " " + it.issuer, it.broker.name, it.yieldRate, it.initialValue);
+  });
 
-const bla = {
-  totalStock: 248.81,
-  stock: [
-    {
-      id: 34,
-      stock: {
-        id: "AAPL",
-        name: "Apple Inc.",
-      },
-      broker: {
-        id: 2,
-        name: "XP Investimentos",
-      },
-      quantity: 10.0,
-      initialValue: 10.0,
-      initialDate: "2022-01-02 00:00:00",
-      price: 179.26,
-    },
-    {
-      id: 35,
-      stock: {
-        id: "ABNB",
-        name: "Airbnb, Inc.",
-      },
-      broker: {
-        id: 2,
-        name: "XP Investimentos",
-      },
-      quantity: 10.0,
-      initialValue: 10.0,
-      initialDate: "2022-06-02 00:00:00",
-      price: 121.26,
-    },
-  ],
-  totalCheckingAccount: 0.0,
-  checkingAccount: [],
-  totalFixedIncome: 1100.0,
-  fixedIncome: [
-    {
-      id: 11,
-      paper: "LCA",
-      issuer: "Bradesco",
-      yieldRate: 1.1,
-      initialDate: "2021-12-15 00:00:00",
-      finalDate: "2022-12-15 00:00:00",
-      initialValue: 1000.0,
-      broker: {
-        id: 1,
-        name: "Binance",
-      },
-    },
-  ],
-};
+  row.forEach((it) => {
+    rows.push(it);
+  });
 
-const teste = bla.fixedIncome.map((objeto) => {
-  return createRow(objeto.paper, objeto.issuer, objeto.initialValue, objeto.yieldRate);
-});
-
-teste.forEach((row) => {
-  rows.push(row);
-});
-
-console.log(rows);
-
-export default function TableRendafixa() {
   const invoiceSubtotal = subtotal(rows);
 
   return (
     <Table hover responsive size="sm">
       <thead>
         <tr>
-          <th>Desc</th>
+          <th>Descrição</th>
           <th>Instituição</th>
-          <th>Qty.</th>
-          <th>Unit</th>
-          <th>Soma</th>
+          <th>Rendimento final</th>
+          <th>Valor inicial</th>
+          <th>Valor Atual</th>
         </tr>
       </thead>
       <tbody>

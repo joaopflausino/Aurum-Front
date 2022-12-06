@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { AccordionBody, AccordionHeader, AccordionItem, UncontrolledAccordion } from "reactstrap";
 
 export default function ({ Title, Content1, Content2, Content3 }) {
-  const [open, setOpen] = useState("1");
+  const [open, setOpen] = useState("2");
   const toggle = (id) => {
     if (open === id) {
       setOpen();
@@ -12,10 +12,10 @@ export default function ({ Title, Content1, Content2, Content3 }) {
   };
 
   return (
-    <UncontrolledAccordion defaultOpen={["1", "2"]} stayOpen>
+    <UncontrolledAccordion defaultOpen={["1", "1"]} stayOpen>
       <AccordionItem>
-        <AccordionHeader targetId="1">{Title}</AccordionHeader>
-        <AccordionBody accordionId="1">
+        <AccordionHeader targetId="2">{Title}</AccordionHeader>
+        <AccordionBody accordionId="2">
           {Content1}
           {Content2}
           {Content3}

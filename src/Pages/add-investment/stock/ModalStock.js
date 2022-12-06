@@ -1,9 +1,12 @@
 import Axios from "axios";
 import React, { useState } from "react";
 import { ModalBody, Form, FormGroup, Label, Input } from "reactstrap";
+import AuthService from "../../../app/service/auth";
 import "./ModalStock.css";
 
 function ModalStock(args) {
+  const auth = AuthService;
+
   const [modal, setModal] = useState(true);
 
   const toggle = () => setModal(!modal);
@@ -31,18 +34,20 @@ function ModalStock(args) {
     e.preventDefault();
     const formData = new FormData(e.target);
     const data = Object.fromEntries(formData);
-    const json = {
+    const stock = {
       stock: {
         id: data.stock,
       },
       broker: {
-        id: 1,
+        id: data.broker,
       },
       quantity: parseFloat(data.quantity),
       initialValue: parseFloat(data.quantity) * parseFloat(data.price),
       initialDate: data.initialDate,
       price: parseFloat(data.price),
     };
+    const user = auth.getUserAuth();
+    const json = { stock: stock, user: user };
     api.post("/stock", json).then((response) => {
       console.log(response);
     });
@@ -63,7 +68,9 @@ function ModalStock(args) {
                 {broker.map((b, index) => {
                   return (
                     <>
-                      <option key={index}>{b.name}</option>
+                      <option key={index} value={b.id}>
+                        {b.name}
+                      </option>
                     </>
                   );
                 })}

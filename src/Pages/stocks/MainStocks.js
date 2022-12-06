@@ -4,6 +4,7 @@ import { useEffect } from "react";
 import Navbar from "../../components/Navbar";
 import "./stocks.css";
 import imagem_nasdaq from "../../shared/images/nasdaq-logo.png";
+import { AuthContext } from "../../main/ProvedorDeAutentificacao";
 
 function MainStocks() {
   //RECEBE AS AÇÕES
@@ -188,8 +189,8 @@ function MainStocks() {
         <div className="container-cima-pa">
           <div className="indice-preco">
             <img src={imagem_nasdaq} className="nasdaq-logo" />
-            <h3 className="indice-nasdaq"> 11.994,26</h3>
-            <h3 className="variation-nasdaq">−47,63 (0,40%)</h3>
+            <h3 className="indice-nasdaq"> 11.786,80</h3>
+            <h3 className="variation-nasdaq">−207,46 (1,73%)</h3>
           </div>
           <h3 className="sub-titulo-nasdaq">National Association of Securities Dealers Automated Quotations</h3>
           <h3 className="texto-nasdaq">

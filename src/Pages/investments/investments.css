@@ -1,39 +1,53 @@
-.main-mi {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100vw;
-  height: 100vh;
-  flex-direction: column;
-  margin-left: 9%;
-}
-
 .spinner {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
   height: 100%;
+  position: absolute;
+  top: 1%;
+  left: 10%;
+}
+.main-mi {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
   flex-direction: column;
   margin-left: 9%;
-  margin-top: 30%;
+  overflow: auto;
+  height: "inherit";
+  max-width: 300;
+  margin-left: 20;
+}
+
+#container-mi-mi {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.h1-mi-mi {
+  font-weight: 700;
+  margin: 50px 0 20px 0;
 }
 
 .container-cima-mi {
-  margin: 3vh 0px 0px 16vw;
+  margin: 3vh 0px 0px 0px;
   width: 60vw;
   height: 43vh;
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  background: #d9d9d9b3;
+
   border: none;
+  border-radius: 15px;
   outline: none;
   flex-direction: column;
 }
 
 .container-baixo-mi {
-  margin: 20px 0px 3vh 16vw;
+  margin: 20px 0px 3vh 0px;
   width: 60vw;
   height: 57vh;
   display: flex;
@@ -49,6 +63,18 @@
   display: none;
 }
 
-.row {
-  background: #d9d9d9b3;
+#container-my-investments {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#stockInput,
+#checkingAccountInput,
+#fixedIncomeInput {
+  display: none;
+}
+
+.inputH3 {
+  font-size: 20px;
 }

@@ -31,6 +31,10 @@ class UsuarioService extends Api {
     return this.get("/checkingAccount/conclude/" + idInvest);
   }
 
+  atualizarUsuario(usuario) {
+    return this.put("/user/", usuario);
+  }
+
   validar(usuario) {
     const erros = [];
     if (!usuario.name) erros.push("O campo Nome é obrigatório.");

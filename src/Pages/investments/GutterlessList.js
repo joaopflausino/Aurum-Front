@@ -6,7 +6,6 @@ const HandleClick = () => {
 };
 
 export default function GutterlessList({ objeto }) {
-  console.log(objeto);
   return (
     <div>
       {objeto.map((objeto) => (
