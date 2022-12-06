@@ -15,7 +15,7 @@ function Navbar() {
             <IconContext.Provider value={{ className: 'qualquer' }}>
                 <nav className={'nav-menu active'}>
                     <div className="imagem">
-                    <img src={imagem} className="logo-aurum"/>
+                        <img src={imagem} className="logo-aurum" />
                     </div>
                     <ul className='nav-menu-items' onClick={showSidebar}>
                         {SidebarData.map((item, index) => {
@@ -23,7 +23,7 @@ function Navbar() {
                                 <li key={index} className={item.cName} id={item.id}>
                                     <Link to={item.path}>
                                         <div className='icon'>
-                                        {item.icon}</div>
+                                            {item.icon}</div>
                                         <span>
                                             {item.title}
                                         </span>

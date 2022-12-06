@@ -42,7 +42,7 @@
     transition: transform .2s;
 }
 
-.single-news:nth-child(1){
+.single-news:nth-child(1) {
     margin-top: 3vw;
 }
 

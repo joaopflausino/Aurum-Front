@@ -43,7 +43,7 @@
   margin: 0px 0px 2vh 21%;
 }
 
-.texto-e-input-si > label {
+.texto-e-input-si>label {
   font-size: 1.1em;
   font-weight: 400;
   text-shadow: rgb(179, 179, 179) 0.1em 0.1em 0.3em;
@@ -67,7 +67,7 @@
   flex-direction: row;
 }
 
-.checkbox-e-texto-si > input {
+.checkbox-e-texto-si>input {
   padding: 0.7vh;
   outline: none;
 }
