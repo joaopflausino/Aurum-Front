@@ -50,36 +50,48 @@ function SI() {
           <div className="container-si">
             <h3 className="h3-si">Simular Investimento</h3>
 
-            <div className="texto-e-input-si-first">
+            <div className="texto-e-input-si">
               <label for="valor-investido">Valor Investido</label>
-              <input id="valorinvestido" type="text" name="valorinvestido" placeholder="Insira montante investido" />
-            </div>
-
-            <div className="texto-e-input-si">
-              <label for="taxa-juros">Taxa de Juros</label>
               <div className="checkbox-e-texto-si">
-                <Input id="taxajuros" type="text" name="taxajuros" placeholder="Taxa de Juros" />
+                <input id="valorinvestido" type="text" name="valorinvestido" placeholder="Insira o Valor Investido" />
               </div>
             </div>
 
             <div className="texto-e-input-si">
-              <label for="taxa-inflacao">Taxa de Inflação (opcional)</label>
+              <label for="taxa-juros">Taxa de Juros Mensal</label>
               <div className="checkbox-e-texto-si">
-                <input id="taxainflacao" type="text" name="taxainflacao" placeholder="Taxa de Inflação" />
+                <input id="taxajuros" type="text" name="taxajuros" placeholder="Insira a Taxa de Juros Mensal" />
               </div>
             </div>
 
             <div className="texto-e-input-si">
-              <label for="aporte-periodico">Aporte periódico (opcional)</label>
+              <label for="taxa-inflacao">Taxa de Inflação Mensal (opcional)</label>
               <div className="checkbox-e-texto-si">
-                <input id="aporteperiodico" type="text" name="aporteperiodico" placeholder="Aporte periódico" />
+                <input
+                  id="taxainflacao"
+                  type="text"
+                  name="taxainflacao"
+                  placeholder="Insira a Taxa de Inflação Mensal"
+                />
               </div>
             </div>
 
             <div className="texto-e-input-si">
-              <label for="tempo">Tempo</label>
+              <label for="aporte-periodico">Aporte Periódico Mensal (opcional)</label>
               <div className="checkbox-e-texto-si">
-                <input id="tempo" type="text" name="tempo" placeholder="Tempo" />
+                <input
+                  id="aporteperiodico"
+                  type="text"
+                  name="aporteperiodico"
+                  placeholder="Insira oAporte Periódico Mensal"
+                />
+              </div>
+            </div>
+
+            <div className="texto-e-input-si">
+              <label for="tempo">Tempo em Meses</label>
+              <div className="checkbox-e-texto-si">
+                <input id="tempo" type="text" name="tempo" placeholder="Insira o Tempo em Meses" />
               </div>
             </div>
 
