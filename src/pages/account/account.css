@@ -21,9 +21,10 @@
 }
 
 .h1-meus-dados {
+  padding: 60px 0px 40px 0;
   font-size: 2.1em;
   font-weight: 700;
-  margin: 5% 0px 6% 0px;
+  margin: 0 15px 15px 0;
 }
 
 .texto-e-input-md {
@@ -73,7 +74,7 @@
 }
 
 .botao-salvar {
-  width: 45%;
+  width: 50%;
   padding: 14px 0px;
   margin-top: 5%;
   border: none;
@@ -83,6 +84,7 @@
   background: #fce91b;
   font-weight: 800;
   cursor: pointer;
+  margin-left: 15px;
 }
 
 /*  ------------------------TUDO ABAIXO É RESPOSAVEL PELO CHECKBOX ------------------------------------- */
