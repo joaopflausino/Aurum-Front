@@ -23,6 +23,7 @@
   border: none;
   outline: none;
   flex-direction: column;
+  border-radius: 15px;
 }
 
 .h3-si {
