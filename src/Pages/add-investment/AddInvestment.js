@@ -3,7 +3,7 @@ import { useEffect } from "react";
 import "./add-investment.css";
 import { Modal, ModalHeader, ModalFooter, Button, Tooltip } from "reactstrap";
 import ModalStock from "./stock/ModalStock";
-import ModalFixedRate from "./fixedrate/ModalFixedRate";
+import ModalFixedRate from "./fixedrate/ModalFixedIncome";
 import ModalDirectTreasuary from "./directtreasury/ModalDirectTreasury";
 import ModalCheckingAccount from "./checkingaccount/ModalCheckingAccount";
 import Navbar from "../../components/Navbar";

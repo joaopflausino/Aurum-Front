@@ -82,8 +82,8 @@ function ModalCheckingAccount(args) {
             <Input id="initialValue" name="initialValue" placeholder="Valor investido" type="text" />
           </FormGroup>
           <FormGroup>
-            <Label for="yieldRate">Rendimento</Label>
-            <Input id="yieldRate" name="yieldRate" placeholder="Rendimento anual" type="text" />
+            <Label for="yieldRate">Rendimento Mensal</Label>
+            <Input id="yieldRate" name="yieldRate" placeholder="Rendimento mensal" type="text" />
           </FormGroup>
         </Form>
       </ModalBody>

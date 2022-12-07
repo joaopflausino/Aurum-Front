@@ -1,15 +1,15 @@
-import React, { Suspense } from "react";
+import React from "react";
 import Navbar from "../../components/Navbar";
 import AnyChart from "anychart-react/dist/anychart-react.min.js";
 import "./investments.css";
 import UsuarioService from "../../app/service/usuarioService";
 import { Form, ListGroup, ListGroupItem, Spinner, UncontrolledAlert } from "reactstrap";
-import TableAcoes from "./TableAcoes";
 import AccordionComponent from "./AccordionComponent";
-import TableRendafixa from "./TableRendaFixa";
+import TableFixedIncome from "./TableFixedIncome";
 import { AuthContext } from "../../main/ProvedorDeAutentificacao";
 import TableCheckingAccount from "./TableCheckingAccount";
 import Axios from "axios";
+import TableStocks from "./TableStocks";
 
 class MyInvestments extends React.Component {
   constructor() {
@@ -143,7 +143,7 @@ class MyInvestments extends React.Component {
                 <AccordionComponent
                   Title={"Renda Fixa"}
                   Content1={<AnyChart id="rendafixa" {...this.torta_rendafixa} />}
-                  Content2={<TableRendafixa fixedIncome={this.state.lista.fixedIncome} />}
+                  Content2={<TableFixedIncome fixedIncome={this.state.lista.fixedIncome} />}
                   Content3={<></>}
                 />
                 <AccordionComponent
@@ -182,7 +182,7 @@ class MyInvestments extends React.Component {
                 <AccordionComponent
                   Title={"Ações"}
                   Content1={<AnyChart id="acoes" {...this.torta_acoes} />}
-                  Content2={<TableAcoes stocks={this.state.lista.stock} />}
+                  Content2={<TableStocks stocks={this.state.lista.stock} />}
                   Content3={
                     <div className="stockDiv">
                       {this.state.lista.stock.map((objeto) => (

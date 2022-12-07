@@ -353,9 +353,7 @@ async function Stock5() {
 }
 
 async function GetNews() {
-  let responseN = await fetch(
-    "https://newsapi.org/v2/everything?q=mercado-financeiro&sortBy=popularity&apiKey=572353a32aed49179c9463f5eee0e609"
-  );
+  let responseN = await fetch("https://newsapi.org/v2/everything?q=financeiro&apiKey=572353a32aed49179c9463f5eee0e609");
   let resultN = await responseN.json();
 
   const newsHome = resultN.articles.slice(0, 10).map((noticia) => {

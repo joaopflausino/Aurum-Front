@@ -2,15 +2,6 @@ import React, { useState } from "react";
 import { AccordionBody, AccordionHeader, AccordionItem, UncontrolledAccordion } from "reactstrap";
 
 export default function ({ Title, Content1, Content2, Content3 }) {
-  const [open, setOpen] = useState("2");
-  const toggle = (id) => {
-    if (open === id) {
-      setOpen();
-    } else {
-      setOpen(id);
-    }
-  };
-
   return (
     <UncontrolledAccordion defaultOpen={["1", "1"]} stayOpen>
       <AccordionItem>

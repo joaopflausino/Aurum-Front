@@ -37,7 +37,8 @@ export default function TableCheckingAccount({ cAccounts }) {
           <th>Descrição</th>
           <th>Instituição</th>
           <th>Rendimento mensal</th>
-          <th>Valor total</th>
+          <th>Valor Atual</th>
+          <th>Vator final</th>
         </tr>
       </thead>
       <tbody>
@@ -47,6 +48,7 @@ export default function TableCheckingAccount({ cAccounts }) {
             <td>{row.inst}</td>
             <td>{row.qty}</td>
             <td>{row.unit.toFixed(2)}</td>
+            <td>{ccyFormat(row.price)}</td>
           </tr>
         ))}
         <tr>
@@ -54,6 +56,7 @@ export default function TableCheckingAccount({ cAccounts }) {
           <th></th>
           <th></th>
           <th></th>
+          <td>{ccyFormat(invoiceSubtotal)}</td>
         </tr>
       </tbody>
     </Table>

@@ -18,7 +18,7 @@ function subtotal(items) {
   return items.map(({ price }) => price).reduce((sum, i) => sum + i, 0);
 }
 
-export default function TableRendafixa({ fixedIncome }) {
+export default function TableFixedIncome({ fixedIncome }) {
   const rows = [];
   const row = fixedIncome.map((it) => {
     return createRow(it.paper + " " + it.issuer, it.broker.name, it.yieldRate, it.initialValue);
@@ -47,7 +47,7 @@ export default function TableRendafixa({ fixedIncome }) {
             <th scope="row">{row.desc}</th>
             <td>{row.inst}</td>
             <td>{row.qty}</td>
-            <td>{row.unit}</td>
+            <td>{row.unit.toFixed(2)}</td>
             <td>{ccyFormat(row.price)}</td>
           </tr>
         ))}

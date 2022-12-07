@@ -6,10 +6,11 @@ import Home from "../pages/home/Home";
 import Account from "../pages/account/account";
 import News from "../pages/news/News";
 import AddInvestment from "../pages/add-investment/AddInvestment";
-import SI from "../pages/simulate-investment/Simular_investimentos";
+import simulateInvestment from "../pages/simulate-investment/SimulateInvestment";
 import MyInvestments from "../pages/investments/MyInvestments";
-import Registration from "../pages/registration/Cadastro";
+import Registration from "../pages/registration/Registration";
 import MainStocks from "../pages/stocks/MainStocks";
+import SI from "../pages/simulate-investment/SimulateInvestment";
 
 function RotaAutenticada({ component: Component, isAutenticado, ...props }) {
   return (

@@ -1,20 +1,9 @@
 import Axios from "axios";
-import React, { useState } from "react";
-import {
-  Button,
-  Modal,
-  ModalHeader,
-  ModalBody,
-  ModalFooter,
-  Form,
-  FormGroup,
-  Label,
-  Input,
-  FormText,
-} from "reactstrap";
+import React from "react";
+import { ModalBody, FormGroup, Label, Input, Form } from "reactstrap";
 import AuthService from "../../../app/service/auth";
 
-function ModalFixedRate(args) {
+function ModalFixedIncome(args) {
   const auth = AuthService;
 
   const [broker, setBroker] = React.useState(null);
@@ -88,8 +77,8 @@ function ModalFixedRate(args) {
             <Input id="initialValue" name="initialValue" placeholder="Valor investido" type="text" />
           </FormGroup>
           <FormGroup>
-            <Label for="yieldRate">Rendimento</Label>
-            <Input id="yieldRate" name="yieldRate" placeholder="Rendimento anual" type="text" />
+            <Label for="yieldRate">Rendimento Total</Label>
+            <Input id="yieldRate" name="yieldRate" placeholder="Rendimento total" type="text" />
           </FormGroup>
         </Form>
       </ModalBody>
@@ -97,4 +86,4 @@ function ModalFixedRate(args) {
   );
 }
 
-export default ModalFixedRate;
+export default ModalFixedIncome;
