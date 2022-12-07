@@ -41,80 +41,80 @@ function ModalDirectTreasuary(args) {
 
   return (
     <div>
-        <ModalBody>
-          <Form id="modalForm" onSubmit={handleSubmit}>
-            <FormGroup>
-              <Label for="broker">
-                Instituição
-              </Label>
-              <Input
-                  id="broker"
-                  name="broker"
-                  type="select"
-                >
-                  {broker.map((b, index) => {
-                    return (
-                      <>
-                        <option key={index}>{b.name}</option>
-                      </>);
-                  })}
-                </Input>
-            </FormGroup>
-            <FormGroup>
-              <Label for="title">
-                Título
-              </Label>
-              <Input
-                id="title"
-                name="title"
-                placeholder="Nome do tesouro direto"
-                type="text"
-              />
-            </FormGroup>
-            <FormGroup>
-              <Label for="initialDate">
-                Data Inicial
-              </Label>
-              <Input
-                id="initialDate"
-                name="initialDate"
-                type="date"
-              />
-            </FormGroup>
-            <FormGroup>
-              <Label for="finalDate">
-                Data Final
-              </Label>
-              <Input
-                id="finalDate"
-                name="finalDate"
-                type="date"
-              />
-            </FormGroup>
-            <FormGroup>
-              <Label for="initialValue">
-                Valor Inicial
-              </Label>
-              <Input
-                id="initialValue"
-                name="initialValueName"
-                placeholder="Valor investido"
-                type="text"
-              />
-            </FormGroup>
-            <FormGroup>
-              <Label for="yieldRate">
-                Rendimento
-              </Label>
-              <Input
-                id="yieldRate"
-                name="yieldRate"
-                placeholder="Rendimento final"
-                type="text"
-              />
-            </FormGroup>
-          </Form>
-        </ModalBody>
+      <ModalBody>
+        <Form id="modalForm" onSubmit={handleSubmit}>
+          <FormGroup>
+            <Label for="broker">
+              Instituição
+            </Label>
+            <Input
+              id="broker"
+              name="broker"
+              type="select"
+            >
+              {broker.map((b, index) => {
+                return (
+                  <>
+                    <option key={index}>{b.name}</option>
+                  </>);
+              })}
+            </Input>
+          </FormGroup>
+          <FormGroup>
+            <Label for="title">
+              Título
+            </Label>
+            <Input
+              id="title"
+              name="title"
+              placeholder="Nome do tesouro direto"
+              type="text"
+            />
+          </FormGroup>
+          <FormGroup>
+            <Label for="initialDate">
+              Data Inicial
+            </Label>
+            <Input
+              id="initialDate"
+              name="initialDate"
+              type="date"
+            />
+          </FormGroup>
+          <FormGroup>
+            <Label for="finalDate">
+              Data Final
+            </Label>
+            <Input
+              id="finalDate"
+              name="finalDate"
+              type="date"
+            />
+          </FormGroup>
+          <FormGroup>
+            <Label for="initialValue">
+              Valor Inicial
+            </Label>
+            <Input
+              id="initialValue"
+              name="initialValueName"
+              placeholder="Valor investido"
+              type="text"
+            />
+          </FormGroup>
+          <FormGroup>
+            <Label for="yieldRate">
+              Rendimento
+            </Label>
+            <Input
+              id="yieldRate"
+              name="yieldRate"
+              placeholder="Rendimento final"
+              type="text"
+            />
+          </FormGroup>
+        </Form>
+      </ModalBody>
     </div>
   );
 }

@@ -1,4 +1,4 @@
-.header-login{
+.header-login {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -9,31 +9,31 @@
     background: linear-gradient(89.98deg, rgba(0, 0, 0, 0.65) 0.59%, rgba(0, 0, 0, 0.87) 25.96%, #000000 49.96%, rgba(0, 0, 0, 0.87) 74.62%, rgba(0, 0, 0, 0.65) 99.98%);
 }
 
-.logo-login{  
+.logo-login {
     margin-top: 0.8vh;
-    height: 100%; 
+    height: 100%;
 }
 
-body{
+body {
     background-image: url('../../shared/images/fundo-branco.jpg');
 }
 
-.main-login{
+.main-login {
     width: 100vw;
-    height: 91vh; 
+    height: 91vh;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.h1-texto-login{
+.h1-texto-login {
     width: 140%;
 
 }
 
-.esquerda-login{
+.esquerda-login {
     width: 50vw;
-    height: 60vh; 
+    height: 60vh;
     display: flex;
     justify-content: start;
     align-items: flex-start;
@@ -41,17 +41,17 @@ body{
     margin-left: 7%;
 }
 
-.direita-login{
+.direita-login {
     width: 50vw;
-    height: 80vh; 
+    height: 80vh;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.card-login{
+.card-login {
     height: 60vh;
-    border-left:solid;
+    border-left: solid;
     border-width: 2px;
     width: 20vw;
     display: flex;
@@ -59,15 +59,15 @@ body{
     flex-direction: column;
     padding: 30px 0px 0px 70px;
     margin-top: 20%;
-    overflow:hidden;
+    overflow: hidden;
 }
 
-.h1-login{
+.h1-login {
     font-weight: 800;
     margin: 0px 0px 50px 0px;
 }
 
-.campo-texto-login{
+.campo-texto-login {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -75,9 +75,9 @@ body{
     justify-content: center;
 }
 
-.campo-texto-login > input{
+.campo-texto-login>input {
     width: 100%;
-    border:solid;
+    border: solid;
     border-width: 1px;
     border-color: #3a3a3a9f;
     border-radius: 10px;
@@ -88,11 +88,11 @@ body{
     margin-top: 10px;
 }
 
-.botao-login{
+.botao-login {
     width: 80%;
     padding: 16px 0px;
     margin: 25px;
-    border:none;
+    border: none;
     border-radius: 10px;
     outline: none;
     font-size: 12pt;
@@ -101,42 +101,42 @@ body{
     cursor: pointer;
 }
 
-.texto1-login{
+.texto1-login {
     font-size: 17pt;
     margin: 100px 100px 0px 00px;
 }
 
-.baixo-esquerda-login{
+.baixo-esquerda-login {
     width: 60vw;
     display: flex;
-    justify-content:start;
-    align-items: center;  
+    justify-content: start;
+    align-items: center;
 }
 
-.h2-subtexto-login{   
+.h2-subtexto-login {
     font-weight: 200;
 }
 
-.texto2-login{
+.texto2-login {
     box-sizing: border-box;
     display: flex;
     justify-content: center;
-    align-items: start; 
+    align-items: start;
     flex-direction: column;
     font-size: 17pt;
     font-weight: 275;
-    line-height:2em;
+    line-height: 2em;
     margin-bottom: 150px;
 }
 
-.carteira{
+.carteira {
     width: 25vw;
     margin: 50px 0px 0px 90px;
 }
 
-.botao-esqueceu-senha{
+.botao-esqueceu-senha {
     padding-top: 5px;
-    border:none;
+    border: none;
     background: none;
     outline: none;
     font-size: 11pt;
@@ -144,14 +144,14 @@ body{
     cursor: pointer;
 }
 
-.h3-nao-tem-conta{
+.h3-nao-tem-conta {
     margin-top: 50px;
     font-weight: 200;
     font-size: 16pt;
 }
 
-.botao-criar-conta{
-    border:none;
+.botao-criar-conta {
+    border: none;
     background: none;
     outline: none;
     font-size: 18pt;
@@ -163,4 +163,4 @@ body{
 
 .navbar {
     display: none;
-  }
+}
